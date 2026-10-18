@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T04:30:07.063728+00:00",
+ "updated": "2026-10-18T11:01:28.268973+00:00",
  "papers": [
   {
    "id": "eprint:2026/2517",
@@ -1560,6 +1560,16 @@
    "pdf": "http://arxiv.org/pdf/2603.07974v3",
    "source": "arXiv",
    "date": "2026-03-09T05:21:44Z"
+  },
+  {
+   "id": "eprint:2026/467",
+   "title": "Zero-knowledge and Quantum CSS Codes Are Equivalent",
+   "authors": "Noga Ron-Zewi, Mor Weiss",
+   "abstract": "Zero-knowledge codes, introduced by Decatur, Goldreich, and Ron (ePrint 1997), are error-correcting codes in which few codeword symbols reveal no information about the encoded message, and have been extensively used in cryptographic constructions. Quantum CSS codes, introduced by Calderbank and Shor (Phys. Rev. A 1996) and Steane (Royal Society A 1996), are error-correcting codes that allow for quantum error correction, and are also useful for applications in quantum complexity theory. In this short note, we show that (linear, perfect) zero-knowledge codes and quantum CSS codes are equivalent. We demonstrate the potential of this equivalence by using it to obtain explicit asymptotically-good zero-knowledge locally-testable codes.",
+   "url": "https://eprint.iacr.org/2026/467",
+   "pdf": "https://eprint.iacr.org/2026/467.pdf",
+   "source": "ePrint",
+   "date": "2026-03-06T07:30:51+00:00"
   },
   {
    "id": "eprint:2026/460",

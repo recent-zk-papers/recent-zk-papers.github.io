@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T04:37:55.484159+00:00",
+ "updated": "2026-10-19T13:10:19.816704+00:00",
  "papers": [
   {
    "id": "eprint:2026/2517",
@@ -1330,6 +1330,26 @@
    "pdf": "http://arxiv.org/pdf/2604.16827v1",
    "source": "arXiv",
    "date": "2026-04-18T04:34:39Z"
+  },
+  {
+   "id": "eprint:2026/723",
+   "title": "Hint-Free Multi-Signatures",
+   "authors": "Dennis Hofheinz, Michael Reichle, Benedikt Wagner",
+   "abstract": "In a (non-interactive) multi-signature scheme, parties independently generate keys and produce signatures on a common message, which can be aggregated into a single signature verifiable with respect to the set of public keys. Existing multi-signature constructions, however, suffer from at least one of two limitations: either (1) aggregate signatures cannot be further aggregated, or (2) verification requires auxiliary information beyond the set of public keys, such as the aggregation topology. We argue that these limitations significantly restrict the applicability of multi-signatures in large-scale distributed systems, such as proof-of-stake blockchains. To address this gap, we initiate the formal study of hint-free multi-signatures, which support multi-hop aggregation while allowing verification using only the set of public keys. To the best of our knowledge, the only previously known (folklore) construction that is fully hint-free relies on recursive SNARKs, which introduces unclear heuristics for security (e.g., proving statements about random oracle relations) or inherently limits the depth of the aggregation topology. We show that hint-free multi-signatures can be realized without proof recursion, in the standard model. At a high level, we show how to publicly normalize BLS multi-signatures so that verification depends only on the set of public keys rather than a multi-set. While our scheme is not practical (it uses indistinguishability obfuscation), it establishes the feasibility of the primitive provides a foundation for future work on practical constructions.",
+   "url": "https://eprint.iacr.org/2026/723",
+   "pdf": "https://eprint.iacr.org/2026/723.pdf",
+   "source": "ePrint",
+   "date": "2026-04-14T09:15:15+00:00"
+  },
+  {
+   "id": "eprint:2026/714",
+   "title": "$\\mathsf{Veloz}$: Efficient and Flexible Distribution Framework for Interleaved-Code-Based Polynomial Commitment Scheme",
+   "authors": "Yuanzhuo Yu, Shi-Feng Sun, Yuncong Zhang, Chenhua Fan, Tianyi Ma, Dawu Gu",
+   "abstract": "Polynomial commitment schemes (PCSs) are a fundamental cryptographic primitive that allows a prover to reveal evaluations for a committed polynomial. Motivated by the inefficiency of proof generation for large-scale computations as well as the concerns regarding third-party reliance and quantum threats, a line of recent works has focused on distributing code-based PCS, where the proving workload is distributed among multiple sub-provers to accelerate proof generation, while preserving transparent setup and plausible quantum resilience. However, for $M$ sub-provers generating an evaluation proof for a polynomial of size $N$, existing solutions either require $O(N)$ total communication among sub-provers, or incur an $O(M)$ overhead in proof size. In this paper, we introduce $\\mathsf{Veloz}$, a novel distribution framework for interleaved-code-based multilinear PCS, which for the first time achieves communication cost sublinear in $N$, and eliminates the dependence of proof size on the number of sub-provers, without compromising proving speed or security. At its core is a customized proof aggregation method from interleaved code that efficiently combines sub-proofs via minimum communication. We further present two instantiations of $\\mathsf{Veloz}$: one based on Reed-Solomon code, $\\mathsf{Veloz}_{\\text{RS}}$, achieves $O(\\frac{N}{M}\\log{\\frac{N}{\\log{N}}})$ proving time, $O(\\lambda \\cdot \\frac{\\log^{2}{N}}{\\log\\log{N}} + M\\cdot\\frac{N}{\\log{N}})$ communication, and $O(\\lambda \\cdot \\frac{\\log^{2}{N}}{\\log\\log{N}})$ proof size; the other based on the fast linear code from Brakedown (Golovnev et al., CRYPTO 2023), $\\mathsf{Veloz}_{\\text{Lin}}$, features $O(\\frac{N}{M})$ proving time, $O(\\lambda \\cdot K + M\\cdot\\frac{N}{K})$ communication, and $O(\\lambda \\cdot K)$ proof size for $K \\in [\\sqrt[3]{N}, \\sqrt{N}]$, while enjoying field agnosticism. We also implement both schemes in Rust and conduct a comprehensive performance evaluation. The experimental results demonstrate their efficient scalability with increasing $M$. More specifically, for $N = 2^{30}$ and $M = 8$, $\\mathsf{Veloz}_{\\text{RS}}$ takes 61.8s for proof generation, achieving a 6.46$\\times$ speedup compared to running a single prover, while $\\mathsf{Veloz}_{\\text{Lin}}$ generates a proof in 26.9s and achieves a 7.03$\\times$ speedup.",
+   "url": "https://eprint.iacr.org/2026/714",
+   "pdf": "https://eprint.iacr.org/2026/714.pdf",
+   "source": "ePrint",
+   "date": "2026-04-12T13:06:25+00:00"
   },
   {
    "id": "arxiv:2604.10473",

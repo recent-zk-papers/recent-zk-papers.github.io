@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T20:40:19.913002+00:00",
+ "updated": "2026-10-19T04:37:55.484159+00:00",
  "papers": [
   {
    "id": "eprint:2026/2517",
@@ -30,6 +30,16 @@
    "pdf": "https://eprint.iacr.org/2026/2514.pdf",
    "source": "ePrint",
    "date": "2026-10-16T15:28:19+00:00"
+  },
+  {
+   "id": "arxiv:2610.23078",
+   "title": "Cryptographically Secure Agent-to-Agent Communication in Multi-Agent Systems",
+   "authors": "Karol Budzyn, Adrian Brodzik, Mateusz Szczepkowski",
+   "abstract": "Multi-agent systems (MAS) comprise AI agents that collaborate or compete to perform complex, distributed tasks. Their dynamic interactions create opportunities for threat actors to target and impersonate other agents, intercept messages, inject malicious prompts, and exfiltrate sensitive data while simultaneously complicating the detection of anomalous behavior through conventional monitoring. This paper surveys threats and cryptographic challenges in agent-to-agent communication and presents a zero-trust architecture integrating identity, transport security, message integrity, and monitoring. The architecture establishes agent identities via decentralized identifiers and task-scoped verifiable credentials backed by a permissioned ledger, enforcing least-privilege authorization. For transport security, it provides mutually authenticated, crypto-agile TLS with hybrid post-quantum key establishment, and evaluates KEMTLS with pre-distributed public keys to reduce handshake overhead. Signed CBOR envelopes preserve payload integrity across multi-hop exchanges, while zero-knowledge proofs verify declared task constraints without exposing underlying inputs. Context-aware monitoring of inter-agent messages, tool activity, and execution telemetry informs the setting of risk-based trust thresholds and supports the detection of behavioral anomalies. Together, these mechanisms provide an integrated framework for securing and auditing agent communication, with implications for other agentic protocols and prospective 6G semantic communication.",
+   "url": "http://arxiv.org/abs/2610.23078v1",
+   "pdf": "http://arxiv.org/pdf/2610.23078v1",
+   "source": "arXiv",
+   "date": "2026-10-16T07:49:54Z"
   },
   {
    "id": "eprint:2026/2501",

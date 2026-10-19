@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T13:10:19.816704+00:00",
+ "updated": "2026-10-19T22:20:19.300027+00:00",
  "papers": [
   {
    "id": "eprint:2026/2517",
@@ -342,6 +342,16 @@
    "date": "2026-09-23T10:48:47+00:00"
   },
   {
+   "id": "eprint:2026/2165",
+   "title": "Argo: Leaking a Secret from an Invalid Groth16 Proof",
+   "authors": "Liam Eagen, Ying Tong Lai",
+   "abstract": "We present Argo, a randomized encoding scheme for the invalidity of pairing-based SNARKs like Groth16. Argo allows an encoder to encode a proof such that a decoder can derive a secret if the proof is invalid. We prove the selective security of invalidity Argo, as well as the adaptive security of validity Argo, under DDH in one source group of a bilinear pairing in the standard model, a standard assumption that holds in the generic group model used to analyze Groth16. We show how to couple invalidity Argo with a projective garbling scheme like Argo MAC or Duty-Free Bits to construct a garbled circuit for Groth16 invalidity as a function of the proof bits, and how to use it with BitVM to construct a permissionless, optimistic Groth16 verifier for Bitcoin: a decoder proves a proof invalid by publishing a secret, and the decoder can be anyone, not necessarily known in advance. When instantiated with BN254, Argo has an offline encoding size of about 21 kB, a thousand times smaller than the projective garbling scheme, and an end-to-end protocol size more than three orders of magnitude smaller than existing Yao-based approaches. Generating an Argo + Argo MAC garbled circuit takes tens of milliseconds on a laptop, compared to minutes for a Yao GC. Argo is the first protocol that makes permissionless, optimistic SNARK verification on Bitcoin practical.",
+   "url": "https://eprint.iacr.org/2026/2165",
+   "pdf": "https://eprint.iacr.org/2026/2165.pdf",
+   "source": "ePrint",
+   "date": "2026-09-23T02:22:56+00:00"
+  },
+  {
    "id": "arxiv:2609.27100",
    "title": "Cryptographic Security Is Not Enough: Privacy Gaps in the Renegade Decentralized Dark Pool",
    "authors": "Prerna Arote, Adrian Saiz, Oriol Saguillo, Lucianna Kiffer",
@@ -680,6 +690,16 @@
    "pdf": "http://arxiv.org/pdf/2608.09087v1",
    "source": "arXiv",
    "date": "2026-08-10T03:37:08Z"
+  },
+  {
+   "id": "eprint:2026/1635",
+   "title": "Limber: Low Overhead SNARKs for Integers from Any PCS",
+   "authors": "Jessica Chen, Lucas Xia, Wilson Nguyen, Benedikt B\u00fcnz",
+   "abstract": "In real-world applications of SNARKs, non-native arithmetic, the emulation of computation outside of the specified SNARK field, is a key bottleneck. It introduces large overheads, and proof system designers often resort to non-standard SNARK-friendly hash-functions or other means like elliptic curve cycles to mitigate its costs. Besides performance concerns, non-native circuit arithmetization is also a major cause of implementation errors. In a collection of 27 critical bugs in real world ZK systems (0xPARC/zkbugtracker), 9 were related to non-native arithmetization. We tackle these challenges by constructing a minimal overhead SNARK for integer computation that generically handles non-native arithmetic. We follow the recipe of Zaratan (PKC 26), which proves an integer relation such as $a\\cdot b = c + u\\cdot m$ by fingerprinting---reducing it to the same relation but over a randomly sampled prime field. Realizing this recipe requires an integer mod-PCS that commits to integer polynomials and opens their evaluations modulo a random prime, which is crucially chosen after the underlying PCS's setup and commitment phases. Our central contribution is Limber, the first practical integer mod-PCS construction that asymptotically has $o(1)$ multiplicative commitment overhead and can be instantiated with any standard field polynomial commitment scheme, including ones over small fields. Combining Limber with a PIOP for integer R1CS over the random prime yields our SNARK. We demonstrate its practicality by implementing our scheme and showing that we can prove an RSA accumulator benchmark $15$-$30\\times$ faster than circuit-based approaches, and non-native Poseidon2 hashing $24\\times$ faster.",
+   "url": "https://eprint.iacr.org/2026/1635",
+   "pdf": "https://eprint.iacr.org/2026/1635.pdf",
+   "source": "ePrint",
+   "date": "2026-08-07T22:11:14+00:00"
   },
   {
    "id": "arxiv:2608.07063",

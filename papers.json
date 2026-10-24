@@ -1,6 +1,16 @@
 {
- "updated": "2026-10-24T15:55:20.107948+00:00",
+ "updated": "2026-10-24T20:46:48.594080+00:00",
  "papers": [
+  {
+   "id": "eprint:2026/2581",
+   "title": "Post-Quantum Sublinear Lookup Arguments from Polynomial Preprocessing",
+   "authors": "Adarsh Basumata, Chaya Ganesh, Varun Narayanan, Sikhar Patranabis, Surbhi Shaw, Nitin Singh",
+   "abstract": "Lookup arguments with sublinear prover time typically rely on bilinear pairings. The only exception is the recent work of Campanelli, Carrillo, Cascudo, Fiore, Francati, and Gennaro (ePrint 2025/238); however, they rely on general-purpose SNARKs to certify expensive preprocessing, which requires non-black-box usage of cryptographic primitives. Thus practical realizations of sublinear lookups with post-quantum security remain challenging. We develop the first plausibly post-quantum sublinear lookup arguments that avoid general-purpose SNARKs via polynomial preprocessing and a novel adaptation of proximity testing for Reed-Muller codes into the Interactive Oracle Proof (IOP) framework. Our starting point is a knowledge-sound polynomial commitment scheme (PCS) with prover-side preprocessing based on the Kedlaya-Umans framework. Rather than proving the expensive preprocessing computation inside a general-purpose SNARK, we directly certify its output using Reed-Muller proximity testing and an associated evaluation protocol. For polynomials of size $N$, our approach yields multivariate and univariate PCS with $N^{1+\\epsilon}\\mathsf{polylog}(N)$ preprocessing and only $\\mathsf{polylog}(N)$ online prover time, while retaining $\\mathsf{polylog}(N)$ proof size and verification. We leverage this PCS to obtain a lookup argument for \\textit{static} tables of size $N$ and $k\\ll N$ lookups with $k\\cdot\\mathsf{polylog}(N)$ online prover time and $\\mathsf{polylog}(N)$ verification and proof size. We further extend the approach to \\textit{updatable} tables, obtaining $O(k(N^\\epsilon+\\mathsf{polylog}(N)))$ amortized prover time for a $k$-sized batch of reads and writes, where $\\epsilon \\in (0,1)$. We retain $\\mathsf{polylog}(N)$ proof size and verification. The IOPs underlying our lookup arguments satisfy round-by-round (knowledge) soundness, which can be compiled into plausibly post-quantum arguments in the (quantum) random oracle model with transparent setup.",
+   "url": "https://eprint.iacr.org/2026/2581",
+   "pdf": "https://eprint.iacr.org/2026/2581.pdf",
+   "source": "ePrint",
+   "date": "2026-10-21T06:35:51+00:00"
+  },
   {
    "id": "arxiv:2610.29230",
    "title": "PQ-Vault: Provably Quantum-Safe Asset Custody for Unmodified Ethereum",
@@ -2580,16 +2590,6 @@
    "pdf": "http://arxiv.org/pdf/2509.16581v1",
    "source": "arXiv",
    "date": "2025-09-20T09:03:54Z"
-  },
-  {
-   "id": "arxiv:2509.16390",
-   "title": "B5GRoam: A Zero Trust Framework for Secure and Efficient On-Chain B5G Roaming",
-   "authors": "Mohamed Abdessamed Rezazi, Mouhamed Amine Bouchiha, Ahmed Mounsf Rafik Bendada, Yacine Ghamri-Doudane",
-   "abstract": "Roaming settlement in 5G and beyond networks demands secure, efficient, and trustworthy mechanisms for billing reconciliation between mobile operators. While blockchain promises decentralization and auditability, existing solutions suffer from critical limitations-namely, data privacy risks, assumptions of mutual trust, and scalability bottlenecks. To address these challenges, we present B5GRoam, a novel on-chain and zero-trust framework for secure, privacy-preserving, and scalable roaming settlements. B5GRoam introduces a cryptographically verifiable call detail record (CDR) submission protocol, enabling smart contracts to authenticate usage claims without exposing sensitive data. To preserve privacy, we integrate non-interactive zero-knowledge proofs (zkSNARKs) that allow on-chain verification of roaming activity without revealing user or network details. To meet the high-throughput demands of 5G environments, B5GRoam leverages Layer 2 zk-Rollups, significantly reducing gas costs while maintaining the security guarantees of Layer 1. Experimental results demonstrate a throughput of over 7,200 tx/s with strong privacy and substantial cost savings. By eliminating intermediaries and enhancing verifiability, B5GRoam offers a practical and secure foundation for decentralized roaming in future mobile networks.",
-   "url": "http://arxiv.org/abs/2509.16390v2",
-   "pdf": "http://arxiv.org/pdf/2509.16390v2",
-   "source": "arXiv",
-   "date": "2025-09-19T20:11:42Z"
   }
  ]
 }

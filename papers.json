@@ -1,6 +1,56 @@
 {
- "updated": "2026-10-24T20:46:48.594080+00:00",
+ "updated": "2026-10-25T04:38:11.417198+00:00",
  "papers": [
+  {
+   "id": "eprint:2026/2615",
+   "title": "Faster and Smaller Anonymous Credentials from Standardized Signatures",
+   "authors": "Chad Sharp, Paul Grubbs",
+   "abstract": "We present GordieHowe, a system comprising a language, a certifying compiler, and a zero-knowledge proof protocol. GordieHowe is especially suitable for building anonymous credentials on top of standardized signature schemes like ECDSA, RSA, and ML-DSA. GordieHowe is the first system to achieve the following three properties simultaneously: provable security against quantum attackers, efficiency for statements spanning multiple fields\u2014including proving and verifying in parallel\u2014and automatic batching of structured computations. GordieHowe is high-assurance by design. The language is designed to enable static checking of bounds safety, preventing integer overflows. Its compiler emits a Lean certificate that its optimization decisions are semantics-preserving for the input program. The proof system's security theorems are machine-checked in Lean. GordieHowe is faster and has smaller proofs than comparable prior work. It proves, in parallel on four cores, an ECDSA-signed mobile driving license presentation in 64.8 ms with a 276 KiB proof, 10.1\u00d7 faster and 22% smaller than Google's Longfellow. With at least 101 bits of knowledge soundness in the random oracle model, GordieHowe proves knowledge of a 1 KiB SHA3-256 preimage in 5.0 ms with a 60 KiB proof, and of an RSA-2048 signature on a private 2 KiB message in 25.9 ms with a 210 KiB proof. With at least 116 bits against quantum adversaries, GordieHowe proves knowledge of an ML-DSA-44 signature on a private message in 87.3 ms with a 549 KiB proof, 70.2\u00d7 faster and 29% smaller than an optimized Longfellow circuit. In building GordieHowe we make a number of contributions of independent interest. We define a new notion of an interactive oracle proof (IOP) whose messages are partially ordered, which we call a series-parallel IOP. We extend the BCS transformation to series-parallel IOPs, and give knowledge soundness and ZK proofs in the QROM. We also show our BCS extension satisfies a form of simulation extractability in the QROM; we believe this is the first simulation extractability result of any kind for BCS in the QROM.",
+   "url": "https://eprint.iacr.org/2026/2615",
+   "pdf": "https://eprint.iacr.org/2026/2615.pdf",
+   "source": "ePrint",
+   "date": "2026-10-23T13:11:34+00:00"
+  },
+  {
+   "id": "eprint:2026/2611",
+   "title": "For Thirty Pieces of Silver: Overcoming Non-IID via ZKP Sample-Level Auditing and Forcing Attackers into Traitors in Federated Learning",
+   "authors": "Jinghao Zhao, Hongwei Yang, Bobo Wang, Meng Hao, Hui He, Weizhe Zhang",
+   "abstract": "As a privacy-preserving distributed learning paradigm, federated learning faces severe security threats, especially data poisoning, gradient tampering, distributed attacks, and adaptive attacks. Existing gradient-based detection methods encounter three major bottlenecks in practical applications. First, they cannot distinguish between benign and malicious gradients under distributed attacks in non-IID scenarios. Second, defenders lack prior knowledge of trigger patterns. Third, attackers can launch adaptive attacks against these defense mechanisms. To address these challenges, we propose a novel defense paradigm. This paradigm shifts away from gradient detection, instead leveraging zero-knowledge proofs to conduct sample-level inspections on the local datasets of clients, eliminating the defense degradation caused by distributed attacks under non-IID settings. Then, through a staking mechanism, attackers are forced to train on discovered malicious samples with flipped labels, generating counter-gradients to neutralize hidden malicious samples, achieving targeted backdoor removal without requiring any prior knowledge of backdoor features. Furthermore, through zero-knowledge proof commitments, training gradients must be generated based on the same locked data. This prevents dynamic adaptive attacks based on reference model parameters and precludes gradient tampering. Experimental results demonstrate that under the highly non-IID setting of $\\text{Dir}(0.1)$, our proposed scheme successfully defends against distributed backdoor attacks and edge-case attacks on CIFAR-10, suppressing the attack success rate to below $6\\%$. To the best of our knowledge, this is the first framework to achieve such defense results.",
+   "url": "https://eprint.iacr.org/2026/2611",
+   "pdf": "https://eprint.iacr.org/2026/2611.pdf",
+   "source": "ePrint",
+   "date": "2026-10-23T10:29:01+00:00"
+  },
+  {
+   "id": "eprint:2026/2606",
+   "title": "On the $s$-projected Goppa Codes and their Application to the Interactive Oracle Proofs of Proximity",
+   "authors": "Abhraneel Dutta, Veronika Kuchta, Edoardo Persichetti",
+   "abstract": "Error-correcting codes are a useful tool in cryptography, being used both to design schemes whose hardness relies on coding theory problems (the area typically known as code-based cryptography) and as a building block in other contexts, such as proof systems and associated cryptographic argument systems. Among all codes used in cryptography, Goppa codes stand out, notably in the well-known McEliece encryption scheme, where they have withstood the test of time as one of very few classes of codes to be considered secure for over 40 years. Therefore, a natural question is whether Goppa codes can also be used in the construction of proof systems or cryptographic argument systems. In the context of probabilistically checkable proofs (PCPs), codes are used to transform proofs into a format that requires only a constant number of queries for verification. This efficiency is often achieved using low-degree polynomial codes, which enable the verifier to check consistency through interpolation, ensuring correctness with minimal effort. This application underscores the importance of good codes in enhancing the robustness and verifiability of proof systems. Given their critical role, we take a closer look at how error-correcting codes are used in proof systems to find a new way of obtaining an interactive oracle proof system of proximity (IOPP) from Goppa codes.",
+   "url": "https://eprint.iacr.org/2026/2606",
+   "pdf": "https://eprint.iacr.org/2026/2606.pdf",
+   "source": "ePrint",
+   "date": "2026-10-22T21:16:46+00:00"
+  },
+  {
+   "id": "eprint:2026/2596",
+   "title": "ANNULAR: Post-Quantum Private Transactions from Isogenies with Recursive Batch Verification",
+   "authors": "Dustin Ray",
+   "abstract": "ANNULAR is a shielded pool built on isogeny-based primitives. Notes are committed in a Merkle tree and spent by nullifier with hidden amounts, following the structure of Zcash's Sapling, but every primitive is post-quantum: spends are authorised by the prime-degree PRISM signature of Basso et al., note ciphertexts are keyed by the MIKE non-interactive key exchange, and each transaction carries a STARK proved natively over the isogeny field. The transaction proofs of a block are then folded into a single recursive proof. A ledger need record and verify only this one proof, 426 KB in 15 ms, whatever the batch holds, and check each transaction's two signatures alongside it. A transaction's body is the size of Sapling's at the same memo length (2,685 bytes against 2,756 with a 512-byte memo); its share of the batch proof adds under 500 bytes. A move to post-quantum primitives is generally expected to raise a pool's operating cost. We argue that the post-quantum change and the scaling change are complementary: with a STARK as the proof system, proofs fold, and with isogeny keys, the per-transaction data remains small. The cost moves to the sender, whose proof takes 1.4 s on sixteen cores, and to one aggregator per batch, which we measure: 1,248 transactions in 99 s on one GPU. Each proof in the tree carries 100 bits of round-by-round soundness and the batch about 90 under a union bound; under Fiat\u2013Shamir that is the work an adversary needs. The constraints of the leaf circuit are proven in Lean 4 to encode the spend statement, while the soundness of the STARK itself rests on a paper argument. The scheme's claims rest on the signature's existential unforgeability; its strong unforgeability, argued by the construction's authors and not yet proved, is not relied on.",
+   "url": "https://eprint.iacr.org/2026/2596",
+   "pdf": "https://eprint.iacr.org/2026/2596.pdf",
+   "source": "ePrint",
+   "date": "2026-10-22T09:14:45+00:00"
+  },
+  {
+   "id": "eprint:2026/2593",
+   "title": "Efficient Laconic Oblivious Transfer with Malicious Security",
+   "authors": "Yijian Zhang, Zuoxia Yu, Rupeng Yang, Willy Susilo",
+   "abstract": "Laconic Oblivious Transfer (OT) enables a receiver to compress a large database into a short digest, allowing a sender to generate a succinct ciphertext that reveals only a single indexed message. While prior works achieve efficient constructions in the semi-honest model, known solutions for malicious security rely on inherently heavy non-black-box techniques, such as garbled circuits or succinct arguments, resulting in impractical schemes. In this work, we present the first construction of maliciously secure laconic OT that makes fully black-box use of its underlying primitives. Our construction is based on a simple and widely used paradigm combining vector commitments with witness encryption, previously known to yield efficient semi-honest protocols. We show that this approach can in fact achieve malicious security by introducing two minimal yet powerful enhancements: equivocal vector commitments and maliciously secure witness encryption. We prove that these properties suffice to obtain laconic OT with security against malicious senders in the universal composability model and against malicious receivers in the context model. We instantiate our framework from standard assumptions, including LWE and bilinear Diffie-Hellman variants, obtaining schemes in the standard model. Notably, our constructions avoid heavy non-black-box tools mentioned before, and therefore achieve efficiency comparable to the state-of-the-art black-box constructions with merely semi-honest security. In particular, in certain settings, we obtain malicious security at essentially no additional asymptotic cost. Our results resolve a central question on the feasibility of practical, maliciously secure laconic OT, and provide a unifying pathway for efficiently achieving malicious security in laconic cryptography.",
+   "url": "https://eprint.iacr.org/2026/2593",
+   "pdf": "https://eprint.iacr.org/2026/2593.pdf",
+   "source": "ePrint",
+   "date": "2026-10-22T04:22:22+00:00"
+  },
   {
    "id": "eprint:2026/2581",
    "title": "Post-Quantum Sublinear Lookup Arguments from Polynomial Preprocessing",

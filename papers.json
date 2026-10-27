@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T12:09:15.280845+00:00",
+ "updated": "2026-10-27T17:59:12.416456+00:00",
  "papers": [
   {
    "id": "eprint:2026/2648",
@@ -750,6 +750,16 @@
    "pdf": "http://arxiv.org/pdf/2608.27954v2",
    "source": "arXiv",
    "date": "2026-08-28T05:51:22Z"
+  },
+  {
+   "id": "eprint:2026/1784",
+   "title": "Faster Post-Quantum zkSNARK Provers Using the LCH Polynomial Basis",
+   "authors": "Mohammadtaghi Badakhshan, Susanta Samanta, Guang Gong",
+   "abstract": "An important class of plausibly post-quantum zkSNARKs uses univariate-polynomial interactive oracle proofs (IOPs) over binary extension fields $\\mathbb{F}_{2^k}$, relying on the Fast Reed--Solomon (RS) Interactive Oracle Proof of Proximity (FRI) for low-degree testing. Their provers fold RS codewords in FRI and perform polynomial arithmetic, notably division and multiplication by subspace vanishing polynomials. Constraint polynomials and RS codewords are in evaluation form, but existing implementations perform this arithmetic in the monomial basis, requiring inverse additive fast Fourier transforms (FFTs) for coefficient recovery and forward FFTs for evaluation. On a general basis, Gao--Mateer and Lin--Chung--Han (LCH) additive FFTs incur $O(n(\\log n)^2)$ field additions and $O(n\\log n)$ field multiplications for basis conversion per $n$-point transform, and Lagrange-based FRI folding performs a field inversion per coset. We carry out this arithmetic directly in the LCH polynomial basis for arbitrary $\\mathbb{F}_2$-bases. We introduce a divide-and-conquer algorithm for division by subspace vanishing polynomials directly in the LCH basis. For $n$ input coefficients, it requires $O(n)$ field operations, and on a Cantor basis it requires no field multiplications. We also show that the multiples of vanishing polynomials used for zero-knowledge blinding can be sampled directly through their LCH coefficients. Together, these remove the basis-conversion stage of the LCH additive FFT, leaving only its butterfly. We further express the FRI fold in the LCH basis: on each coset, it is an LCH inverse butterfly followed by an evaluation at the verifier challenge, and for higher-arity folds, the challenge of each stage is the value of a normalized subspace vanishing polynomial at the verifier challenge. Given constants that depend only on the domain, this yields a fold without field inversions whose folding loop performs $n(1-1/\\kappa)$ field multiplications for a length-$n$ codeword and arity $\\kappa$; for every input word, it outputs the same next codeword as the classical fold. We integrate these algorithms into the Aurora prover without changing the proof or the verifier. At $2^{19}$ constraints over $\\mathbb{F}_{2^{256}}$, when all configurations use our FRI fold, the LCH-basis arithmetic speeds up the prover by $2.80\\times$ over \\texttt{libiop} on a general basis and by $1.24\\times$ over a Cantor-basis prover that uses the LCH additive FFT. Against these baselines with their Lagrange-based FRI fold, the speedups are $3.63\\times$ and $2.05\\times$.",
+   "url": "https://eprint.iacr.org/2026/1784",
+   "pdf": "https://eprint.iacr.org/2026/1784.pdf",
+   "source": "ePrint",
+   "date": "2026-08-23T19:00:18+00:00"
   },
   {
    "id": "arxiv:2608.22525",
@@ -2700,16 +2710,6 @@
    "pdf": "http://arxiv.org/pdf/2509.25072v1",
    "source": "arXiv",
    "date": "2025-09-29T17:16:51Z"
-  },
-  {
-   "id": "arxiv:2510.02319",
-   "title": "Modeling the Attack: Detecting AI-Generated Text by Quantifying Adversarial Perturbations",
-   "authors": "Lekkala Sai Teja, Annepaka Yadagiri, Sangam Sai Anish, Siva Gopala Krishna Nuthakki, Partha Pakray",
-   "abstract": "The growth of highly advanced Large Language Models (LLMs) constitutes a huge dual-use problem, making it necessary to create dependable AI-generated text detection systems. Modern detectors are notoriously vulnerable to adversarial attacks, with paraphrasing standing out as an effective evasion technique that foils statistical detection. This paper presents a comparative study of adversarial robustness, first by quantifying the limitations of standard adversarial training and then by introducing a novel, significantly more resilient detection framework: Perturbation-Invariant Feature Engineering (PIFE), a framework that enhances detection by first transforming input text into a standardized form using a multi-stage normalization pipeline, it then quantifies the transformation's magnitude using metrics like Levenshtein distance and semantic similarity, feeding these signals directly to the classifier. We evaluate both a conventionally hardened Transformer and our PIFE-augmented model against a hierarchical taxonomy of character-, word-, and sentence-level attacks. Our findings first confirm that conventional adversarial training, while resilient to syntactic noise, fails against semantic attacks, an effect we term \"semantic evasion threshold\", where its True Positive Rate at a strict 1% False Positive Rate plummets to 48.8%. In stark contrast, our PIFE model, which explicitly engineers features from the discrepancy between a text and its canonical form, overcomes this limitation. It maintains a remarkable 82.6% TPR under the same conditions, effectively neutralizing the most sophisticated semantic attacks. This superior performance demonstrates that explicitly modeling perturbation artifacts, rather than merely training on them, is a more promising path toward achieving genuine robustness in the adversarial arms race.",
-   "url": "http://arxiv.org/abs/2510.02319v1",
-   "pdf": "http://arxiv.org/pdf/2510.02319v1",
-   "source": "arXiv",
-   "date": "2025-09-22T13:03:53Z"
   }
  ]
 }

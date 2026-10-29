@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T05:45:25.836561+00:00",
+ "updated": "2026-10-29T12:57:20.718720+00:00",
  "papers": [
   {
    "id": "eprint:2026/2671",
@@ -2020,6 +2020,16 @@
    "pdf": "http://arxiv.org/pdf/2602.15756v1",
    "source": "arXiv",
    "date": "2026-02-17T17:41:59Z"
+  },
+  {
+   "id": "eprint:2026/284",
+   "title": "Knowledge Soundness of Polynomial Commitments in the Algebraic Group Model Does Not Guarantee Extractability",
+   "authors": "Petr Chmel, Pavel Hub\u00e1\u010dek, Dominik Stejskal",
+   "abstract": "The Algebraic Group Model (AGM) has become a standard framework for analyzing the knowledge soundness of group-based polynomial commitment schemes. In this work, we formally establish inherent limitations of this methodology. For many PCSs analyzed in the AGM, the algebraic explanation directly determines a polynomial and any required randomness that together reproduce the commitment. We call this structural property AGM-clarity. The extraction proof then only needs to show that the accepted evaluation agrees with this polynomial. For AGM-clear schemes, evaluation binding alone implies knowledge soundness in the AGM. If the commitment algorithm is itself algebraic, knowledge soundness in the AGM is in fact equivalent to weak evaluation binding, a relaxation of evaluation binding introduced by Catalano, Fiore, and Tucker (ASIACRYPT 2022). We then show that this guarantee implies neither standard-model extraction nor evaluation binding. Under the discrete-logarithm and SBDH assumptions, we give a succinct modification of the KZG polynomial commitment that is evaluation binding and, hence, knowledge-sound in the AGM. It admits a prover that is accepted on every evaluation point, yet no efficient extractor recovers an opening of its commitment, even given the prover's code and state. For a non-succinct variant, no polynomial consistent with the transcript exists at all, so extraction fails even for unbounded extractors. A minor modification of those PCSs destroys evaluation binding while leaving knowledge soundness in the AGM intact, so the AGM notion lies strictly below evaluation binding. Finally, we show that the common formulation, which also requires algebraic explanations of evaluation proofs, is strictly weaker than the variant characterized by weak evaluation binding. Our separating schemes satisfy even the stronger variant, so no property implied by either formulation guarantees extraction in the standard model.",
+   "url": "https://eprint.iacr.org/2026/284",
+   "pdf": "https://eprint.iacr.org/2026/284.pdf",
+   "source": "ePrint",
+   "date": "2026-02-17T06:38:28+00:00"
   },
   {
    "id": "arxiv:2602.13682",

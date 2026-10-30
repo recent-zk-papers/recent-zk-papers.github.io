@@ -1,6 +1,16 @@
 {
- "updated": "2026-10-29T22:43:32.100801+00:00",
+ "updated": "2026-10-30T05:44:26.281549+00:00",
  "papers": [
+  {
+   "id": "arxiv:2610.38862",
+   "title": "Improved LCL Equivalences and Curve Decoding Alphabet Sizes",
+   "authors": "Rohan Goyal, Venkatesan Guruswami, Yihang Sun, Mary Wootters",
+   "abstract": "Local Coordinate-wise Linear (LCL) properties, introduced by Levi, Mosheiff, and Shagrithaya (2025), capture coding-theoretic properties such as list decoding and list recovery. They showed that every LCL property has the same rate threshold for random linear codes (RLC) and random Reed--Solomon codes (RRS). Brakensiek, Chen, Dhar, and Zhang (2025) extended this to random additive codes. Thus any property of all subspace design codes holds for RLCs and RRS at the same rate. In this work, we improve the probabilistic guarantees in the RRS local equivalence theorem and extend the equivalence to all known subspace design constructions individually. Each such construction, including folded Reed--Solomon codes, has the same LCL threshold as RLC and RRS codes. We apply these results to alphabet-size bounds for curve decoding. Curve decoding, introduced by Goyal and Guruswami (2025) and Carmon et al. (2026), is a row-span-constrained LCL property implying proximity gaps (PG), correlated agreement (CA), and mutual correlated agreement (MCA), relevant to IOPs and SNARKs. Informally, a rate-$R$ code $C \\subset \\mathbb{F}^n$ is $(\\ell,\u03b4,a,b)$-curve decodable if any degree-$\\ell$ curve $u:\\mathbb{F}\\to\\mathbb{F}^n$ that is $\u03b4$-close to $C$ on at least $a$ points has at least $b\\leq a$ nearby codewords lying on a degree-$\\ell$ curve in $C$. Goyal and Guruswami (2025) and Goyal, Guruswami, Sun, and Wootters (2026) established curve decodability for RLC and RRS codes at radius $\u03b4$ approaching $1-R$, but with large alphabets in $\\ell$ and $\u03b7:=1-R-\u03b4$. Using our improved LCL equivalence and rank-sensitive counting inspired by Goyal and Guruswami (2026), we exponentially improve alphabet requirements while matching the best known values of $(a,b)$. For $\\ell=O(1)$, our alphabet-size bounds match the best known for list decoding, and improves results for PG, CA, and MCA.",
+   "url": "http://arxiv.org/abs/2610.38862v1",
+   "pdf": "http://arxiv.org/pdf/2610.38862v1",
+   "source": "arXiv",
+   "date": "2026-10-28T20:36:27Z"
+  },
   {
    "id": "eprint:2026/2671",
    "title": "Beyond the Event Horizon of Keccak, Extending the Observation from 2011 and applications",
@@ -10,6 +20,16 @@
    "pdf": "https://eprint.iacr.org/2026/2671.pdf",
    "source": "ePrint",
    "date": "2026-10-28T12:39:08+00:00"
+  },
+  {
+   "id": "arxiv:2610.38557",
+   "title": "A Minimally Informed Black-Box Fake-Report Attack on DRL Traffic-Signal Control",
+   "authors": "Amro Saleh, Loukas Lazos, Mohammad J. Abdel-Rahman",
+   "abstract": "Deep reinforcement learning (DRL) traffic-signal controllers may use vehicle-to-infrastructure (V2I) reports, exposing their perception layer to false-data injection. Existing demonstrations typically assume either white-box access to the controller's weights or full observability of the traffic state. We study the impact of a weaker and more realistic adversary who has no access to the RL model and whose traffic observations are limited to her own approach. This black-box, minimally informed attacker trains an imitation surrogate of the controller. She then crafts bounded fake reports, restricted to inflating vehicle counts on her own approach, that transfer to the real controller. We demonstrate that despite the loss of accuracy relative to an attacker who can observe the entire state and action space, this limited attacker can significantly increase the average waiting time for other approaches while barely changing the waiting time on her own approach, i.e. externalizing the added delay onto the other approaches. Because the only realizable move is to inflate one's own reported queue, we find that a zero-knowledge attacker that simply reports the maximum feasible queue is as damaging as the surrogate-based one, while an unstructured random inflation is not: the surrogate is not required to reproduce the degradation, and the exposed vulnerability is the V2I sensing channel itself. The surrogate's role is directional control, selecting a disruptive or a selfish objective at the same budget. The attack persists under +/-20% uniform demand variation. Finally, on a common per-lane budget we place the attacker on a knowledge ladder against white-box adversaries, and find the black-box surrogate matches a realizable white-box attacker that uses the victim's own gradients; only abandoning realizability raises the damage further.",
+   "url": "http://arxiv.org/abs/2610.38557v1",
+   "pdf": "http://arxiv.org/pdf/2610.38557v1",
+   "source": "arXiv",
+   "date": "2026-10-28T09:53:39Z"
   },
   {
    "id": "eprint:2026/2648",
@@ -2124,10 +2144,10 @@
   {
    "id": "arxiv:2602.00667",
    "title": "zkCraft: Prompt-Guided LLM as a Zero-Shot Mutation Pattern Oracle for TCCT-Powered ZK Fuzzing",
-   "authors": "Rong Fu, Jia Yee Tan, Ziyu Kong, Shuning Zhang, Xianda Li, Kun Liu, Youjin Wang, Simon Fong",
+   "authors": "Rong Fu, Jia Yee Tan, Ziyu Kong, Shuning Zhang, Xianda Li, Kun Liu, Simon Fong",
    "abstract": "Zero-knowledge circuits enable privacy-preserving and scalable systems but are difficult to implement correctly due to the tight coupling between witness computation and circuit constraints. We present zkCraft, a practical framework that combines deterministic, R1CS-aware localization with proof-bearing search to detect semantic inconsistencies. zkCraft encodes candidate constraint edits into a single Row-Vortex polynomial and replaces repeated solver queries with a Violation IOP that certifies the existence of edits together with a succinct proof. Deterministic LLM-driven mutation templates bias exploration toward edge cases while preserving auditable algebraic verification. Evaluation on real Circom code shows that proof-bearing localization detects diverse under- and over-constrained faults with low false positives and reduces costly solver interaction. Our approach bridges formal verification and automated debugging, offering a scalable path for robust ZK circuit development.",
-   "url": "http://arxiv.org/abs/2602.00667v6",
-   "pdf": "http://arxiv.org/pdf/2602.00667v6",
+   "url": "http://arxiv.org/abs/2602.00667v7",
+   "pdf": "http://arxiv.org/pdf/2602.00667v7",
    "source": "arXiv",
    "date": "2026-01-31T11:31:00Z"
   },

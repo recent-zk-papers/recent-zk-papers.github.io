@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T05:44:26.281549+00:00",
+ "updated": "2026-10-30T12:51:56.091246+00:00",
  "papers": [
   {
    "id": "arxiv:2610.38862",
@@ -1280,6 +1280,16 @@
    "pdf": "http://arxiv.org/pdf/2606.10172v1",
    "source": "arXiv",
    "date": "2026-06-08T21:07:02Z"
+  },
+  {
+   "id": "eprint:2026/1202",
+   "title": "Morphic Accumulators and Applications: Optimal Range Proofs, Polynomial Commitments, and Ring Signatures",
+   "authors": "Dimitrios Papadopoulos, Qiang Tang, Jiajun Xin",
+   "abstract": "Cryptographic accumulators based on groups of unknown order (GUO) provide constant-size set membership proofs. For security purposes, existing works require first encoding set elements via division-intractable (DI) hash functions, typically instantiated as random oracles that destroy any algebraic structure. This confines GUO-based accumulators to a purely set-membership role, making them \"incompatible\" with various existing cryptographic proof techniques over committed integers in the same groups as the GUO, such as constant-size proofs of exponentiation and modular exponent relations. We introduce the notion of morphic accumulators, which replaces the DI hash with a discrete logarithm encoding $H_g(x) = g^x$, mapping set elements to a group before accumulation. We prove, under a variant of the subset product assumption in the generic group model, that this encoding is inherently division intractable, achieving the same security guarantee as random-oracle DI hashes, while simultaneously being a group homomorphism: accumulated elements retain their group-algebraic relationships. This resolves a fundamental tension between compact representation and algebraic structure: the accumulator serves simultaneously as a binding commitment to a set and as a substrate for homomorphic computation over its elements. Morphic accumulators yield asymptotically optimal constructions across multiple domains: range proofs with $O(n)$ prover time, $O(1)$ proof size, $O(1)$ verification with transparent setups (the first scheme to simultaneously achieve these optimal bounds); polynomial commitments with $O(n)$ prover and $O(1)$ proof size, resolving the cubic bottleneck in prior constant-proof-size GUO-based schemes; and the first linkable ring signatures with $O(1)$ signature size, transparent setup, $O(n)$ offline signing and $O(1)$ online signing.",
+   "url": "https://eprint.iacr.org/2026/1202",
+   "pdf": "https://eprint.iacr.org/2026/1202.pdf",
+   "source": "ePrint",
+   "date": "2026-06-08T11:54:51+00:00"
   },
   {
    "id": "arxiv:2606.08211",

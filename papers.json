@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T15:46:18.073594+00:00",
+ "updated": "2026-11-03T00:56:20.908725+00:00",
  "papers": [
   {
    "id": "arxiv:2610.41655",
@@ -520,6 +520,16 @@
    "pdf": "http://arxiv.org/pdf/2609.31087v1",
    "source": "arXiv",
    "date": "2026-09-25T10:26:19Z"
+  },
+  {
+   "id": "eprint:2026/2209",
+   "title": "The Cost of Rewinding for Succinct Arguments: Strict-Time Barriers and Expected-Time Security",
+   "authors": "Alessandro Chiesa, Ziyi Guan, William Wang, Yuetian Wu",
+   "abstract": "Succinct arguments are central cryptographic objects, underlying various applications such as blockchains and image authentication. Almost all succinct arguments used in practice follow the commit-and-open paradigm introduced by Kilian (STOC 1992): commit to a probabilistic proof, then open the few locations the verifier queries. Decades of work have generalized and optimized this paradigm, yet its exact provable security in the standard model remains unclear. Existing analyses proceed by rewinding, and they leave gaps: strict-time analyses lose an inverse-polynomial factor, while expected-time analyses are sharper but apply only to special cases of this paradigm. We resolve both gaps. On the negative side, we show that the strict-time loss is inherent: no strict polynomial-time reduction relying on a black-box extractor can achieve negligible knowledge error (unless the underlying language is easy). On the positive side, we give a new expected-time analysis, achieving negligible soundness and knowledge errors via an expected polynomial-time reduction against expected polynomial-time adversaries, at the full generality of the paradigm, capturing multi-round and functional variants such as polynomial and linear IOPs compiled with the corresponding commitments. This is the first standard-model analysis to reach this regime for succinct arguments deployed in practice.",
+   "url": "https://eprint.iacr.org/2026/2209",
+   "pdf": "https://eprint.iacr.org/2026/2209.pdf",
+   "source": "ePrint",
+   "date": "2026-09-25T06:12:08+00:00"
   },
   {
    "id": "arxiv:2609.30719",
@@ -1410,6 +1420,16 @@
    "pdf": "http://arxiv.org/pdf/2606.00962v1",
    "source": "arXiv",
    "date": "2026-05-31T02:34:38Z"
+  },
+  {
+   "id": "eprint:2026/1109",
+   "title": "SoK: Cryptographic Erasure on Public Ledgers: Application-Layer Architectures, Key-Lifecycle Adversaries, and GDPR Art. 17 Sufficiency",
+   "authors": "Yitebeier Aikebaier",
+   "abstract": "Public permissionless ledgers are append-only by design, yet are increasingly asked to host data subject to statutory erasure obligations (GDPR Art. 17, EDPB Guidelines 02/2025). The prevailing cryptographic response, rewriting the chain via chameleon hashes and redactable-blockchain constructions, is structurally unavailable on Bitcoin and Ethereum mainnet. This SoK systematizes the orthogonal application-layer design space, in which the ledger is left untouched and erasure is achieved by destroying the key material required to read the on-chain bytes. We organise the literature along two axes, data locus (on-chain ciphertext, anchor-only, or hybrid), key custody (single-custodian or threshold), and access gate (none, time, or witness), into a twelve-cell grid with canonical constructions from 1996 to 2026. We extend standard IND-CCA security with a key-lifecycle adversary model parametrised by HSM side-channel leakage, coercion fraction over the custody committee, and algorithmic-break horizon, give the security experiment as pseudo-code with adaptive corruption, cumulative leakage across key rotations, a decryption oracle, and a stronger post-destruction adversary class, and prove that the resulting Destruction-IND-CCA notion suffices for a semantic-security formalisation of the EDPB \"render unrecoverable\" criterion. We state what is provable per custody model: a concrete bound for single-custodian AEAD, a bound for Shamir threshold custody that grows with the number of rotations, an impossibility result for delay-only designs, and a reduction showing witness-gated erasure needs extractable witness encryption. Evaluating seven reference architectures against eleven engineering, cryptographic, and regulatory criteria, including a production RegTech engine measured at 2.6 \u00d7 10^3 events/s single-threaded (10^4 projected with connection pooling), we find that the literature has concentrated on chain-rewriting while the application-layer branch lacks a common threat-model vocabulary. We close this gap and identify five open problems: post-quantum destruction security, the leakage threshold of a custody scheme, decentralised lifecycle audit (with a multi-custody extension covering encrypted mempools), composition with ZKP selective disclosure, and erasure under multi-regime retention conflict.",
+   "url": "https://eprint.iacr.org/2026/1109",
+   "pdf": "https://eprint.iacr.org/2026/1109.pdf",
+   "source": "ePrint",
+   "date": "2026-05-30T10:56:55+00:00"
   },
   {
    "id": "arxiv:2605.29654",

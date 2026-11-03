@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T14:09:28.674982+00:00",
+ "updated": "2026-11-03T23:20:51.821465+00:00",
  "papers": [
   {
    "id": "arxiv:2610.41655",
@@ -1292,6 +1292,16 @@
    "date": "2026-06-22T16:42:25Z"
   },
   {
+   "id": "eprint:2026/1289",
+   "title": "A Toolkit for Succinct Lattice-Based Zero Knowledge Proofs",
+   "authors": "Beatrice Biasioli, Madalina Bolboceanu, Vadim Lyubashevsky, Antonio Merino-Gallardo, Micha\u0142 Osadnik, Gregor Seiler, Patrick Steuer",
+   "abstract": "The development of proof systems whose security relies on the hardness of lattice problems has been a fruitful research area in recent years. By leveraging the techniques introduced in LaBRADOR (Beullens, Seiler, Crypto 2023), the state-of-the-art lattice-based schemes have very fast provers and have output sizes under 100KB for arbitrarily large statements. These proofs are in fact the smallest, and often have the fastest provers, out of all post-quantum schemes. In addition to succinctness, many applications also require witness privacy. Achieving this can, in theory, be done by combining LaBRADOR with a linear-size zero-knowledge proof. While such a combination has already been described in the LaBRADOR paper itself, as well as in the works of Albrecht et al. (Eurocrypt 2024) and del Pino et al. (Crypto 2025), its concrete costs remained unexplored. In this work, we provide the first concrete construction and implementation that adds zero-knowledge proofs to LaBRADOR by integrating the linear-size zero-knowledge proof from (Lyubashevsky, Nguyen, Plan\u00e7on, Crypto 2022) into the protocol. We describe the non-trivial challenges that this entails and show practicality of the construction by benchmarking several use-cases. We make the proof system and primitives accessible by extending the LaZer library (Lyubashevsky, Seiler, Steuer, CCS 2024) in a way that they can easily be used in other applications.",
+   "url": "https://eprint.iacr.org/2026/1289",
+   "pdf": "https://eprint.iacr.org/2026/1289.pdf",
+   "source": "ePrint",
+   "date": "2026-06-19T09:18:07+00:00"
+  },
+  {
    "id": "arxiv:2606.20868",
    "title": "Can LLMs Reason About Brand Ownership? An Empirical Study of Domain Attribution Intelligence",
    "authors": "Fathima Mashood, Mohamed Nabeel",
@@ -2010,6 +2020,16 @@
    "pdf": "http://arxiv.org/pdf/2603.00179v3",
    "source": "arXiv",
    "date": "2026-02-26T20:38:19Z"
+  },
+  {
+   "id": "eprint:2026/398",
+   "title": "Orthus: Practical Sublinear Batch-Verification of Lattice Relations from Standard Assumptions",
+   "authors": "Madalina Bolboceanu, Jonathan Bootle, Vadim Lyubashevsky, Antonio Merino-Gallardo, Gregor Seiler",
+   "abstract": "The past several years have seen a rapid rise in practical lattice-based proof systems with linear-sized zero-knowledge proofs forming the foundation of many of the most efficient quantum-safe privacy protocols, and succinct proofs rapidly catching up and surpassing other quantum-safe alternatives in many metrics. A recent comparison of lattice-based aggregate signatures (Ethereum Foundation, 2025) involving the hash-based aggregate signature scheme Plonky3 and the instantiation of aggregate signatures from Falcon from the LaZer lattice library (Lyubashevsky, Seiler, Steuer, CCS 2024) using LaBRADOR (Beullens, Seiler, Crypto 2023), showed that lattice-based constructions have an advantage in terms of proof size and prover time, but are around an order of magnitude slower with regards to verification time. In general, it appears that slower verification times are the main obstacle to the adoption of succinct lattice-based proof systems. In this work, we introduce and implement Orthus, a proof system with sub-linear verification designed for relations that naturally arise in lattice-based constructions. Asymptotically, the verification time grows with the square root of the witness size, and for a concrete example of aggregating Falcon signatures our implementation reduces the verifier running time by a factor of $9X$ when aggregating $2^{17}$ signatures.",
+   "url": "https://eprint.iacr.org/2026/398",
+   "pdf": "https://eprint.iacr.org/2026/398.pdf",
+   "source": "ePrint",
+   "date": "2026-02-26T16:03:54+00:00"
   },
   {
    "id": "arxiv:2602.18539",
@@ -2742,6 +2762,16 @@
    "date": "2025-10-14T05:16:23Z"
   },
   {
+   "id": "eprint:2025/1900",
+   "title": "Beholder Signatures",
+   "authors": "Stefan Dziembowski, Sebastian Faust, Pawe\u0142 K\u0119dzior, Marcin Mielniczuk, Susil Kumar Mohanty, Krzysztof Pietrzak",
+   "abstract": "We introduce a new primitive, called beholder signatures, which, in some sense, are the opposite of blind signatures. In a beholder signature, one signs a commitment to a (potentially very long) message, and the signature attests that the parties participating in the signing process who know the secret key, jointly also know the entire committed message. This guarantee holds even against distributed adversaries that use secure multi-party computation (MPC) to produce the signature. We work in the distributed adversarial model (Dziembowski, Faust, and Lizurej, Crypto'23), where one assumes that it is infeasible to evaluate a large number of hash queries without any of the participating parties learning the input. We propose a construction of beholder signatures in the random oracle model. The starting point of our construction is proofs of complete knowledge, recently proposed by (Kelkar et al. CCS'24), which again build on Fischlin's transformation of a sigma protocol to a noninteractive, straight-line extractable zero-knowledge proof of knowledge. Our scheme is concretely efficient and comes with a proof-of-concept implementation using Schnorr as the underlying sigma protocol. The primary applications of beholder signatures can be found within the blockchain ecosystem. In particular, we describe how to use them to construct proofs of custody (Feist, 2021) that do not require ephemeral keys and are noninteractive. We also outline applications to data dissemination, data availability, and proofs of replication.",
+   "url": "https://eprint.iacr.org/2025/1900",
+   "pdf": "https://eprint.iacr.org/2025/1900.pdf",
+   "source": "ePrint",
+   "date": "2025-10-11T12:48:31+00:00"
+  },
+  {
    "id": "arxiv:2510.09729",
    "title": "SNARKChain: Proof-of-Useful-Work Blockchain Consensus with General-Purpose SNARK Marketplace",
    "authors": "Samuel Oleksak, Richard Gazdik, Martin Peresini, Ivan Homoliak",
@@ -2820,26 +2850,6 @@
    "pdf": "http://arxiv.org/pdf/2510.01967v1",
    "source": "arXiv",
    "date": "2025-10-02T12:39:57Z"
-  },
-  {
-   "id": "arxiv:2509.25469",
-   "title": "Balancing Compliance and Privacy in Offline CBDC Transactions Using a Secure Element-based System",
-   "authors": "Panagiotis Michalopoulos, Anthony Mack, Cameron Clark, Linus Chen, Johannes Sedlmeir, Andreas Veneris",
-   "abstract": "Blockchain technology has spawned a vast ecosystem of digital currencies with Central Bank Digital Currencies (CBDCs) -- digital forms of fiat currency -- being one of them. An important feature of digital currencies is facilitating transactions without network connectivity, which can enhance the scalability of cryptocurrencies and the privacy of CBDC users. However, in the case of CBDCs, this characteristic also introduces new regulatory challenges, particularly when it comes to applying established Anti-Money Laundering and Countering the Financing of Terrorism (AML/CFT) frameworks. This paper introduces a prototype for offline digital currency payments, equally applicable to cryptocurrencies and CBDCs, that leverages Secure Elements and digital credentials to address the tension of offline payment support with regulatory compliance. Performance evaluation results suggest that the prototype can be flexibly adapted to different regulatory environments, with a transaction latency comparable to real-life commercial payment systems. Furthermore, we conceptualize how the integration of Zero-Knowledge Proofs into our design could accommodate various tiers of enhanced privacy protection.",
-   "url": "http://arxiv.org/abs/2509.25469v1",
-   "pdf": "http://arxiv.org/pdf/2509.25469v1",
-   "source": "arXiv",
-   "date": "2025-09-29T20:19:31Z"
-  },
-  {
-   "id": "arxiv:2509.25072",
-   "title": "Optimizing Privacy-Preserving Primitives to Support LLM-Scale Applications",
-   "authors": "Yaman Jandali, Ruisi Zhang, Nojan Sheybani, Farinaz Koushanfar",
-   "abstract": "Privacy-preserving technologies have introduced a paradigm shift that allows for realizable secure computing in real-world systems. The significant barrier to the practical adoption of these primitives is the computational and communication overhead that is incurred when applied at scale. In this paper, we present an overview of our efforts to bridge the gap between this overhead and practicality for privacy-preserving learning systems using multi-party computation (MPC), zero-knowledge proofs (ZKPs), and fully homomorphic encryption (FHE). Through meticulous hardware/software/algorithm co-design, we show progress towards enabling LLM-scale applications in privacy-preserving settings. We demonstrate the efficacy of our solutions in several contexts, including DNN IP ownership, ethical LLM usage enforcement, and transformer inference.",
-   "url": "http://arxiv.org/abs/2509.25072v1",
-   "pdf": "http://arxiv.org/pdf/2509.25072v1",
-   "source": "arXiv",
-   "date": "2025-09-29T17:16:51Z"
   }
  ]
 }

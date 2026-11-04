@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T14:37:29.071590+00:00",
+ "updated": "2026-11-04T23:39:03.723193+00:00",
  "papers": [
   {
    "id": "arxiv:2611.04701",
@@ -20,6 +20,36 @@
    "pdf": "http://arxiv.org/pdf/2611.04240v1",
    "source": "arXiv",
    "date": "2026-11-03T03:24:04Z"
+  },
+  {
+   "id": "eprint:2026/2721",
+   "title": "Authenticated Outsourced Incrementally Verifiable MPC",
+   "authors": "Hamidreza Khoshakhlagh, Anders Kalles\u00f8e, Anders Dalskov",
+   "abstract": "Many privacy-preserving applications such as iterative machine learning training require executing ongoing computations over a secret state for long periods of time. While MPC enables secure computation, long-lived secret state is vulnerable to adaptive corruptions, requiring periodic share refreshes and committee rotation. In many settings, it is desirable for external parties to be able to verify that these state updates and rotations are performed correctly, but existing approaches for such public verifiability incur high overhead as they require MPC nodes to generate expensive proofs over secret-shared data. We propose Authenticated Outsourced Incrementally Verifiable MPC (IV-MPC), a framework for efficient public verification of long-running MPC computation. Our approach decouples private proof computation (run by MPC nodes) from public tasks within the proof generation that can be delegated to a single external prover $P^*$. To realize this architecture, we introduce three main components: (1) a Private-opening Polynomial Commitment Scheme (PoPCS) that lets an incoming committee prove they received the correct state shares without revealing the underlying data; (2) an efficient distributed proof system based on the sumcheck protocol and compressed $\\Sigma$-protocols to verify state updates; and (3) a stateless handover technique that anchors committee transfers to a fixed state commitment, preventing proof sizes from growing over time. Combined with an incrementally verifiable computation (IVC) proof run by the external prover $P^*$, IV-MPC enables external auditors to verify correctness of MPC computation at every round with verification time asymptotically independent of the total number of epochs.",
+   "url": "https://eprint.iacr.org/2026/2721",
+   "pdf": "https://eprint.iacr.org/2026/2721.pdf",
+   "source": "ePrint",
+   "date": "2026-11-02T09:58:10+00:00"
+  },
+  {
+   "id": "eprint:2026/2717",
+   "title": "Verifiable Data on Bitcoin: FlatMerkle Commitments, Refutable Proofs, and FlatChecks",
+   "authors": "Sergio Demian Lerner",
+   "abstract": "We give a method to publish data on Bitcoin and to verify properties of that data on Bitcoin itself, against a publisher who may lie. The data is a FlatMerkle file \u2013 a structured byte string whose ordinary SHA-256 supports logarithmic inclusion proofs and logarithmic proofs of malformation \u2013 placed in a transaction's annex or, at four times the cost but relayable by Bitcoin Core, in an output. We show that the publisher's ordinary Taproot signature, with a suitably chosen signature-hash type, binds the publisher to the published data in a form that a dispute can authenticate with a single SHA-256 compression plus the signature check, or with three compressions when no annex is used. Claims about the data, and claims about such claims, are published as proof messages in two formats: a plain encoding, refuted by revealing it whole, and a traced encoding that stores the verifier's output after each level, so that any false message is refuted by revealing at most five of its elements. The format, chosen by a cost model that weighs challenge bytes against published bytes, is fixed by public context so that no message can be read in two formats; chains of claims about claims settle at four logical elements. A dispute thus reduces to a few dozen SHA-256 compressions and one Schnorr verification per commitment \u2013 too large for Bitcoin Script, but small enough to adjudicate with an interactive bisection game, a chunked script in the manner of BitVM2, or a garbled circuit. The same technique verifies any locally refutable verifier, one whose every rejection is witnessed by a single check over a few words of a canonical trace. In a FlatCheck, the prover publishes only the proof; the trace, the verifier's intermediate values, is published only if a challenger asks for it, and the dispute then examines the single check he names. When the verifier splits into groups that each read a few parts of the proof, a challenge forces the trace of one group only. We give two examples: a toy L2 of signed transfers, whose 512-transfer batches cost 12,200 vbytes to claim, and a Bitcoin header-chain light client verified on Bitcoin itself, which claims a retarget period of 2,016 headers in 45,200 vbytes; a dispute over a local check costs about 37,500 and 49,200 vbytes, and one over a malformed trace about 77,100 and 99,800, independently of the number of groups. Verifying STARK proofs is another application. We also remove FlatMerkle's restriction to power-of-two sizes without padding.",
+   "url": "https://eprint.iacr.org/2026/2717",
+   "pdf": "https://eprint.iacr.org/2026/2717.pdf",
+   "source": "ePrint",
+   "date": "2026-11-01T22:40:42+00:00"
+  },
+  {
+   "id": "eprint:2026/2714",
+   "title": "Polynomial Batch Accumulators for Onboarding-Dominant Zero-Knowledge Membership Proofs",
+   "authors": "Samanta Karmaker, Sampad Sikder, Md Ariful Islam, Md Sadek Ferdous",
+   "abstract": "Zero-knowledge membership accumulators are conventionally tailored for slowly growing sets with frequent proof generation, creating severe efficiency bottlenecks for modern compliance architectures. Governance-driven applications like FATF customer due diligence, eIDAS 2.0 wallet issuance, and MiCA VASP authorization invert this structure. In this regime, rosters are ingested at an enterprise scale, while proofs are requested selectively. To resolve this mismatch, we introduce Polynomial Equation Batching (PEB), a membership accumulator for onboarding heavy workloads. PEB represents up to 128 members per batch as a characteristic polynomial and hashes its coefficients via Poseidon, seamlessly scaling to arbitrarily large populations through parallel batching. We present two variants: PEB-A, which maps member secrets directly to polynomial roots for maximum performance, and PEB-B, which hashes secrets in-circuit for hardened security. Implemented in Noir and Barretenberg on BN254, and evaluated for up to 1,048,576 members, PEB provides significant performance improvements. Compared to incremental Merkle trees, PEB-A achieves up to a 149.07x mean speedup in per-user initialization while incurring a modest 33.87% proof-generation overhead. Additionally, against static Merkle trees, PEB-A delivers a 15.71x speedup during setup. By shifting off-circuit overhead from hash evaluations to field multiplications, PEB provides a highly efficient, scalable solution for real-world zero-knowledge compliance systems.",
+   "url": "https://eprint.iacr.org/2026/2714",
+   "pdf": "https://eprint.iacr.org/2026/2714.pdf",
+   "source": "ePrint",
+   "date": "2026-11-01T15:05:55+00:00"
   },
   {
    "id": "eprint:2026/2708",

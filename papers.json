@@ -1,6 +1,36 @@
 {
- "updated": "2026-11-03T23:20:51.821465+00:00",
+ "updated": "2026-11-04T06:15:48.271549+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.04701",
+   "title": "Proving the Wrong Program: Miscompilations as a Threat to zkVM Guarantees",
+   "authors": "Hui Xuan Tan, Stefanos Chaliasos, Alastair F. Donaldson",
+   "abstract": "A zero-knowledge virtual machine (zkVM) lets an untrusted prover convince a verifier that a program, typically Rust compiled to RISC-V, ran correctly. The proof covers the compiled binary, so a miscompilation can make a correct zkVM produce a valid proof of a computation that differs from the developer's source. We present the first empirical study of miscompilation as a threat to zkVM guarantees, on the production zkVMs SP1 and Jolt. We assemble 88 known rustc and LLVM miscompilations with Rust reproducers, using an LLM agent to recover Rust triggers for 60 of 124 LLVM bugs reported only as LLVM IR. Many of the bugs carry over to zkVMs: 48 of the 88 make a guest commit a wrong output on SP1 and 46 on Jolt, including the same 15 rustc bugs on both. Most bugs that do not reproduce never reach the faulty code on the zkVM's target, e.g. because they need an instruction-set extension. Existing guest programs are rarely affected by accident. Across 13 guests of 10 popular SP1 projects, the buggy and the fixed compiler produce byte-identical binaries in 447 of the 552 guest-bug pairs that build, and the other 105 have the same code or agree on every input we ran. An attacker who contributes code to a guest, however, can trigger these bugs on purpose. For about $40 per project, an LLM agent found patches that look like ordinary optimisations, preserve the behaviour of the guest's source, and expose a known bug in 12 of 366 project-bug pairs, across 11 of 20 projects. In four cases the guest commits a wrong output, including an Ethereum client that rejects a valid block, and in the other eight it fails on a valid input. Reviewing or formally verifying the zkVM or the guest's source cannot catch such a patch, because both are correct. zkVM projects should treat their compiler as part of their trusted base and track the known bugs of their toolchain.",
+   "url": "http://arxiv.org/abs/2611.04701v1",
+   "pdf": "http://arxiv.org/pdf/2611.04701v1",
+   "source": "arXiv",
+   "date": "2026-11-03T11:22:45Z"
+  },
+  {
+   "id": "arxiv:2611.04240",
+   "title": "VerfGraph: Efficient Zero-Knowledge Verifiable Graph Query Evaluation System",
+   "authors": "Tianyi Ma, Yuncong Zhang, Yuanzhuo Yu, Boshi Yuan, Shi-Feng Sun",
+   "abstract": "Graph databases are often used to manage relationship-rich data, whose graph structure and attributes may be sensitive. In many applications, a database owner or a service provider evaluates queries over a private graph for a client. Because the graph cannot be fully disclosed and independently re-executing the query may be impractical, the client cannot directly verify the returned result. This creates a need for verifiable graph query evaluation that preserves data confidentiality. We present VerfGraph, a zero-knowledge system for verifiable graph query evaluation, which enables a client to verify that the query result was correctly computed over a committed graph data, without revealing private graph records or intermediate query values beyond the public inputs and what is implied by the query result. Building on the expansion-centric model introduced by the state-of-the-art zero-knowledge verifiable graph query evaluation system ZKGraph (ICDE'26), VerfGraph achieves more efficient and expressive zero-knowledge verifiable graph query evaluation by advancing design in two key ways. First, we propose novel operator-proof methods for core expansion and shortest-path operations that reduce costly sorting and comparison checks and eliminate edge canonicalization for bidirectional expansion. Furthermore, we introduce correctness proofs for count and weighted shortest-path operators, broadening the class of graph queries that can be verified. We evaluate VerfGraph using the LDBC Social Network Benchmark. Compared with ZKGraph on complex IC queries, VerfGraph achieves $33.9\\times$-$59.7\\times$ speedups in proof generation and reduces peak prover memory by factors of $4.5\\times$-$6.6\\times$, while maintaining millisecond-level verification and producing sub-MB proofs.",
+   "url": "http://arxiv.org/abs/2611.04240v1",
+   "pdf": "http://arxiv.org/pdf/2611.04240v1",
+   "source": "arXiv",
+   "date": "2026-11-03T03:24:04Z"
+  },
+  {
+   "id": "eprint:2026/2701",
+   "title": "SPIDER: A Faster and Smaller Identity-Based Signature From Isogenies",
+   "authors": "Tako Boris Fouotsa, Gustave Tchoffo Saah",
+   "abstract": "PRISM is an isogeny-based digital signature whose security relies on the problem of computing large prime degree isogenies from a supersingular elliptic curve of unknown endomorphism ring. In this paper, we design SPIDER, a digital signature that builds on a sigma protocol which when given a supersingular elliptic curve $E$, proves the knowledge of an isogeny $\\phi: E\\rightarrow E'$ of prime (or non smooth) degree $d$. SPIDER can hence be seen as a proof of knowledge of a PRISM signature. The latter observation allows us to combine SPIDER and PRISM to obtain an Identity-Based Signature (IBS) which we denote by SPIDER-IBS. SPIDER-IBS is the most efficient and the most compact isogeny-based IBS scheme, as all its predecessors are based on isogeny group actions.",
+   "url": "https://eprint.iacr.org/2026/2701",
+   "pdf": "https://eprint.iacr.org/2026/2701.pdf",
+   "source": "ePrint",
+   "date": "2026-10-30T21:29:19+00:00"
+  },
   {
    "id": "arxiv:2610.41655",
    "title": "Fooling Relying Parties of the EUDI Wallet Architecture: Credential Pooling Attacks and CRESTA, a Standard-Compliant Countermeasure",
@@ -20,6 +50,16 @@
    "pdf": "http://arxiv.org/pdf/2610.41170v1",
    "source": "arXiv",
    "date": "2026-10-30T02:47:24Z"
+  },
+  {
+   "id": "eprint:2026/2687",
+   "title": "Penalty Deposits For Discrete Logarithms",
+   "authors": "Francisco Vial-Prado, Louis Goubin",
+   "abstract": "We propose a technique that allows a trusted party in some protocol to attach deposits to their own secrets, without impacting security, and convincing other parties using zero-knowledge proofs. The rationale is that, should this party compromise the protocol by blundering or revealing its secrets, they lose the attached deposit to attackers. As a result, stakeholders gain confidence on how this trusted party operates, and breaches become public as soon as deposits are claimed. We formalize this technique and related security notions, provide two practical constructions in generic discrete logarithm groups, and analyze its application to ECDLP-based protocols.",
+   "url": "https://eprint.iacr.org/2026/2687",
+   "pdf": "https://eprint.iacr.org/2026/2687.pdf",
+   "source": "ePrint",
+   "date": "2026-10-29T20:26:39+00:00"
   },
   {
    "id": "eprint:2026/2681",
@@ -780,6 +820,16 @@
    "pdf": "http://arxiv.org/pdf/2609.07654v1",
    "source": "arXiv",
    "date": "2026-09-07T15:42:20Z"
+  },
+  {
+   "id": "eprint:2026/1868",
+   "title": "Zero-Knowledge PCPs of Quasilinear Size via Locally Simulatable Sheaf Codes",
+   "authors": "Hadas Zeilberger, Jack O'Connor, Tom Gur, Nicholas Spooner",
+   "abstract": "We show that for every polynomial $T,b \\colon \\mathbb{N} \\to \\mathbb{N}$, there exist an $O(1)$-query probabilistically checkable proof (PCP) for $\\operatorname{NTIME}(T)$ of length $\\widetilde{O}\\bigl(T(n)+b(n)^2\\bigr)$, which is $b(n)$-query perfect zero knowledge. This strictly improves on the polynomial-length zero-knowledge PCPs of Gur, O'Connor, and Spooner (STOC 2024; STOC 2025). Our construction builds on the PCPs of Ben-Sasson and Sudan (SICOMP 2008) and Dinur (JACM 2007). We prove the zero-knowledge property of our PCPs via the new machinery of locally simulatable sheaf codes.",
+   "url": "https://eprint.iacr.org/2026/1868",
+   "pdf": "https://eprint.iacr.org/2026/1868.pdf",
+   "source": "ePrint",
+   "date": "2026-09-02T14:43:12+00:00"
   },
   {
    "id": "eprint:2026/1852",

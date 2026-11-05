@@ -1,6 +1,56 @@
 {
- "updated": "2026-11-04T23:39:03.723193+00:00",
+ "updated": "2026-11-05T06:42:37.518785+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.06286",
+   "title": "Clear Human Web: Where a Person Vouches for Every Client",
+   "authors": "Lorenzo Porcelli",
+   "abstract": "The web cannot tell whether a request comes from a person or from a program. Sites have checked the network address and puzzles in its place, and both have given way: automated traffic exceeds human traffic, and puzzles are solved for pay and by agents. This paper proposes the Clear Human Web, the part of the public web that sites open only to clients a person vouches for. A person's wallet presents their person identification data (PID) to one issuer, the only party that registers as a relying party, and receives a bounded number of blind-signed tokens, proofs of personhood that carry no attribute. The browser spends one token at each site that runs the gate, and the site learns that a valid token of a trusted issuer was spent, and nothing else. No field is added to the PID, no protocol is introduced, no site registers, and the publisher of a site holds the same proof as its readers. We define the Clear Human Web through five properties and seven adversaries, and state which properties the construction satisfies against each adversary. The identities a person can hold on one site in an epoch are bounded to k. The bound holds once the wallet limits a person to one pseudonym at the issuer. In the optimum k = 1, and a zero-knowledge proof of PID possession and a pseudonym per site replace the tokens.",
+   "url": "http://arxiv.org/abs/2611.06286v1",
+   "pdf": "http://arxiv.org/pdf/2611.06286v1",
+   "source": "arXiv",
+   "date": "2026-11-04T10:24:34Z"
+  },
+  {
+   "id": "arxiv:2611.06124",
+   "title": "A Post-Quantum Interactive Hashing Theorem",
+   "authors": "C\u00e9line Chevalier, Laurent Holin, Quoc-Huy Vu",
+   "abstract": "Interactive hashing, introduced by Ostrovsky, Venkatesan, and Yung [OVY93], is a building block in many cryptographic protocols, including perfectly hiding commitments from one-way permutations [NOVY92]. Its multi-output generalization is a key ingredient in constructions of statistical zero-knowledge arguments for NP and statistically hiding commitments from arbitrary one-way functions [NOV06,HR07]. In this note, we give a post-quantum security proof for this multi-output interactive hashing protocol with arbitrary relations.",
+   "url": "http://arxiv.org/abs/2611.06124v1",
+   "pdf": "http://arxiv.org/pdf/2611.06124v1",
+   "source": "arXiv",
+   "date": "2026-11-04T08:08:32Z"
+  },
+  {
+   "id": "eprint:2026/2754",
+   "title": "A note on zero-knowledge ring switching",
+   "authors": "Andrei Kochergin",
+   "abstract": "We make the ring-switching technique of Diamond and Posen zero knowledge, resolving a problem left open in the literature. Over $\\mathbb{F}_{2^n}$, our technique uses $n-1$ auxiliary masks and $n-1$ quadratic constraints, checked in zero knowledge by the underlying commitment scheme.",
+   "url": "https://eprint.iacr.org/2026/2754",
+   "pdf": "https://eprint.iacr.org/2026/2754.pdf",
+   "source": "ePrint",
+   "date": "2026-11-04T01:07:19+00:00"
+  },
+  {
+   "id": "eprint:2026/2750",
+   "title": "Practical Optimal Bucket Sets with Power-of-Two Radices for LFG-Based MSM Algorithms",
+   "authors": "Guiwen Luo",
+   "abstract": "Fixed point multi-scalar multiplication (MSM) is a major computational component of pairing-based SNARK proof generation. The Luo--Fu--Gong (LFG) framework is a variant of Pippenger's bucket method that uses a multiplier set $M$ and precomputed point multiples to reduce the number of buckets and online point additions. For radix $q$ and a positive multiplier set $M$, covering all digit residues requires a bucket set of size at least $q/(2|M|)$. Previous constructions approaching this bound based on primitive roots or power-residue classes impose radix restrictions that exclude $q=2^c$, thereby requiring additional binary-to-radix conversion in software implementations. We present two bucket set constructions for power-of-two radices $q=2^c$, using the multiplier sets $M=\\{1,2,3\\}$ and $M=\\{1,3\\}$, respectively. Their cardinalities are $q/6+O(\\log q)$ and $q/4+2$, respectively, so both asymptotically attain the counting bound $q/(2|M|)$ while allowing efficient radix-digit extraction through shifts and masks. We also present scalar conversion and two methods for handling the leading digit, allowing both constructions to be used within the LFG framework.",
+   "url": "https://eprint.iacr.org/2026/2750",
+   "pdf": "https://eprint.iacr.org/2026/2750.pdf",
+   "source": "ePrint",
+   "date": "2026-11-03T18:49:49+00:00"
+  },
+  {
+   "id": "eprint:2026/2749",
+   "title": "Shielded Bitcoin: Private Transfers on the Bitcoin L1",
+   "authors": "Clara Shikhelman, Mikhail Komarov, Aleksei Moskvin",
+   "abstract": "This paper introduces Shielded Bitcoin, a protocol for private transfer of Bitcoin directly on the Bitcoin L1, requiring no changes to Bitcoin consensus. Its design borrows from the architecture of Zcash and earlier shielded-note systems: value is held as encrypted notes, spends are marked by public nullifiers, and validity is established by zero-knowledge proofs. Unlike Zcash, Shielded Bitcoin introduces no dedicated consensus chain: all protocol data is published on Bitcoin, transfer validity is enforced through PIPEs v2 [ACG+26], and shielded state is reconstructed by deterministic replay of accepted transfers in Bitcoin order. At the metaprotocol transfer level, Shielded Bitcoin is non-custodial: spending authority remains with user-controlled wallet keys encrypted in a ciphertext, and neither indexers nor the replay layer receive authority to spend user notes. A shielded transfer does not publicly reveal its amount, sender, receiver, and place in the transfer graph, while keeping the validity of every encrypted state transition publicly verifiable. Shielded state, comprising the note tree, nullifier set, and block-level root history, is maintained entirely off-chain: any two correct implementations replaying the same Bitcoin history derive identical protocol state without coordination. The paper defines the transfer model, note structure, ciphertext-derived note leaves, nullifier rules, transaction binding, replay semantics, and publication assumptions. Peg-in and peg-out, the mechanisms by which value enters and exits the shielded transfer system, belong to the broader system and fall outside the scope of this paper.",
+   "url": "https://eprint.iacr.org/2026/2749",
+   "pdf": "https://eprint.iacr.org/2026/2749.pdf",
+   "source": "ePrint",
+   "date": "2026-11-03T18:48:02+00:00"
+  },
   {
    "id": "arxiv:2611.04701",
    "title": "Proving the Wrong Program: Miscompilations as a Threat to zkVM Guarantees",

@@ -1,6 +1,16 @@
 {
- "updated": "2026-11-05T19:55:03.536112+00:00",
+ "updated": "2026-11-06T06:39:16.570453+00:00",
  "papers": [
+  {
+   "id": "eprint:2026/2770",
+   "title": "Sumcheck bit packing",
+   "authors": "Matteo Frigo, abhi shelat",
+   "abstract": "Circuit-based zero-knowledge proofs over large fields waste most of a field element when they commit to a single bit. We study the problem of committing to packed witnesses, in which $m$ bits are stored in one element of $GF(2^m)$, while still allowing the proof system to verify linear claims about the individual bits. Prior approaches to this problem either (a) scale to packing only 4 bits[Fs24], (b) require tensor-structured claims and additional sumcheck rounds that incur larger soundness error [DP23,DP25], or (c) rely on Frobenius automorphisms [Koc26]. In contrast, we present a simpler reduction that exploits only the $GF(2)$-linearity of the field trace and achieves soundness error $2^{-m}$ for arbitrary bit-linear claims. We then use a characterization of trace-zero field elements to make the reduction zero-knowledge over any hiding linear commitment scheme: whereas previous constructions verify $O(m^2)$ or $O(m)$quadratic constraints in the commitment scheme, our protocol requires only linear constraints.",
+   "url": "https://eprint.iacr.org/2026/2770",
+   "pdf": "https://eprint.iacr.org/2026/2770.pdf",
+   "source": "ePrint",
+   "date": "2026-11-04T19:18:38+00:00"
+  },
   {
    "id": "arxiv:2611.06286",
    "title": "Clear Human Web: Where a Person Vouches for Every Client",
@@ -245,9 +255,9 @@
    "id": "arxiv:2610.33185",
    "title": "Post-Quantum Perfect Zero-Knowledge Arguments for NP From Any One-Way Permutation",
    "authors": "Fr\u00e9d\u00e9ric Dupuis, R\u00e9mi Ligez, Khaireddine Medhioub, Louis Salvail, Louis-Charles Thibodeau",
-   "abstract": "In this paper, we show for the first time that post-quantum one-way permutations are sufficient for perfect zero-knowledge classical arguments for all of NP with security guaranteed against quantum adversaries. We first establish that Naor, Ostrovsky,Venkatesen, and Yung's bit commitment scheme built from any permutation using interactive hashing, called the NOVY scheme, is sum-binding and collapse-binding against quantum polynomial-time committers provided the permutation is post-quantum one-way. We then show that the collapse-binding property of the NOVY scheme allows for Blum's perfect zero-knowledge argument for HAMCYCLE to remain so exactly as it stands against quantum adversaries.",
-   "url": "http://arxiv.org/abs/2610.33185v1",
-   "pdf": "http://arxiv.org/pdf/2610.33185v1",
+   "abstract": "In this paper, we show for the first time that post-quantum one-way permutations are sufficient for perfect zero-knowledge classical arguments for all of NP with security guaranteed against quantum adversaries. We first establish that Naor, Ostrovsky, Venkatesan, and Yung's bit commitment scheme built from any permutation using interactive hashing, called the NOVY scheme, is sum-binding and collapse-binding against quantum polynomial-time committers provided the permutation is post-quantum one-way. We then show that the collapse-binding property of the NOVY scheme allows for Blum's perfect zero-knowledge argument for HAMCYCLE to remain so exactly as it stands against quantum adversaries.",
+   "url": "http://arxiv.org/abs/2610.33185v2",
+   "pdf": "http://arxiv.org/pdf/2610.33185v2",
    "source": "arXiv",
    "date": "2026-10-23T18:27:44Z"
   },
@@ -635,9 +645,9 @@
    "id": "arxiv:2609.34804",
    "title": "Physics-Attested Federated Learning: Securing Collaborative Anomaly Detection in Critical Water Infrastructure",
    "authors": "Jeff Nijsse, Shu Su, Benjamin Oholeguy, Sreenivas Sremath Tirumala",
-   "abstract": "Federated learning enables industrial operators to train shared intrusion detection models without disclosing proprietary operational telemetry. However, existing defenses operate strictly in update space, leaving aggregators blind to data poisoning; model updates derived from fabricated telemetry remain indistinguishable from honest contributions. We repurpose cyber-physical process invariants, such as conservation laws and actuator couplings, from runtime detection heuristics into a verifiable admission requirement for federated updates, mined automatically from clean operational data. We evaluate this admission gate across two physical water testbeds (SWaT, WADI) and a distribution benchmark (BATADAL), testing seven aggregation rules against telemetry fabrication, exposure-only replay poisoning, and an invariant-aware adaptive adversary. Across three testbeds the mined invariants reject none of 100 honest shards and all naively fabricated ones, including optimised perturbations that FoolsGold admits in full. On real telemetry, five mined invariants detect 12 of SWaT's 35 attacks, while nine invariants detect 20, with no honest shard rejected. With nine rules, the physics gate recovers 69--100% of the targeted-attack recall lost to replay poisoning, and 54--100% of that lost to fabricated telemetry, across five standard aggregators. To reconcile physical admission control with federated data privacy, we show invariant compliance using zero-knowledge proofs (zk-SNARKs) to allow clients to prove batch adherence without revealing operational telemetry.",
-   "url": "http://arxiv.org/abs/2609.34804v1",
-   "pdf": "http://arxiv.org/pdf/2609.34804v1",
+   "abstract": "Federated learning enables industrial operators to train shared intrusion detection models without disclosing proprietary operational telemetry. However, existing defences operate strictly in update space, leaving aggregators blind to data poisoning; model updates derived from fabricated telemetry remain indistinguishable from honest contributions. We repurpose process invariants, physical relations that always hold in normal operation, such as conservation of mass, from runtime detection heuristics into a verifiable admission requirement for federated updates, mined automatically from clean operational data. We evaluate this admission gate across two physical water testbeds (SWaT, WADI) and a distribution benchmark (BATADAL), testing seven aggregation rules against telemetry fabrication, exposure-only replay poisoning, and an invariant-aware adaptive adversary. Across three testbeds the mined invariants reject none of 25 honest shards except every cross-channel fabrication on SWaT and BATADAL, including optimised perturbations that the similarity based FoolsGold admits in full. On real telemetry, five mined invariants detect 12 of SWaT's 35 attacks, while nine invariants detect 20. With nine invariants, the admission gate removes 78% of the targeted-attack recall lost to replay poisoning (95% CI 57--97%, $p < 0.001$ over 20 seeds) across five standard aggregators, and 82% under FedAvg. To reconcile physical admission control with federated data privacy, we show invariant compliance using zero-knowledge proofs (zk-SNARKs) to allow clients to prove batch adherence without revealing operational telemetry.",
+   "url": "http://arxiv.org/abs/2609.34804v2",
+   "pdf": "http://arxiv.org/pdf/2609.34804v2",
    "source": "arXiv",
    "date": "2026-09-28T10:08:19Z"
   },

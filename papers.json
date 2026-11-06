@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T06:39:16.570453+00:00",
+ "updated": "2026-11-06T19:22:35.585351+00:00",
  "papers": [
   {
    "id": "eprint:2026/2770",
@@ -45,7 +45,7 @@
    "id": "eprint:2026/2750",
    "title": "Practical Optimal Bucket Sets with Power-of-Two Radices for LFG-Based MSM Algorithms",
    "authors": "Guiwen Luo",
-   "abstract": "Fixed point multi-scalar multiplication (MSM) is a major computational component of pairing-based SNARK proof generation. The Luo--Fu--Gong (LFG) framework is a variant of Pippenger's bucket method that uses a multiplier set $M$ and precomputed point multiples to reduce the number of buckets and online point additions. For radix $q$ and a positive multiplier set $M$, covering all digit residues requires a bucket set of size at least $q/(2|M|)$. Previous constructions approaching this bound based on primitive roots or power-residue classes impose radix restrictions that exclude $q=2^c$, thereby requiring additional binary-to-radix conversion in software implementations. We present two bucket set constructions for power-of-two radices $q=2^c$, using the multiplier sets $M=\\{1,2,3\\}$ and $M=\\{1,3\\}$, respectively. Their cardinalities are $q/6+O(\\log q)$ and $q/4+2$, respectively, so both asymptotically attain the counting bound $q/(2|M|)$ while allowing efficient radix-digit extraction through shifts and masks. We also present scalar conversion and two methods for handling the leading digit, allowing both constructions to be used within the LFG framework.",
+   "abstract": "Fixed point multi-scalar multiplication (MSM) is a major computational component of pairing-based SNARK proof generation. The Luo--Fu--Gong (LFG) framework is a variant of Pippenger's bucket method that uses a multiplier set $M$ and precomputed point multiples to reduce the number of buckets and online point additions. For radix $q$ and a positive multiplier set $M$, covering all digit residues requires a bucket set of size at least $q/(2|M|)$. Previous constructions approaching this bound based on primitive roots or power-residue classes impose radix restrictions that exclude $q=2^c$, thereby requiring additional binary-to-radix conversion in software implementations. We present two main bucket set constructions for power-of-two radices $q=2^c$, using the multiplier sets $M=\\{1,2,3\\}$ and $M=\\{1,3\\}$, respectively. Their cardinalities are $q/6+O(\\log q)$ and $q/4+2$, respectively, so both asymptotically attain the counting bound $q/(2|M|)$ while allowing efficient radix-digit extraction through shifts and masks. We further give two generalizations. Using consecutive powers of $3$ as multipliers yields bucket sets of size $q/(2\\ell)+O(\\log q)$ for every fixed positive integer $\\ell$. For $\\ell=2^d$ and $c\\ge d+2$, consecutive odd multipliers yield bucket sets of size $q/(2\\ell)+d+1$. We also present scalar conversion and two strategies for handling the leading digit, allowing the bucket set constructions to be used within the LFG framework.",
    "url": "https://eprint.iacr.org/2026/2750",
    "pdf": "https://eprint.iacr.org/2026/2750.pdf",
    "source": "ePrint",
@@ -3030,16 +3030,6 @@
    "pdf": "http://arxiv.org/pdf/2510.05376v3",
    "source": "arXiv",
    "date": "2025-10-06T21:10:11Z"
-  },
-  {
-   "id": "arxiv:2510.01967",
-   "title": "ZK-WAGON: Imperceptible Watermark for Image Generation Models using ZK-SNARKs",
-   "authors": "Aadarsh Anantha Ramakrishnan, Shubham Agarwal, Selvanayagam S, Kunwar Singh",
-   "abstract": "As image generation models grow increasingly powerful and accessible, concerns around authenticity, ownership, and misuse of synthetic media have become critical. The ability to generate lifelike images indistinguishable from real ones introduces risks such as misinformation, deepfakes, and intellectual property violations. Traditional watermarking methods either degrade image quality, are easily removed, or require access to confidential model internals - making them unsuitable for secure and scalable deployment. We are the first to introduce ZK-WAGON, a novel system for watermarking image generation models using the Zero-Knowledge Succinct Non Interactive Argument of Knowledge (ZK-SNARKs). Our approach enables verifiable proof of origin without exposing model weights, generation prompts, or any sensitive internal information. We propose Selective Layer ZK-Circuit Creation (SL-ZKCC), a method to selectively convert key layers of an image generation model into a circuit, reducing proof generation time significantly. Generated ZK-SNARK proofs are imperceptibly embedded into a generated image via Least Significant Bit (LSB) steganography. We demonstrate this system on both GAN and Diffusion models, providing a secure, model-agnostic pipeline for trustworthy AI image generation.",
-   "url": "http://arxiv.org/abs/2510.01967v1",
-   "pdf": "http://arxiv.org/pdf/2510.01967v1",
-   "source": "arXiv",
-   "date": "2025-10-02T12:39:57Z"
   }
  ]
 }

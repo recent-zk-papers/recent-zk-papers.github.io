@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T06:12:29.627060+00:00",
+ "updated": "2026-11-11T14:18:53.844045+00:00",
  "papers": [
   {
    "id": "arxiv:2611.14083",
@@ -234,7 +234,7 @@
   {
    "id": "eprint:2026/2721",
    "title": "Authenticated Outsourced Incrementally Verifiable MPC",
-   "authors": "Hamidreza Khoshakhlagh, Anders Kalles\u00f8e, Anders Dalskov",
+   "authors": "Anders Dalskov, Anders Kalles\u00f8e, Hamidreza Khoshakhlagh",
    "abstract": "Many privacy-preserving applications such as iterative machine learning training require executing ongoing computations over a secret state for long periods of time. While MPC enables secure computation, long-lived secret state is vulnerable to adaptive corruptions, requiring periodic share refreshes and committee rotation. In many settings, it is desirable for external parties to be able to verify that these state updates and rotations are performed correctly, but existing approaches for such public verifiability incur high overhead as they require MPC nodes to generate expensive proofs over secret-shared data. We propose Authenticated Outsourced Incrementally Verifiable MPC (IV-MPC), a framework for efficient public verification of long-running MPC computation. Our approach decouples private proof computation (run by MPC nodes) from public tasks within the proof generation that can be delegated to a single external prover $P^*$. To realize this architecture, we introduce three main components: (1) a Private-opening Polynomial Commitment Scheme (PoPCS) that lets an incoming committee prove they received the correct state shares without revealing the underlying data; (2) an efficient distributed proof system based on the sumcheck protocol and compressed $\\Sigma$-protocols to verify state updates; and (3) a stateless handover technique that anchors committee transfers to a fixed state commitment, preventing proof sizes from growing over time. Combined with an incrementally verifiable computation (IVC) proof run by the external prover $P^*$, IV-MPC enables external auditors to verify correctness of MPC computation at every round with verification time asymptotically independent of the total number of epochs.",
    "url": "https://eprint.iacr.org/2026/2721",
    "pdf": "https://eprint.iacr.org/2026/2721.pdf",
@@ -1480,6 +1480,16 @@
    "pdf": "http://arxiv.org/pdf/2607.13235v1",
    "source": "arXiv",
    "date": "2026-07-14T19:57:43Z"
+  },
+  {
+   "id": "eprint:2026/1435",
+   "title": "FiltrumVote: Scalable, Verifiable, and Coercion-Resistant Internet Voting",
+   "authors": "Leonardo Kimura, Dimitri Leskow, Diego F. Aranha, Roberto Ara\u00fajo, Marcos Simplicio",
+   "abstract": "Internet voting can increase voter turnout and reduce operational costs; however, it also facilitates voter coercion. One compelling approach to address this issue is deniable vote updating, which allows voters to cast multiple ballots while counting only their final vote. Despite its intuitive appeal, achieving deniable vote updating together with verifiability and scalability has proven challenging. Therefore, we present FiltrumVote, a scalable, publicly verifiable, and coercion-resistant Internet voting system based on deniable vote updating. It has a quasi-linear cleansing phase, and it is built mainly from zero-knowledge proofs with standard $\\Sigma-$protocol techniques. As a result, FiltrumVote is highly scalable: a standard computer takes less than 5 hours to prove all zero-knowledge proofs for one million votes.",
+   "url": "https://eprint.iacr.org/2026/1435",
+   "pdf": "https://eprint.iacr.org/2026/1435.pdf",
+   "source": "ePrint",
+   "date": "2026-07-13T22:23:34+00:00"
   },
   {
    "id": "arxiv:2607.11466",
@@ -3190,16 +3200,6 @@
    "pdf": "http://arxiv.org/pdf/2510.06784v2",
    "source": "arXiv",
    "date": "2025-10-08T09:10:32Z"
-  },
-  {
-   "id": "arxiv:2510.05807",
-   "title": "Privacy-Preserving On-chain Permissioning for KYC-Compliant Decentralized Applications",
-   "authors": "Fabian Piper, Karl Wolf, Jonathan Heiss",
-   "abstract": "Decentralized applications (dApps) in Decentralized Finance (DeFi) face a fundamental tension between regulatory compliance requirements like Know Your Customer (KYC) and maintaining decentralization and privacy. Existing permissioned DeFi solutions often fail to adequately protect private attributes of dApp users and introduce implicit trust assumptions, undermining the blockchain's decentralization. Addressing these limitations, this paper presents a novel synthesis of Self-Sovereign Identity (SSI), Zero-Knowledge Proofs (ZKPs), and Attribute-Based Access Control to enable privacy-preserving on-chain permissioning based on decentralized policy decisions. We provide a comprehensive framework for permissioned dApps that aligns decentralized trust, privacy, and transparency, harmonizing blockchain principles with regulatory compliance. Our framework supports multiple proof types (equality, range, membership, and time-dependent) with efficient proof generation through a commit-and-prove scheme that moves credential authenticity verification outside the ZKP circuit. Experimental evaluation of our KYC-compliant DeFi implementation shows considerable performance improvement for different proof types compared to baseline approaches. We advance the state-of-the-art through a holistic approach, flexible proof mechanisms addressing diverse real-world requirements, and optimized proof generation enabling practical deployment.",
-   "url": "http://arxiv.org/abs/2510.05807v1",
-   "pdf": "http://arxiv.org/pdf/2510.05807v1",
-   "source": "arXiv",
-   "date": "2025-10-07T11:24:51Z"
   }
  ]
 }

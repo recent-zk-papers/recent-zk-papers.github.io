@@ -1,6 +1,16 @@
 {
- "updated": "2026-11-10T19:41:47.195856+00:00",
+ "updated": "2026-11-11T06:12:29.627060+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.14083",
+   "title": "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models",
+   "authors": "Tomer Solberg",
+   "abstract": "We present Sable, an argument system and single-GPU prover for the statement that a committed, integer-quantized transformer produced a given token sequence from a given prompt, bit for bit. Sable fixes an integer function F_O with no floating-point step, in which every rounding, normalization, softmax and sampling decision is determined by its inputs, and proves it with a constraint system whose relations provably never wrap modulo the 31-bit KoalaBear prime. The proof batches zerochecks and LogUp-GKR lookups into one sumcheck per domain, and commits to every witness tensor and weight in one multilinear commitment built from Reed-Solomon codes, BLAKE3 Merkle trees and a mixed-length BaseFold opening. The prover streams the model layer by layer on one GPU. On one NVIDIA RTX PRO 6000 Blackwell GPU, Sable proves all 64 layers of Qwen2.5-32B in 92.5 s for 4,096 tokens and 398 s for 16,384 tokens, and covers Qwen3-32B and the mixture-of-experts Qwen3-30B-A3B (4,096 tokens in 121.8 and 84.7 s). A proof costs 41 to 50 times the serving time, or 6.4 cents per 4,096-token request at public GPU prices, and 40 to 64 times less time per parameter and token than zkLLM. On WikiText-2, F_O's greedy token matches the BF16 model's at 86.3% of positions; on Qwen3, F_O is within 1.6 points of BF16 on MMLU and 1.7 points on GSM8K. A verifier with a compiled core checks a proof on one CPU core in 19 to 56 s. In the random-oracle model, the interactive proof has round-by-round soundness error 2^-103. The proof is not zero-knowledge, so the system targets open-weight models. Code: https://github.com/moonmath-ai/Sable",
+   "url": "http://arxiv.org/abs/2611.14083v1",
+   "pdf": "http://arxiv.org/pdf/2611.14083v1",
+   "source": "arXiv",
+   "date": "2026-11-10T13:47:29Z"
+  },
   {
    "id": "arxiv:2611.12636",
    "title": "BioBind: Binding Biometric Deduplication to Zero-Knowledge Authentication",
@@ -32,6 +42,36 @@
    "date": "2026-11-08T16:15:20Z"
   },
   {
+   "id": "eprint:2026/2824",
+   "title": "Incrementally Verifiable Oracle Aided Computation",
+   "authors": "Shafi Goldwasser, Yael Tauman Kalai",
+   "abstract": "Incrementally verifiable computation ($\\IVC$) allows a prover to maintain a short proof that can be efficiently updated after each computation step, without retaining or recomputing the preceding execution. In the context of AI safety, the need for incremental verification is particularly important, as AI systems interact with users over time and perform further computation after each interaction. However, standard $\\IVC$ schemes do not directly address a crucial feature of AI tasks: their dependence on external information and expertise. Indeed, the UK AISI Alignment Team~\\cite{IrvingM25} emphasizes that verification methods for AI safety should accommodate access to external information and human judgment. This is the topic of this paper. We construct $\\IVC$ schemes for {\\em oracle-aided} computations under the Learning with Errors ($\\LWE$) assumption by first constructing succinct non-interactive arguments ($\\SNARG$s), and then extending them to the incremental setting. We consider the following two settings, where below, $\\lambda$ is the security parameter, $n$ is the input length, and $T$, $S$, and $Q$ are the time, space, and oracle-query bounds. \\begin{itemize} \\item \\textbf{Robust computations.} For bounded-space computations, including non-deterministic computations, in which every accepting purported execution on a false input contains at least an $\\varepsilon$-fraction of incorrect oracle answers, we construct {\\em privately verifiable} $\\SNARG$s and $\\IVC$. For $\\IVC$, the corresponding robustness condition is imposed on the claimed configuration. Public parameters, private verification keys, and proofs have length $\\poly(\\lambda,S,\\log T,1/\\varepsilon)$, and verification uses $O(\\lambda/\\varepsilon)$ oracle calls. We complement this result with a lower bound ruling out (deterministic) publicly verifiable $\\SNARG$s and $\\IVC$s with public parameters of length $o(n)$, and $o(Q)$ verifier oracle queries. \\item \\textbf{Signed oracles.} For oracles that digitally sign their query-answer pairs, we construct publicly verifiable $\\SNARG$s and $\\IVC$ without a robustness assumption, and with oracle-free setup and verification. Public parameters and proofs have length $\\poly(\\lambda,S,\\log T)$. For deterministic computations with oracle query and answer lengths $\\poly(\\lambda,\\log T)$, we remove the dependence on $S$, obtaining public parameter and proof lengths $\\poly(\\lambda,\\log T)$. \\end{itemize} All our constructions have adaptive completeness and soundness. Sub-exponential hardness of $\\LWE$ suffices for all constructions; polynomial hardness suffices in the deterministic signed-oracle setting when $T$ is polynomially bounded in $\\lambda$. All cryptographic assumptions are required to hold even given access to the underlying oracle.",
+   "url": "https://eprint.iacr.org/2026/2824",
+   "pdf": "https://eprint.iacr.org/2026/2824.pdf",
+   "source": "ePrint",
+   "date": "2026-11-08T15:19:42+00:00"
+  },
+  {
+   "id": "eprint:2026/2813",
+   "title": "Overcoming Padding in Cryptography via Hardness of Certifying Random Strings",
+   "authors": "Yao-Ching Hsieh, Abhishek Jain, Jiatu Li, Surya Mathialagan",
+   "abstract": "Modern cryptography relies on a provable security paradigm where the security of a primitive is established from the intractability of one or more computational problems. Hybrid arguments are central to this approach. Somewhat unexpectedly, many security proofs in the literature that use this methodology require hybrids with description-size larger than the real scheme. To argue security, the real scheme is artificially padded to match this size. This so-called \u201csuperfluous padding\u201d phenomenon is surprisingly commonplace and poses a barrier to achieving succinct cryptographic primitives where the size of the scheme parameters does not grow with the input length. We present a framework to eliminate padding in cryptography. We demonstrate several applications, including rate-1 iO, succinct (and extractable) witness encryption and succinct non-interactive arguments with short CRS for subclasses of NP, and multi-input functional encryption for functions with unbounded arity. To obtain our results, we establish a new connection between cryptography and proof complexity. Central to our approach is the notion of proof-complexity generators (PCGs) [Kraj\u00ed\u010dek'01, Alekhnovich, Ben-Sasson, Razborov, Wigderson'04], which, informally speaking, formalizes the hardness of certifying random (incompressible) strings with propositional proof systems. Our applications are derived from a master theorem that lifts cryptographic security on \u201ccompressible instances\u201d to security on any instance under the existence of PCGs. Due to its broad scope, this theorem might find future application",
+   "url": "https://eprint.iacr.org/2026/2813",
+   "pdf": "https://eprint.iacr.org/2026/2813.pdf",
+   "source": "ePrint",
+   "date": "2026-11-07T05:43:14+00:00"
+  },
+  {
+   "id": "eprint:2026/2810",
+   "title": "QUASI: Post-Quantum Quorum Attestation of Pre-Validated Statements",
+   "authors": "Maksym Ioffe, Dahlia Malkhi",
+   "abstract": "We present QUASI, a newly conceived class of protocols that enable a group of parties to produce a publicly verifiable attestation about a pre-validated statement. Designed for quorum-based systems, QUASI enables parties to attest to external entities that the statement is valid. Surprisingly, each party need not sign the entire statement: authenticating only a small subset of symbols suffices for the quorum to attest to the whole. A simple deterministic construction illustrates this possibility. Built purely from hashing and error correction, QUASI achieves small per-party contributions and low attestation generation and verification costs, without relying on SNARKs for aggregation. Our main contribution is a randomized construction achieving reductions of more than $10\\times$ in per-party contribution size and hash computations for generation and verification, compared with full hash-based signatures. QUASI is a generic primitive supporting diverse applications. Two principal use cases are external attestation for signature-free consensus, enabling clients to verify statements about committed state; and preprocessing for SNARK-based aggregation, compounding QUASI's savings with succinct-proof compression.",
+   "url": "https://eprint.iacr.org/2026/2810",
+   "pdf": "https://eprint.iacr.org/2026/2810.pdf",
+   "source": "ePrint",
+   "date": "2026-11-07T02:32:00+00:00"
+  },
+  {
    "id": "arxiv:2611.10403",
    "title": "QUASI: Post-Quantum Quorum Attestation of Pre-Validated Statements",
    "authors": "Maksym Ioffe, Dahlia Malkhi",
@@ -40,6 +80,16 @@
    "pdf": "http://arxiv.org/pdf/2611.10403v1",
    "source": "arXiv",
    "date": "2026-11-07T02:29:20Z"
+  },
+  {
+   "id": "eprint:2026/2809",
+   "title": "Pastel: Single Secret Leader Election with Private Weights",
+   "authors": "Jung Hee Cheon, Kevin Choi, Intak Hwang, Jaehee Kang, Alireza Kavousi, Junho Lee, Yongdong Yeo",
+   "abstract": "A single secret leader election (SSLE) protocol allows an election of exactly one leader among $n$ parties in a secrecy-preserving manner, where only the elected leader knows it has won until it publicly announces and claims leadership. Motivated by proof-of-stake blockchains where stakes are stored in an encrypted or committed form for the sake of privacy, we design and implement the first SSLE protocol with private weights. Each party's probability of winning an election in our protocol is weighted by stake, and these weights are private. Prior schemes in the literature only allow probabilistic (i.e. expectation of one but can be zero or many leaders) elections in the same setting. Preserving privacy also means public verification is paramount in order for a protocol to be practically reliable. In this respect, our protocol achieves security against malicious adversaries with a concrete implementation. In particular, we concretely implement the needed zero-knowledge proofs and thus do not rely on slashing (financial penalties) to achieve end-to-end malicious security, though slashing can still serve as a performance optimization. Along the way, we observe that previous SSLE protocols in a setting without private weights (either unweighted or with public weights) are either maliciously secure with implementation or post-quantum secure but not both, while our protocol achieves both.",
+   "url": "https://eprint.iacr.org/2026/2809",
+   "pdf": "https://eprint.iacr.org/2026/2809.pdf",
+   "source": "ePrint",
+   "date": "2026-11-07T01:01:10+00:00"
   },
   {
    "id": "eprint:2026/2805",
@@ -3150,16 +3200,6 @@
    "pdf": "http://arxiv.org/pdf/2510.05807v1",
    "source": "arXiv",
    "date": "2025-10-07T11:24:51Z"
-  },
-  {
-   "id": "arxiv:2510.05376",
-   "title": "Constraint-Level Design of zkEVMs: Architectures, Trade-offs, and Evolution",
-   "authors": "Yahya Hassanzadeh-Nazarabadi, Sanaz Taheri-Boshrooyeh",
-   "abstract": "Zero-Knowledge Ethereum Virtual Machines (zkEVMs) face an inherent tension. The Ethereum Virtual Machine (EVM) was built for transparent step-by-step execution. Proving that execution in zero-knowledge requires recasting it as algebraic circuits that encode computation as mathematical constraints. Existing surveys address zkEVMs at the level of implementations, cryptographic primitives, or Layer 2 deployment, leaving the constraint-system design that governs their cost largely unexamined. This survey provides the first constraint-level analysis of how production zkEVMs and universal Zero-Knowledge Virtual Machines (zkVMs) resolve this tension. We show that the degree of EVM compatibility, captured by the Type 1-4 spectrum, is the defining architectural decision. We classify the design space along four dimensions, namely arithmetization frameworks, dispatch strategies, semantic rewrites, and recursion approaches. The most Ethereum-equivalent systems accept higher constraint counts to preserve full bytecode fidelity, while those that relax fidelity attain lower constraint cost. We close with the open problems that this constraint-level view brings into focus.",
-   "url": "http://arxiv.org/abs/2510.05376v3",
-   "pdf": "http://arxiv.org/pdf/2510.05376v3",
-   "source": "arXiv",
-   "date": "2025-10-06T21:10:11Z"
   }
  ]
 }

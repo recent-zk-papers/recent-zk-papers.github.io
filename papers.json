@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T14:18:53.844045+00:00",
+ "updated": "2026-11-12T00:40:06.538987+00:00",
  "papers": [
   {
    "id": "arxiv:2611.14083",
@@ -1770,6 +1770,16 @@
    "pdf": "http://arxiv.org/pdf/2606.02344v1",
    "source": "arXiv",
    "date": "2026-06-01T14:54:08Z"
+  },
+  {
+   "id": "eprint:2026/1118",
+   "title": "AuditPay: Anonymous Payments with Controlled Oversight",
+   "authors": "Elkana Tovey, Yossi Gilad, Aviv Zohar",
+   "abstract": "This paper introduces AuditPay, a novel mechanism for blockchain mixers that enables controlled oversight through an ``auditing budget.\u2019\u2019 Auditors may monitor up to a budgeted number of addresses per epoch (e.g., an hour or a day), without revealing to users which addresses are monitored. Unlike traditional approaches that require users to voluntarily disclose viewing keys to trusted gatekeepers, AuditPay cryptographically enforces auditing compliance while preserving privacy for non-monitored user addresses and without introducing additional trust assumptions. At the core of AuditPay\u2019s design is a selective encryption mechanism coupled with an efficient audit-key encoding scheme, enforced by a lightweight zero-knowledge proof. Users encrypt audit-relevant information under an audit key, which permits decryption only if the payment is to (or, alternatively, from) an address selected by the auditor for monitoring. We implement AuditPay as an Ethereum-based payment mixer and show through experiments on our prototype that its performance and gas-cost overheads are modest, providing a practical solution for balancing payment oversight with user privacy.",
+   "url": "https://eprint.iacr.org/2026/1118",
+   "pdf": "https://eprint.iacr.org/2026/1118.pdf",
+   "source": "ePrint",
+   "date": "2026-05-31T13:40:55+00:00"
   },
   {
    "id": "arxiv:2606.00962",

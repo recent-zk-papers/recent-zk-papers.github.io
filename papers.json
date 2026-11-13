@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T06:41:12.298368+00:00",
+ "updated": "2026-11-13T19:39:10.137704+00:00",
  "papers": [
   {
    "id": "arxiv:2611.17042",
@@ -3260,16 +3260,6 @@
    "pdf": "http://arxiv.org/pdf/2510.09715v1",
    "source": "arXiv",
    "date": "2025-10-10T06:06:05Z"
-  },
-  {
-   "id": "arxiv:2510.08355",
-   "title": "ExPrESSO: Zero-Knowledge backed Extensive Privacy Preserving Single Sign-on",
-   "authors": "Kaustabh Barman, Fabian Piper, Sanjeet Raj Pandey, Axel Kuepper",
-   "abstract": "User authentication is one of the most important aspects for secure communication between services and end-users over the Internet. Service providers leverage Single-Sign On (SSO) to make it easier for their users to authenticate themselves. However, standardized systems for SSO, such as OIDC, do not guarantee user privacy as identity providers can track user activities. We propose a zero-knowledge-based mechanism that integrates with OIDC to let users authenticate through SSO without revealing information about the service provider. Our system leverages Groth's zk-SNARK to prove membership of subscribed service providers without revealing their identity. We adopt a decentralized and verifiable approach to set up the prerequisites of our construction that further secures and establishes trust in the system. We set up high security targets and achieve them with minimal storage and latency cost, proving that our research can be adopted for production.",
-   "url": "http://arxiv.org/abs/2510.08355v1",
-   "pdf": "http://arxiv.org/pdf/2510.08355v1",
-   "source": "arXiv",
-   "date": "2025-10-09T15:42:01Z"
   }
  ]
 }

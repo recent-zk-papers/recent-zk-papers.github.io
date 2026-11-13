@@ -1,6 +1,56 @@
 {
- "updated": "2026-11-12T23:36:55.706194+00:00",
+ "updated": "2026-11-13T06:41:12.298368+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.17042",
+   "title": "Infrastructure for Verifiable AI: Where Proof Costs Go and How Hardware Can Help",
+   "authors": "Yihan Xia, Wenxin Xu, Taotao Wang",
+   "abstract": "Users of artificial intelligence services, including those powered by large language models and other transformer-based models, need assurance that inference and training follow the declared computation without exposing private models or data. Zero-knowledge proofs can provide this assurance, but proof generation remains expensive. Hardware acceleration research often reports gains for individual cryptographic operations, leaving their effect on the full cost of proving neural-network workloads, particularly large transformer models, unclear. We introduce a four-layer framework linking verifiable AI workloads, proof systems, cryptographic kernels and hardware platforms, use it to review the literature, and add original measurements of six provers and seven kernels to identify which costs matter in practice. Our measurements show that the dominant cost changes with the proof system and input length. In low-rank fine-tuning, the cost of opening commitments to fixed model weights remains nearly constant across input lengths from 64 to 2048, while the work associated with intermediate values grows. A 13-billion-parameter fine-tuning configuration exceeds the capacity of a 40-gigabyte graphics processor but completes on an 80-gigabyte device, showing why capacity must be assessed alongside execution time. Our kernel profiling further identifies instruction issue and synchronization limits that a bandwidth-only model misses. We use these findings to assess graphics processors, reconfigurable logic, custom chips and existing artificial intelligence accelerators. The resulting research agenda connects proof-friendly numeric formats, reuse of fixed-weight commitments, heterogeneous execution and shared benchmarks to the measured bottlenecks. Effective acceleration requires selecting hardware and proof-system optimizations around the cost profile of the target workload.",
+   "url": "http://arxiv.org/abs/2611.17042v1",
+   "pdf": "http://arxiv.org/pdf/2611.17042v1",
+   "source": "arXiv",
+   "date": "2026-11-12T16:27:07Z"
+  },
+  {
+   "id": "arxiv:2611.16065",
+   "title": "Tokenized Reward Systems for Federated Learning: The Privacy vs. Fairness Tradeoff",
+   "authors": "Andreas Sendros, Nikolaos Pavlidis, Vasilios Perifanis, Pavlos S. Efraimidis",
+   "abstract": "Federated learning (FL) systems increasingly rely on blockchain based reward mechanisms to incentivize participation while preserving data privacy. We design and empirically evaluate two complementary Solidity smart contracts for FL reward distribution: the first one that allocates rewards proportionally to a publicly disclosed quality score, and a privacy preserving variant that hides individual quality scores behind a zero-knowledge (ZK) proof of a threshold condition. Both contracts mint a non transferable, use-and-burn token maintaining a trustless incentive structure. We evaluate the two designs through MNIST training with adversarial behavior, including Sybil attacks, zero gradient and random noise, across three independent random seeds. Our results reveal a fundamental tradeoff between cryptographic privacy and incentive fairness. The privacy preserving architecture strictly degrades system robustness, doubling the adversary's average reward capture while introducing severe outcome variance. This vulnerability is driven by a structural self-inclusion bias within cosine-similarity scoring: as the global model converges, legitimate gradient updates naturally diminish, rendering them statistically indistinguishable from bounded noise. Adversaries exploit this dynamic to systematically breach the ZK threshold, triggering a late stage failure cascade that culminates in absolute adversary monopoly over the reward pool and the total exclusion of honest contributors. Alongside a closed-form theorem formalizing this privacy--Sybil resistance tradeoff, we map strict mainnet deployment boundaries via linear gas scaling models, explicitly incorporating the post-Fusaka EIP-7825 per transaction gas cap. Ultimately, while cryptographically secure, static threshold ZK gates fail as incentive layer fairness mechanisms under realistic FL convergence dynamics on standard benchmarks.",
+   "url": "http://arxiv.org/abs/2611.16065v1",
+   "pdf": "http://arxiv.org/pdf/2611.16065v1",
+   "source": "arXiv",
+   "date": "2026-11-11T22:21:23Z"
+  },
+  {
+   "id": "eprint:2026/2868",
+   "title": "Bulletproofs are Optimal: Lower Bounds for Vector Commitments from Fiat-Shamir in Pairing-Free Groups",
+   "authors": "Marian Dietz, Emanuele Giunta",
+   "abstract": "Vector Commitments allow parties to commit to an (ordered) vector and to later succinctly open it at any desired position. In plain (i.e., known order and pairing-free) prime-order groups, all state-of-the-art constructions rely on the combination of a generalized Pedersen commitment and an inner product argument. This includes the celebrated constructions of Bootle et al. (EUROCRYPT 2016) and B\u00fcnz et al. (S&P 2018), and subsequent improvements. All of these achieve proofs consisting of $\\Theta(\\log n)$ group elements, and further provide useful properties including malleability, subvector opening and transparent setup. However, breaking the $O(\\log n)$ barrier in the plain discrete logarithm setting has proven to be a hard problem. This is in stark contrast with other settings, e.g. from pairing-friendly groups or groups of unknown order, where constructions with constant-size commitment and openings have been known for over a decade. In this work we investigate whether this limitation is inherent to constructions based on prime-order groups. Specifically we prove new lower bounds for any accumulator (a weaker object than vector commitments, thus making our result more general), with interactive public-coin membership proof in Maurer's Generic Group Model. An implication of our result is that in such setting at least one of the following must occur: (i) the commitment has super-constant size; (ii) the opening proof contains $\\Omega(\\log n)$ group elements; (iii) the opening proof has length $n^{1-o(1)}$. Our bound further extends to primitives that directly imply accumulators/VCs including polynomial/functional commitments and inner product arguments.",
+   "url": "https://eprint.iacr.org/2026/2868",
+   "pdf": "https://eprint.iacr.org/2026/2868.pdf",
+   "source": "ePrint",
+   "date": "2026-11-11T14:30:49+00:00"
+  },
+  {
+   "id": "eprint:2026/2866",
+   "title": "Anamorphic NIZK: Definition, Construction and More",
+   "authors": "Wenhui Kong, Gongxian Zeng, Zhengan Huang",
+   "abstract": "Anamorphic encryption enables covert communication despite disclosure of ordinary decryption keys~\\cite{PersianoPY22}. Work on anamorphic signatures extends this capability to settings permitting only authentication and shows that Fiat-Shamir preserves anamorphism~\\cite{kutylowski2023anamorphicSignatures,fiat1986prove}. However, this result assumes an already anamorphic protocol and does not by itself ensure witness privacy against the recipient, motivating anamorphism directly in non-interactive zero-knowledge proofs (NIZKs). We introduce anamorphic NIZK (ANIZK), in which publicly verifiable proofs carry covert messages recoverable with a double key. The framework formalizes anamorphic security, strong robustness, and recipient anamorphic zero knowledge and simulation extractability. A generic construction in the random oracle model combines suitable Sigma protocols with authenticated encryption with associated data through a salted Fiat-Shamir transform. Applying ANIZK within the Naor-Yung paradigm \\cite{NaorYung90} yields recipient anamorphic encryption satisfying STE-xCCA1, SIND-aCCA1, and SIND-nCCA security under the notions of~\\cite{choi2026unified}. Finally, an asymmetric variant of ANIZK, termed ASY-ANIZK, combines a labeled NIZK with public-key encryption satisfying ciphertext pseudorandomness and random ciphertext rejection. It separates public embedding from secret recovery and achieves weak robustness, as public embedding precludes strong robustness.",
+   "url": "https://eprint.iacr.org/2026/2866",
+   "pdf": "https://eprint.iacr.org/2026/2866.pdf",
+   "source": "ePrint",
+   "date": "2026-11-11T10:44:17+00:00"
+  },
+  {
+   "id": "arxiv:2611.14984",
+   "title": "VRMaaS: Verifiable Reward-Model-as-a-Service for Trustworthy LLM Alignment",
+   "authors": "Guofu Liao, Hailang Xi, Taotao Wang, Shengli Zhang, Rongcheng Tu, Hao Liao",
+   "abstract": "Reward models (RMs) are increasingly deployed as service components in LLM alignment pipelines, where payment, audit, moderation, and governance workflows act on the scores they return. An inference proof alone does not show whether a score belongs to the intended request, model checkpoint, numerical configuration, and verifier: in a controlled comparison that isolates the accepted statement from prover scale, a generic inference proof wrapped for on-chain checking remains valid after six classes of such service-field substitution. We formulate verifiable reward-model-as-a-service (VRMaaS) as a service-output integrity problem and present a framework in which each returned reward becomes a proof-carrying artifact. Its off-chain acceptance rule binds request identity, committed weights, verifier and configuration identifiers, proof-task order, and the digest of the exported package, so auditors can check a reward without rerunning the private RM or exposing inputs, checkpoints, or hidden activations; an optional on-chain zero-knowledge wrapper gives contracts a partial attestation of selected consistency checks and supplied service fields. The framework decomposes Transformer RM serving into arithmetic and lookup-backed proof tasks, aggregates them into a composite proof, and links hidden operands to the committed weights. A GPU prototype on 1B, 3B, and 8B reward models over 128-1024 tokens preserves 93.5-99% pairwise agreement with the baseline RM and rejects every tested service-field substitution in complete artifacts. Using exact integer witnesses and request-level aggregation of weight-binding openings, it generates complete artifacts in 49.8-206.1 seconds across the evaluated settings; auditors verify retained artifacts in 1.94-5.11 seconds, and partial public attestation costs about 217K gas. These costs suit delayed audit, settlement, and governance workflows.",
+   "url": "http://arxiv.org/abs/2611.14984v1",
+   "pdf": "http://arxiv.org/pdf/2611.14984v1",
+   "source": "arXiv",
+   "date": "2026-11-11T03:41:30Z"
+  },
   {
    "id": "arxiv:2611.14083",
    "title": "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models",
@@ -10,6 +60,16 @@
    "pdf": "http://arxiv.org/pdf/2611.14083v1",
    "source": "arXiv",
    "date": "2026-11-10T13:47:29Z"
+  },
+  {
+   "id": "eprint:2026/2858",
+   "title": "Revisiting Fiat-Shamir NIZKPs and Signatures from Seed-Friendly Sigma Protocols",
+   "authors": "Andrea Flamini, Federico Pintore, Edoardo Signorini",
+   "abstract": "Seed-friendly sigma protocols have a small challenge space, and when compiled into NIZKP, they require parallel repetition to reduce extraction error. Fiat-Shamir proofs obtained from seed-friendly Sigma protocols can be made more compact with fixed-weight parallel repetitions, and seed-tree compression. So far, these have been presented as compression techniques for the proof size, but standard analysis of the extraction property of NIZKP still relies on the Forking Lemma and rewinding. In this work, we show that not only fixed-weight parallel repetition and seed-tree compression improve the compactness of the proofs, but also improve their security. Interestingly, when the prover randomness is generated from a salted seed tree, interacting with a random oracle, the standard Fiat-Shamir compilation is straight-line extractable in the classical random-oracle model, without any additional proof field or proof-of-work. We further show that the Fiat-Shamir NIZKP from seed-friendly Sigma protocols satisfies multi-proof zero knowledge, and that its straight-line extractability does not require the underlying seed-friendly Sigma protocol to have unique responses.",
+   "url": "https://eprint.iacr.org/2026/2858",
+   "pdf": "https://eprint.iacr.org/2026/2858.pdf",
+   "source": "ePrint",
+   "date": "2026-11-10T10:25:02+00:00"
   },
   {
    "id": "arxiv:2611.12636",

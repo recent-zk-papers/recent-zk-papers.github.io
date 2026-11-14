@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T19:39:10.137704+00:00",
+ "updated": "2026-11-14T06:18:17.268988+00:00",
  "papers": [
   {
    "id": "arxiv:2611.17042",
@@ -3250,16 +3250,6 @@
    "pdf": "http://arxiv.org/pdf/2510.09729v2",
    "source": "arXiv",
    "date": "2025-10-10T10:38:42Z"
-  },
-  {
-   "id": "arxiv:2510.09715",
-   "title": "A Scalable, Privacy-Preserving Decentralized Identity and Verifiable Data Sharing Framework based on Zero-Knowledge Proofs",
-   "authors": "Hui Yuan",
-   "abstract": "With the proliferation of decentralized applications (DApps), the conflict between the transparency of blockchain technology and user data privacy has become increasingly prominent. While Decentralized Identity (DID) and Verifiable Credentials (VCs) provide a standardized framework for user data sovereignty, achieving trusted identity verification and data sharing without compromising privacy remains a significant challenge. This paper proposes a novel, comprehensive framework that integrates DIDs and VCs with efficient Zero-Knowledge Proof (ZKP) schemes to address this core issue. The key contributions of this framework are threefold: first, it constructs a set of strong privacy-preserving protocols based on zk-STARKs, allowing users to prove that their credentials satisfy specific conditions (e.g., \"age is over 18\") without revealing any underlying sensitive data. Second, it designs a scalable, privacy-preserving credential revocation mechanism based on cryptographic accumulators, effectively solving credential management challenges in large-scale scenarios. Finally, it integrates a practical social key recovery scheme, significantly enhancing system usability and security. Through a prototype implementation and performance evaluation, this paper quantitatively analyzes the framework's performance in terms of proof generation time, verification overhead, and on-chain costs. Compared to existing state-of-the-art systems based on zk-SNARKs, our framework, at the cost of a larger proof size, significantly improves prover efficiency for complex computations and provides stronger security guarantees, including no trusted setup and post-quantum security. Finally, a case study in the decentralized finance (DeFi) credit scoring scenario demonstrates the framework's immense potential for unlocking capital efficiency and fostering a trusted data economy.",
-   "url": "http://arxiv.org/abs/2510.09715v1",
-   "pdf": "http://arxiv.org/pdf/2510.09715v1",
-   "source": "arXiv",
-   "date": "2025-10-10T06:06:05Z"
   }
  ]
 }

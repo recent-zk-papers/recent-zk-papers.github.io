@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T17:58:41.020198+00:00",
+ "updated": "2026-11-14T22:21:32.969051+00:00",
  "papers": [
   {
    "id": "arxiv:2611.17042",
@@ -10,6 +10,16 @@
    "pdf": "http://arxiv.org/pdf/2611.17042v1",
    "source": "arXiv",
    "date": "2026-11-12T16:27:07Z"
+  },
+  {
+   "id": "eprint:2026/2877",
+   "title": "Toward E\ufb03cient Post-Quantum Bitcoin Bridges",
+   "authors": "Stephen Duan, Vanhger Pham, Blake Hou, Ethan Zhu, Jingping Yin",
+   "abstract": "BitVM-style protocols verify succinct proofs on Bitcoin by garbling a proof veri\ufb01er o\ufb00-chain. What reaches the chain in a dispute is the proof itself: its bits under one-time keys, the scripts that authenticate them and the signatures that bind them to transactions. Existing designs garble elliptic-curve SNARK veri\ufb01ers, which a quantum adversary breaks. Our goal is a post-quantum alternative: a hash-based STARK veri\ufb01er, garbled and fed with hash-based one-time keys, with no number-theoretic assumption anywhere in the veri\ufb01er; its price is a far larger proof, and this paper measures and reduces that on-chain data. We compile the complete veri\ufb01er for WHIR-based STARK proofs from Ziren into a Boolean circuit using free-XOR gadgets for binary-tower arithmetic and Blake3. Our implementation uses Ziren\u2019s binary-\ufb01eld proof stage and narrow recursion. For the \ufb01nal recursive WHIR-proof veri\ufb01er, our circuit-cost analysis gives 218.0M non-free gates and 564,552 input bits, corresponding to 3.49 GB of garbled tables. The transactions publishing that input with translated Winternitz keys have a total virtual size of 4.26 million virtual bytes (MvB) for one key set.",
+   "url": "https://eprint.iacr.org/2026/2877",
+   "pdf": "https://eprint.iacr.org/2026/2877.pdf",
+   "source": "ePrint",
+   "date": "2026-11-12T11:55:38+00:00"
   },
   {
    "id": "arxiv:2611.16065",

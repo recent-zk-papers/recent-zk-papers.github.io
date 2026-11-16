@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T06:24:11.816651+00:00",
+ "updated": "2026-11-16T21:58:52.451514+00:00",
  "papers": [
   {
    "id": "arxiv:2611.17042",
@@ -12,10 +12,30 @@
    "date": "2026-11-12T16:27:07Z"
   },
   {
+   "id": "eprint:2026/2880",
+   "title": "Sum-Checking SmallWood: Smaller Hash-Based Zero-Knowledge Arguments",
+   "authors": "Thibauld Feneuil, Killian Provin, Matthieu Rivain",
+   "abstract": "Hash-based zero-knowledge (ZK) arguments are particularly attractive for their conservative post-quantum security, relying only on cryptographic hash functions. While VOLE-in-the-Head proofs, based on GGM trees, are the most compact for very small witnesses, Merkle-tree-based approaches take over for larger ones. In this regime, the recent SmallWood scheme achieves the smallest proof sizes for witness sizes ranging from $2^6$ to $2^{16}$. In this work, we present SmallWood+, an enhanced variant of SmallWood that leverages sum-check-based protocols to further reduce proof sizes. Following the paradigm of Longfellow ZK, where a hash-based ZK argument is used to wrap the verification of a sum-check-based protocol, we formalize the notion of Sum-Check Verification Constraint System (SVCS), which captures a broad class of such protocols, including GKR for layered circuits and the sum-check protocol for R1CS. We then design generic compilers transforming SVCS instances into ZK arguments from linear commitment schemes and/or multilinear polynomial commitment schemes, which we efficiently instantiate from SmallWood. Along the way, we develop tools of independent interest: hiding multilinear extensions, which make a multilinear evaluation of the committed witness safe to reveal in the small-field regime, a zero-knowledge version of the ring-switching protocol, and an improved circuit-flattening technique for GKR. Applied to (layered) arithmetic circuits, hash functions, and lattice-based statements, our constructions establish new state-of-the-art proof sizes for hash-based ZK arguments - for instance, 18 KB and 63 KB to prove 1 and 100 Keccak permutations, against 29 KB and 127 KB for the best previous schemes.",
+   "url": "https://eprint.iacr.org/2026/2880",
+   "pdf": "https://eprint.iacr.org/2026/2880.pdf",
+   "source": "ePrint",
+   "date": "2026-11-12T15:55:49+00:00"
+  },
+  {
+   "id": "eprint:2026/2878",
+   "title": "Batch, Pack, and Prove: More Efficient Verifiable Computation for CKKS",
+   "authors": "Ignacio Cascudo, Anamaria Costache, Daniele Cozzo, Dario Fiore, Antonio Guimar\u00e3es, Eduardo Soria-Vazquez",
+   "abstract": "An important challenge in homomorphic encryption (HE) is ensuring the integrity of the encrypted computations. Although verifiable computation can address this in theory, making it practical is far from trivial. [Cascudo et al. CRYPTO 2025] recently proposed a solution to this problem for the CKKS scheme. In particular, they propose new succinct arguments that efficiently prove arithmetic circuits and range checks over the ring $R_q = \\mathbb{Z}_q[Y]/(Y^N+1)$, and combine them to prove computations on CKKS ciphertexts. Despite the important progress, their work faces scalability challenges: the size of the polynomial commitment proofs, a large $O(N)$ overhead in range proofs, and the lack of an explicit method for efficient -- sublinear in circuit size -- verification. In this paper we present new techniques that remove all these bottlenecks. First, we provide a more efficient arithmetization of CKKS computations. Second, we introduce BatchFold, a new polynomial commitment for $R_q$ that supports batched evaluations and achieves shorter proofs. Third, we design packing, a novel algebraic technique that eliminates the need to commit to massive polynomials and removes the $O(N)$ overhead in range proofs. Finally, we introduce SparsePack, an efficient protocol for proving the evaluations of sparse, circuit-dependent polynomials, leveraging both packing and batched evaluations. We evaluate the efficiency of our solution on a generic neural network architecture, achieving proofs several orders of magnitude smaller and faster than prior approaches.",
+   "url": "https://eprint.iacr.org/2026/2878",
+   "pdf": "https://eprint.iacr.org/2026/2878.pdf",
+   "source": "ePrint",
+   "date": "2026-11-12T15:21:53+00:00"
+  },
+  {
    "id": "eprint:2026/2877",
    "title": "Toward E\ufb03cient Post-Quantum Bitcoin Bridges",
    "authors": "Stephen Duan, Vanhger Pham, Blake Hou, Ethan Zhu, Jingping Yin",
-   "abstract": "BitVM-style protocols verify succinct proofs on Bitcoin by garbling a proof veri\ufb01er o\ufb00-chain. What reaches the chain in a dispute is the proof itself: its bits under one-time keys, the scripts that authenticate them and the signatures that bind them to transactions. Existing designs garble elliptic-curve succinct non-interactive argument of knowledge (SNARK) veri\ufb01ers, which a quantum adversary breaks. Our goal is a post-quantum alternative: a hash-based scalable transparent argument of knowledge (STARK) veri\ufb01er, garbled and fed with hash-based one-time keys, with no number-theoretic assumption anywhere in the veri\ufb01er; its price is a far larger proof, and this paper measures and reduces that on-chain data. We compile the complete veri\ufb01er for WHIR-based STARK proofs from Ziren into a Boolean circuit using free-XOR gadgets for binary-tower arithmetic and Blake3. Our implementation uses Ziren\u2019s binary-\ufb01eld proof stage and narrow recursion. For an Ethereum block proved through four recursion levels, the \ufb01nal recursive WHIR-proof veri\ufb01er has 175.4M non-free gates and 520,832 input bits, corresponding to 2.81 GB of garbled tables, and publishing that input with translated Winternitz keys takes 3.93 million virtual bytes (MvB) for one key set, in 41 standard transactions. The costs are coupled: on-chain cost grows linearly with the input bits, o\ufb00-chain storage with the gate count, and proving time exponentially with the grinding that shortens the input. The WHIR schedule, the Merkle cap depth and the input encoding trade these costs against one another, and a model of proof size and proving time selects the setting, a step toward practical post-quantum Bitcoin bridges.",
+   "abstract": "BitVM-style protocols verify succinct proofs on Bitcoin by garbling a proof veri\ufb01er o\ufb00-chain. What reaches the chain in a dispute is the proof itself: its bits under one-time keys, the scripts that authenticate them and the signatures that bind them to transactions. Existing designs garble elliptic-curve succinct non-interactive argument of knowledge (SNARK) veri\ufb01ers, which a quantum adversary breaks. Our goal is a post-quantum alternative: a hash-based scalable transparent argument of knowledge (STARK) veri\ufb01er, garbled and fed with hash-based one-time keys, with no number-theoretic assumption anywhere in the veri\ufb01er; its price is a far larger proof, and this paper measures and reduces that on-chain data. We compile the complete veri\ufb01er for WHIR-based STARK proofs from Ziren into a Boolean circuit using free-XOR gadgets for binary-tower arithmetic and Blake3. Our implementation uses Ziren\u2019s binary-\ufb01eld proof stage and narrow recursion. For an Ethereum block proved through four recursion levels, the \ufb01nal recursive WHIR-proof veri\ufb01er has 175.4M non-free gates and 520,832 input bits, corresponding to 2.81 GB of garbled tables, and publishing that input with translated Winternitz keys takes 3.93 million virtual bytes (MvB), in 41 standard transactions. The costs are coupled: on-chain cost grows linearly with the input bits, o\ufb00-chain storage with the gate count, and proving time exponentially with the grinding that shortens the input. The WHIR schedule, the Merkle cap depth and the input encoding trade these costs against one another, and a model of proof size and proving time selects the setting, a step toward practical post-quantum Bitcoin bridges.",
    "url": "https://eprint.iacr.org/2026/2877",
    "pdf": "https://eprint.iacr.org/2026/2877.pdf",
    "source": "ePrint",
@@ -2502,6 +2522,16 @@
    "date": "2026-02-26T16:03:54+00:00"
   },
   {
+   "id": "eprint:2026/391",
+   "title": "Zero-Knowledge IOPPs for Constrained Interleaved Codes",
+   "authors": "Alessandro Chiesa, Giacomo Fenzi, Guy Weissenberg",
+   "abstract": "Succinct arguments based on interactive oracle proofs (IOPs) have achieved remarkable efficiency improvements and are now widely adopted in applications. State-of-the-art IOPs involve protocols for testing proximity to constrained interleaved linear codes, and enjoy essentially optimal parameters. However, recent IOP constructions provide no privacy guarantees, which remain a must for many applications. We present an IOP of proximity for testing constrained interleaved linear codes that achieves (honest-verifier) zero-knowledge, while incurring a negligible overhead compared to the (non-zero-knowledge) state of the art. In line with recent constructions, our construction satisfies round-by-round knowledge soundness with a straightline extractor and negligible error. We propose a definition of (honest-verifier) zero-knowledge for interactive oracle reductions (IORs) that we prove is compatible with composition, and then obtain our result by constructing and modularly composing several lightweight zero-knowledge IORs. Our key technical contributions are a zero-knowledge sumcheck IOR and a zero-knowledge code-switching IOR that fit the strict efficiency requirements of our setting; these contributions and other technical complications entailed overcoming several challenges with new notions and protocols. Finally, along the way, we highlight the efficiency benefits of high-distance codes obtained from dispersers, which may be of independent interest.",
+   "url": "https://eprint.iacr.org/2026/391",
+   "pdf": "https://eprint.iacr.org/2026/391.pdf",
+   "source": "ePrint",
+   "date": "2026-02-25T17:02:27+00:00"
+  },
+  {
    "id": "arxiv:2602.18539",
    "title": "Poster: Privacy-Preserving Compliance Checks on Ethereum via Selective Disclosure",
    "authors": "Supriya Khadka, Dhiman Goswami, Sanchari Das",
@@ -2750,6 +2780,16 @@
    "pdf": "http://arxiv.org/pdf/2601.17875v2",
    "source": "arXiv",
    "date": "2026-01-25T15:11:13Z"
+  },
+  {
+   "id": "eprint:2026/119",
+   "title": "Reusable Anonymous Credentials with Flow-Mode Unlinkability",
+   "authors": "Bin Xie, Tianyu Zheng, Rui Song, Shang Gao, Bin Xiao",
+   "abstract": "Anonymous credentials let a holder prove certified attributes and verifier predicates without revealing the credential or linking sessions. SNARK-based credentials support expressive predicates and deployed signatures such as ECDSA and BLS, but remain stateless: each presentation re-proves the credential relation and predicates from scratch. Reusable presentations amortize this cost, but create a leakage channel outside standard unlinkability: a verifier may detect that two tokens came from the same evolving reuse chain. We introduce reusable anonymous credentials, where a holder maintains a compact private state and derives fresh presentation tokens by rerandomization or incremental predicate update. Our security model introduces flow-mode unlinkability, which requires tokens from the same reuse chain to be indistinguishable from independently generated tokens under the same public schedule. This captures colluding verifiers who pool transcripts across repeated presentations. SHIFT realizes this model with two components. Superhalo is a function-hiding non-uniform incrementally verifiable computation (IVC) from Halo-style KZG accumulation. Standard multi-function IVC reveals the active function because only one accumulator slot changes; Superhalo instead updates all slots with dummy work and hides the update trace. SHIFT also uses proof composition for signature possession: a $\\Sigma$-protocol proves expensive BLS pairing checks outside the recursive circuit, while the IVC binds the proof to the credential digest, predicates, and session context. Our Rust implementation evaluates BLS credentials and an ECDSA variant on commodity hardware. Rerandomization takes about $0.65$ s independent of attribute length and predicate size, proof size is below $2$ KB, and verification is below $50$ ms. Incremental predicate update reduces prover time by up to $3.5\\times$ compared with the proof-of-possession baseline of Woo~et al (S&P~2025) in the evaluated setting.",
+   "url": "https://eprint.iacr.org/2026/119",
+   "pdf": "https://eprint.iacr.org/2026/119.pdf",
+   "source": "ePrint",
+   "date": "2026-01-25T03:59:39+00:00"
   },
   {
    "id": "arxiv:2601.17133",

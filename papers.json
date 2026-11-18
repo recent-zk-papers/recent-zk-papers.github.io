@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T20:52:36.602105+00:00",
+ "updated": "2026-11-18T07:24:29.393920+00:00",
  "papers": [
   {
    "id": "arxiv:2611.17042",
@@ -3270,16 +3270,6 @@
    "pdf": "http://arxiv.org/pdf/2510.13318v1",
    "source": "arXiv",
    "date": "2025-10-15T09:07:31Z"
-  },
-  {
-   "id": "arxiv:2510.12153",
-   "title": "VeilAudit: Breaking the Deadlock Between Privacy and Accountability Across Blockchains",
-   "authors": "Minhao Qiao, Hai Dong, Iqbal Gondal",
-   "abstract": "Cross chain interoperability in blockchain systems exposes a fundamental tension between user privacy and regulatory accountability. Existing solutions enforce an all or nothing choice between full anonymity and mandatory identity disclosure, which limits adoption in regulated financial settings. We present VeilAudit, a cross chain auditing framework that introduces Auditor Only Linkability, which allows auditors to link transaction behaviors that originate from the same anonymous entity without learning its identity. VeilAudit achieves this with a user generated Linkable Audit Tag that embeds a zero knowledge proof to attest to its validity without exposing the user master wallet address, and with a special ciphertext that only designated auditors can test for linkage. To balance privacy and compliance, VeilAudit also supports threshold gated identity revelation under due process. VeilAudit further provides a mechanism for building reputation in pseudonymous environments, which enables applications such as cross chain credit scoring based on verifiable behavioral history. We formalize the security guarantees and develop a prototype that spans multiple EVM chains. Our evaluation shows that the framework is practical for today multichain environments.",
-   "url": "http://arxiv.org/abs/2510.12153v2",
-   "pdf": "http://arxiv.org/pdf/2510.12153v2",
-   "source": "arXiv",
-   "date": "2025-10-14T05:16:23Z"
   }
  ]
 }

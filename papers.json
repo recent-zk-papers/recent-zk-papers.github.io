@@ -1,6 +1,36 @@
 {
- "updated": "2026-11-18T20:28:32.583902+00:00",
+ "updated": "2026-11-19T07:21:47.506086+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.24623",
+   "title": "Robust, Lightweight Locally Differentially Private Histogram Estimation and the Role of Dropout Attacks",
+   "authors": "Haochen Sun, Jacob Imola, Xi He",
+   "abstract": "Local differential privacy (LDP) is vulnerable to output manipulation by malicious clients. Zero-knowledge proofs can enforce correct report computation, but clients may still selectively drop out after inspecting their outputs. Prior work combines zero-knowledge proofs with homomorphic encryption to hide reports from clients and prevent selective dropout, but incurs substantial computational cost. We instead develop a three-message lightweight verification framework for robust histogram estimation that uses proofs of plaintext evaluation to restrict output manipulation to selective dropout. Across the evaluated settings for PI-RAPPOR and Hadamard Response, mean per-client online latency remains below 500 milliseconds. We further establish tight error bounds showing that, for RAPPOR, PI-RAPPOR, and Hadamard Response, restricting malicious clients to selective dropout reduces attack-dependent error by a factor proportional to the square root of the domain size compared with output manipulation. Additionally, when client protocols cannot be modified, we propose server-side consistency checks for RAPPOR and Hadamard Response. These checks improve robustness without client-side cryptography and can be applied post-hoc to collected reports, offering an alternative under different deployment constraints. Experiments demonstrate that both verification and consistency checks substantially reduce attack error for certain mechanisms, with consistency checks yielding errors intermediate between those obtained with verification and those under unrestricted output manipulation.",
+   "url": "http://arxiv.org/abs/2611.24623v1",
+   "pdf": "http://arxiv.org/pdf/2611.24623v1",
+   "source": "arXiv",
+   "date": "2026-11-18T15:38:28Z"
+  },
+  {
+   "id": "eprint:2026/2898",
+   "title": "LEASH: When LaBRADOR\u2019s Guarantees Go Astray",
+   "authors": "Xiang Wang, Ji Xiang",
+   "abstract": "Succinct arguments enable efficient verification of large computations, while lattice-based constructions offer a promising path toward post-quantum security. LaBRADOR advances this direction through recursive reductions of knowledge that achieve compact proofs. However, these reductions require careful control of witness norms, relation preservation, and knowledge extraction to maintain their claimed guarantees. In this paper, we revisit the correctness and security analysis of LaBRADOR. We construct explicit counterexamples showing that its concrete parameter-selection strategy can fail to preserve completeness, even for valid binary R1CS witnesses. We further identify inconsistencies in recursive relation transformations and inaccuracies in the probability bounds underlying its knowledge extraction analysis. We develop targeted repairs and provide corresponding mathematical analyses, examining how changes to norm bounds, decomposition parameters, and challenge distributions affect the resulting security and efficiency guarantees. Our results highlight the importance of rigorous parameterization and compositional reasoning in lattice-based succinct proof systems.",
+   "url": "https://eprint.iacr.org/2026/2898",
+   "pdf": "https://eprint.iacr.org/2026/2898.pdf",
+   "source": "ePrint",
+   "date": "2026-11-15T10:30:26+00:00"
+  },
+  {
+   "id": "eprint:2026/2894",
+   "title": "BMuSig-L: Blind Multi-Signature from Lattice",
+   "authors": "Anirban Chakraborty, Mriganka Dey, Nikita Dey, Avijit Dutta, Subhabrata Samajder",
+   "abstract": "Blind signatures and multi-signatures are two fundamental cryptographic primitives for privacy-preserving decentralized protocols. A blind signature enables a user to obtain a signature on a message from a signer while keeping the message hidden from the signer. Moreover, the signer cannot subsequently link the resulting signature to the corresponding signing session. In contrast, a multi-signature scheme allows a group of signers to jointly generate a single signature on a message. Blind multi-signatures, a primitive recently introduced by Karantaidou et al. (AsiaCCS 2024), combine the advantages of both techniques. They enable a user to obtain a joint signature from a group of signers while ensuring that the message remains hidden from every signer and that colluding signers cannot later link the final signature to the corresponding signing session. Recently, Bisht et al. proposed $\\textsf{BMuSig2}$ (AsiaCCS 2026), a Schnorr-compatible blind multi-signature scheme whose security is based on the hardness of the discrete logarithm problem. In this paper, we present $\\textsf{BMuSig-L}$, a lattice-based, two-round, concurrently secure blind multi-signature scheme. Our construction builds upon the lattice-based multi-signature scheme $\\textsf{MuSig-L}$ (CRYPTO 2022), the concurrently secure blind signature scheme of Fuchsbauer and Wolf (CRYPTO 2024), which employs non-interactive zero-knowledge arguments and public-key encryption, and a knowledge-sound non-interactive argument system. We prove that $\\textsf{BMuSig-L}$ is one-more unforgeable under the assumptions of the unforgeability of $\\textsf{MuSig-L}$, the computational soundness of the underlying non-interactive zero-knowledge proof system, and the knowledge soundness of the employed non-interactive argument of knowledge. Finally, we present a prototype implementation of $\\textsf{BMuSig-L}$ and evaluate its performance in terms of signature size and verification time.",
+   "url": "https://eprint.iacr.org/2026/2894",
+   "pdf": "https://eprint.iacr.org/2026/2894.pdf",
+   "source": "ePrint",
+   "date": "2026-11-14T13:12:55+00:00"
+  },
   {
    "id": "arxiv:2611.17042",
    "title": "Infrastructure for Verifiable AI: Where Proof Costs Go and How Hardware Can Help",
@@ -155,7 +185,7 @@
    "id": "eprint:2026/2810",
    "title": "QUASI: Post-Quantum Quorum Attestation of Pre-Validated Statements",
    "authors": "Maksym Ioffe, Dahlia Malkhi",
-   "abstract": "We present QUASI, a newly conceived class of protocols that enable a group of parties to produce a publicly verifiable attestation about a pre-validated statement. Designed for quorum-based systems, QUASI enables parties to attest to external entities that the statement is valid. Surprisingly, each party need not sign the entire statement: authenticating only a small subset of symbols suffices for the quorum to attest to the whole. A simple deterministic construction illustrates this possibility. Built purely from hashing and error correction, QUASI achieves small per-party contributions and low attestation generation and verification costs, without relying on SNARKs for aggregation. Our main contribution is a randomized construction achieving reductions of more than $10\\times$ in per-party contribution size and hash computations for generation and verification, compared with full hash-based signatures. QUASI is a generic primitive supporting diverse applications. Two principal use cases are external attestation for signature-free consensus, enabling clients to verify statements about committed state; and preprocessing for SNARK-based aggregation, compounding QUASI's savings with succinct-proof compression.",
+   "abstract": "We present QUASI, a newly conceived class of hash-based, post-quantum-secure protocols that enable a group of parties to produce a publicly verifiable attestation about a pre-validated statement. QUASI produces attestations that reduce the size and verification cost to a fraction of a full hash-based signatures collection, without relying on SNARKs or a trusted setup. QUASI rests on a surprising discovery: each party need not sign the entire statement. Authenticating only a small subset of symbols suffices for a quorum to attest to the whole. We turn this insight into a randomized construction that achieves reductions of more than 10x in per-party contribution size and hash computations for generation and verification, compared with full hash-based signatures. QUASI is a generic primitive supporting diverse applications. Operationally, QUASI requires no additional interactive setup or preprocessing beyond independent key generation by parties for the underlying hash-based authentication scheme. Two principal use cases are external attestation for signature-free consensus, enabling clients to verify statements about committed state; and preprocessing for SNARK-based aggregation, compounding QUASI\u2019s savings with succinct-proof compression.",
    "url": "https://eprint.iacr.org/2026/2810",
    "pdf": "https://eprint.iacr.org/2026/2810.pdf",
    "source": "ePrint",
@@ -1060,6 +1090,16 @@
    "pdf": "http://arxiv.org/pdf/2609.21419v1",
    "source": "arXiv",
    "date": "2026-09-18T07:29:50Z"
+  },
+  {
+   "id": "eprint:2026/2072",
+   "title": "Sunshine Systems: Enabling Privacy-Preserving Compliance with Freedom of Information Laws",
+   "authors": "Aarushi Goel, Gabriel Kaptchuk, Yuange Li",
+   "abstract": "Freedom of information laws (informally known as Sunshine Laws), such as the US Federal Freedom of Information Act, provide legal pathways for members of the public to compel governments to produce internal documentation. These laws have become a powerful tool for government accountability, allowing journalists and activists to uncover malfeasance and advocate for change. However, because compliance with these laws requires government actors---the same entities who may be accused of malfeasance---to produce documentation, there is a risk that evidence of malfeasance may be suppressed rather than produced in response to a query. In this work, we introduce a cryptographic framework called {\\em Sunshine Systems}, designed to constrain government actors' ability to circumvent freedom of information laws. At a high level, Sunshine Systems enable agencies to prove, in zero knowledge, that they have produced the complete and correct set of documents responsive to a given request. We instantiate a Sunshine System that supports keyword queries, building on recent advances in lookup arguments. We implement and evaluate our approach on low-cost hardware, demonstrating its practicality even for small government agencies. Our evaluation shows that our implementation dramatically out-performs a PoneglyphDB [SIGMOD '25] baseline.",
+   "url": "https://eprint.iacr.org/2026/2072",
+   "pdf": "https://eprint.iacr.org/2026/2072.pdf",
+   "source": "ePrint",
+   "date": "2026-09-17T16:36:27+00:00"
   },
   {
    "id": "arxiv:2609.20532",

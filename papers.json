@@ -1,6 +1,16 @@
 {
- "updated": "2026-11-19T20:33:00.600792+00:00",
+ "updated": "2026-11-20T07:10:38.967892+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.25663",
+   "title": "Correctable Enrollment and One-Transaction Seed Proofs for Ethereum's Post-Quantum Transition",
+   "authors": "Xin Jin, Maximillian Liao, Handong Chen, Yi Nancy Li, Junyu Liu",
+   "abstract": "A quantum computer running Shor's algorithm can extract the private key of every Ethereum account whose public key is published, and accounts exposed by their own transactions hold 54.6% of execution-layer ETH. As the first such machine may stay secret, a migration cannot wait for visible thefts, and once keys are extractable, legacy signatures no longer tell owners from attackers. We design a migration in which owners enroll post-quantum keys cheaply with their existing signatures before ECDSA is retired at a scheduled time, while a zero-knowledge proof of the wallet's BIP-39 seed can correct any such enrollment until a common deadline afterward; an account nobody enrolled stays frozen and recoverable by seed proof without a deadline. Each proof binds the new key, a nonce and a fee cap, so neither a paying sponsor nor a reordering block builder can redirect or replay it. Validators switch to hash-based keys first, at a finalized checkpoint and under a stated bound on the attacker's voting power. We prove the account guarantees under explicit assumptions, model-check the rules, and implement the design in go-ethereum and a Lean consensus client. A three-layer recursive hash-based STARK yields a seed proof of about 190 KB that fits one transaction, verifies in 38 ms and takes a median of 111 s to generate on a laptop; four proofs aggregate into one. In a ten-node simulation with mainnet-derived accounts and fee demand, block space rather than proving sets the duration: the 4.45 million accounts with at least 0.1 ETH would migrate in 29.4 days if all enroll before ECDSA is retired and in 235 days if all recover after it in batches of four. In a mass enrollment, an enrollment waits a median of 19.1 minutes in the public mempool, longer than published estimates for a fast quantum computer to extract its key, so owners with a seed and an unexposed key should migrate by seed proof.",
+   "url": "http://arxiv.org/abs/2611.25663v1",
+   "pdf": "http://arxiv.org/pdf/2611.25663v1",
+   "source": "arXiv",
+   "date": "2026-11-19T07:43:09Z"
+  },
   {
    "id": "arxiv:2611.24623",
    "title": "Robust, Lightweight Locally Differentially Private Histogram Estimation and the Role of Dropout Attacks",
@@ -195,9 +205,9 @@
    "id": "arxiv:2611.10403",
    "title": "QUASI: Post-Quantum Quorum Attestation of Pre-Validated Statements",
    "authors": "Maksym Ioffe, Dahlia Malkhi",
-   "abstract": "We present QUASI, a newly conceived class of protocols that enable a group of parties to produce a publicly verifiable attestation about a pre-validated statement. Designed for quorum-based systems, QUASI enables parties to attest to external entities that the statement is valid. Surprisingly, each party need not sign the entire statement: authenticating only a small subset of symbols suffices for the quorum to attest to the whole. A simple deterministic construction illustrates this possibility. Built purely from hashing and error correction, QUASI achieves small per-party contributions and low attestation generation and verification costs, without relying on SNARKs for aggregation. Our main contribution is a randomized construction achieving reductions of more than $10\\times$ in per-party contribution size and hash computations for generation and verification, compared with full hash-based signatures. QUASI is a generic primitive supporting diverse applications. Two principal use cases are external attestation for signature-free consensus, enabling clients to verify statements about committed state; and preprocessing for SNARK-based aggregation, compounding QUASI's savings with succinct-proof compression.",
-   "url": "http://arxiv.org/abs/2611.10403v1",
-   "pdf": "http://arxiv.org/pdf/2611.10403v1",
+   "abstract": "We present QUASI, a newly conceived class of hash-based, post-quantum-secure protocols that enable a group of parties to produce a publicly verifiable attestation about a pre-validated statement. QUASI produces attestations that reduce the size and verification cost to a fraction of a full hash-based signatures collection, without relying on SNARKs or a trusted setup. QUASI rests on a surprising discovery: each party need not sign the entire statement. Authenticating only a small subset of symbols suffices for a quorum to attest to the whole. We turn this insight into a randomized construction that achieves reductions of more than 10x in per-party contribution size and hash computations for generation and verification, compared with full hash-based signatures. QUASI is a generic primitive supporting diverse applications. Operationally, QUASI requires no additional interactive setup or preprocessing beyond independent key generation by parties for the underlying hash-based authentication scheme. Two principal use cases are external attestation for signature-free consensus, enabling clients to verify statements about committed state; and preprocessing for SNARK-based aggregation, compounding QUASI's savings with succinct-proof compression.",
+   "url": "http://arxiv.org/abs/2611.10403v2",
+   "pdf": "http://arxiv.org/pdf/2611.10403v2",
    "source": "arXiv",
    "date": "2026-11-07T02:29:20Z"
   },

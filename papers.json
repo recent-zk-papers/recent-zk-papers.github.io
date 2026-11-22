@@ -1,6 +1,56 @@
 {
- "updated": "2026-11-22T06:43:24.578678+00:00",
+ "updated": "2026-11-22T19:35:28.876843+00:00",
  "papers": [
+  {
+   "id": "eprint:2026/2957",
+   "title": "Does Witness Indistinguishability Require Cryptography?",
+   "authors": "Gal Arnon, Noam Mazor, Rafael Pass, Jad Silbak",
+   "abstract": "An interactive proof is witness indistinguishable ($\\mathsf{WI}$) if the verifier cannot tell which of several valid witnesses the prover used. $\\mathsf{WI}$ is a fundamental privacy guarantee that is implied by a number of central primitives, including zero knowledge ($\\mathsf{ZK}$), batch arguments, and succinct arguments. Ostrovsky and Wigderson [OW93] showed that, assuming the worst-case hardness of $\\mathsf{NP}$, $\\mathsf{ZK}$ proofs for $\\mathsf{NP}$ imply auxiliary-input one-way functions. This was recently strengthened by Hirahara and Nanashima [HN24], who showed that, under the same assumption, $\\mathsf{ZK}$ proofs for $\\mathsf{NP}$ imply standard one-way functions. For $\\mathsf{WI}$, no analogous result was known; in fact, we do not known if cryptography is necessary for $\\mathsf{WI}$ at all. One source of difficulty in proving a cryptographic implication from $\\mathsf{WI}$ is the possible unconditional existence of witness canonicalization. More formally, an $\\varepsilon$-witness canonicalization ($\\varepsilon$-$\\mathsf{WC}$) is a deterministic polynomial-time map that sends any valid witness $w$ for $x$, together with public randomness $r$, to an efficiently verifiable string that depends only on $x$ and $r$ (and not on the specific witness $w$), except with probability $\\varepsilon$. Completeness and soundness hold perfectly (only canonicalization is allowed to fail). Indeed, if a valid witnesses for an $\\mathsf{NP}$ statement can be efficiently mapped to a single canonical representation, then $\\mathsf{WI}$ is trivial and requires no cryptography: the prover sends the canonical witness, and so reveals nothing about its own. We prove the following: 1. Let $L$ be an $\\mathsf{NP}$ language that admits no $\\varepsilon$-$\\mathsf{WC}$ for some inverse-polynomial $\\varepsilon$. Then, under a derandomization assumption, every constant-round (honest-verifier) $\\mathsf{WI}$ proof for $L$ implies infinitely-often auxiliary-input one-way functions. The derandomization assumption can be avoided if one settles for canonicalization with negligible completeness and soundness errors. 2. Combining (a variant of) the above with a theorem of Bitansky, Kamath, Paneth, Rothblum, and Vasudevan [BKPRV24] yields analogous consequences for sufficiently compressing batch arguments and succinct non-interactive arguments. Since it is unlikely that $\\mathsf{SAT}$ has a $\\varepsilon$-$\\mathsf{WC}$, even for constant $\\varepsilon$, the above results establish that cryptography is necessary for designing $\\mathsf{WI}$ proofs (or sufficiently compressing BARG/SNARGs) for $\\mathsf{SAT}$. As far as we are aware, these are the first results establishing the necessity of cryptographic hardness for witness indistinguishability, BARGs, and SNARGs.",
+   "url": "https://eprint.iacr.org/2026/2957",
+   "pdf": "https://eprint.iacr.org/2026/2957.pdf",
+   "source": "ePrint",
+   "date": "2026-11-19T19:59:22+00:00"
+  },
+  {
+   "id": "eprint:2026/2956",
+   "title": "Complexity-Theoretic Consequences of Zero-Knowledge with Inefficient Simulation",
+   "authors": "Gal Arnon, Noam Mazor, Rafael Pass, Jad Silbak",
+   "abstract": "Zero-knowledge ($\\mathsf{ZK}$) protocols are one of the most fundamental cryptographic primitives. Classic results in the 1980s established that one-way functions (OWFs) suffice for constructing $\\mathsf{ZK}$ for $\\mathsf{NP}$ (Goldreich-Micali-Wigderson [JACM'91], Naor [CRYPTO\u201989], Hastad et al. [SICOMP\u201999]). Moreover, OWFs are, in fact, necessary for $\\mathsf{ZK}$ for $\\mathsf{NP}$, due to the classic result of Ostrovsky and Wigderson [ISTCS'93], which was recently strengthened by Hirahara and Nanashima [STOC'24]. But for many applications of $\\mathsf{ZK}$, it suffices to consider a slight relaxation of the $\\mathsf{ZK}$ property where the simulator is allowed to run in super-polynomial time (Pass [Eurocrypt'03]). Surprisingly, the results of Ostrovsky and Wigderson break once we allow even a slightly inefficient simulator. Indeed, a recent result by Baril and Haitner [CRYPTO'26] shows that, without efficient simulation, $\\mathsf{ZK}$ does not imply one-way functions in a black-box manner. We show that two-message arguments with a (non-trivial) inefficient simulator imply the errorless average-case hardness of the Minimum Time-Bounded Kolmogorov Complexity Problem ($\\mathsf{MKtP}$) over the uniform distribution. The hardness of the same problem against two-sided error algorithms is known to imply OWFs (Liu and Pass, [FOCS'20]). As far as we know, this result is the first complexity-theoretic consequence of $\\mathsf{ZK}$ with even just slightly super-polynomial-time simulation.",
+   "url": "https://eprint.iacr.org/2026/2956",
+   "pdf": "https://eprint.iacr.org/2026/2956.pdf",
+   "source": "ePrint",
+   "date": "2026-11-19T19:40:52+00:00"
+  },
+  {
+   "id": "eprint:2026/2948",
+   "title": "LaTSEC: Lattice-Based Threshold Signatures with Native Non-Interactive Identifiable Abort and Compact Per-Party Storage",
+   "authors": "Muhammad Arzaki, Muhammed F. Esgin, Markku-Juhani O. Saarinen, Amin Sakzad, Ron Steinfeld",
+   "abstract": "We present $\\mathsf{LaTSEC}$, a three-round lattice-based threshold signature scheme with native non-interactive identifiable abort. Each party holds one small-norm signing share and is associated with one public abort key, against which its partial signature is verified directly, without zero-knowledge proofs or an additional interactive protocol. Prior lattice-based threshold signatures that identify misbehaving parties rely on one of three mechanisms: zero-knowledge proofs, an additional interactive protocol, or an everywhere-short secret sharing scheme in which each party holds multiple signing shares, each with its own public abort key. Compared with schemes that use the third mechanism, $\\mathsf{LaTSEC}$ substantially reduces per-party storage. The construction uses $\\mathsf{SEC}$, a recent ramp everywhere-short secret sharing scheme based on lossless expanders that gives each party a single short share. We prove correctness, identifiable-abort security, and threshold unforgeability under the standard $\\mathsf{MLWE}$ and $\\mathsf{MSIS}$ assumptions. The unforgeability proof introduces the Repeated-$\\boldsymbol{A}$ Matrix Hint-MLWE problem, a new variant of $\\mathsf{MLWE}$ with hints that captures the complete tuple of correlated public abort keys. We rigorously prove that this new variant admits a reduction from the standard $\\mathsf{MLWE}$ problem. For 60 parties at 128-bit security, $\\mathsf{LaTSEC}$ tolerates up to 6 corrupted parties, and, empirically, a randomly chosen set of at least 46 parties can sign with probability at least 0.99. Each party holds one signing share of about 14.3 KiB and is associated with one 24-KiB public abort key.",
+   "url": "https://eprint.iacr.org/2026/2948",
+   "pdf": "https://eprint.iacr.org/2026/2948.pdf",
+   "source": "ePrint",
+   "date": "2026-11-19T10:53:05+00:00"
+  },
+  {
+   "id": "eprint:2026/2947",
+   "title": "SPECTRA: Sensor Provenance and Execution Through Recursive Arguments",
+   "authors": "Marco Calipari, Paul Timke Contreras, Mohammad Hamad, Sebastian Steinhorst",
+   "abstract": "Autonomous systems plan and act on sensor data, yet existing integrity measures protect that data only after it has been produced. Signature- or proof-based schemes trust every processing stage that runs prior to the protection, so an attacker with privileged access can manipulate the data before any cryptographic measure applies. We propose SPECTRA, a novel, general sensor model that moves the trust boundary as close as possible to the analog domain while attesting every stage in the digital domain. We formally define the SPECTRA sensor by leveraging the recursive arguments of Non-uniform Incrementally Verifiable Computation (NIVC), define when a stage is attested, with the resulting trust boundary, and compare it to the state of the art, identifying a trust gap, where current solutions protect a single stage, or trust the whole sensor until the data leaves it. Furthermore, we instantiate SPECTRA for the camera pipeline (SPECTRA-CAM), with Bayer-compliant step circuit implementation, and evaluate it on CPU and GPU, from an embedded NVIDIA Jetson to high- end server hardware, over a wide range of frame sizes. Finally, we expose the limitations of the state of the art with Pipeline Ordering Shuffling Attacks, showing that merely reordering the pipeline stages can mislead downstream classifiers while the output still carries a valid signature. In the context of this attack we show why the state of the art falls short, and motivate the need to rethink sensor attestation from a data-centric perspective. To the best of our knowledge, this is the first image pipeline proven with NIVC, optionally in zero-knowledge, and the first image-based proof system evaluated directly on commodity embedded hardware, the NVIDIA Jetson, which proves frames up to 4K in under 6 GiB of memory. With GPU acceleration, its proving time on utility frame sizes is on average 3.1\u00d7 lower than on its CPU, and on classifier-sized frames it stays within tens of seconds of server-grade hardware.",
+   "url": "https://eprint.iacr.org/2026/2947",
+   "pdf": "https://eprint.iacr.org/2026/2947.pdf",
+   "source": "ePrint",
+   "date": "2026-11-19T09:34:27+00:00"
+  },
+  {
+   "id": "eprint:2026/2946",
+   "title": "BOCCHI: Compact Blind SNARK via Malformation-Tolerant Ciphertext Aggregation",
+   "authors": "Ye Yu, Kexi Huang",
+   "abstract": "Blind SNARKs combine fully homomorphic encryption (FHE) with cryptographic proofs to enable verifiable computation over encrypted data, and can substantially outperform SNARK-over-FHE approaches in efficiency. However, ciphertext openings in existing constructions can inflate proofs to tens or hundreds of megabytes. We present BOCCHI, a compact and efficient blind SNARK that addresses this bottleneck by committing to ciphertexts natively and opening them through a few aggregates. To establish soundness even for malformed ciphertexts, we introduce canonical binding and a lightweight noise filter that achieves it with optimal error, tools that may be of independent interest. We further formulate this transformation as a Commit\u2013Aggregate\u2013Check (CAC) compiler and show its effectiveness on two systems with different PIOPs (GKR and Fractal). At $2^{22}$ constraints, BOCCHI produces a 6.57 MB proof in 115.3 seconds, 9.3\u00d7 smaller and 2.54\u00d7 faster than Phalanx. Its proof is the smallest among five baselines. Our implementation is available at https://anonymous.4open.science/r/BOCCHI-Artifacts.",
+   "url": "https://eprint.iacr.org/2026/2946",
+   "pdf": "https://eprint.iacr.org/2026/2946.pdf",
+   "source": "ePrint",
+   "date": "2026-11-19T07:55:25+00:00"
+  },
   {
    "id": "arxiv:2611.25663",
    "title": "Correctable Enrollment and One-Transaction Seed Proofs for Ethereum's Post-Quantum Transition",
@@ -10,6 +60,26 @@
    "pdf": "http://arxiv.org/pdf/2611.25663v1",
    "source": "arXiv",
    "date": "2026-11-19T07:43:09Z"
+  },
+  {
+   "id": "eprint:2026/2943",
+   "title": "A Transparent Post-Quantum Zero-Knowledge Argument for R1CS",
+   "authors": "Vu Hung Tung",
+   "abstract": "We construct a transparent, post-quantum zero-knowledge argument of knowledge for R1CS. Satisfiability of $n$ constraints is reduced by two masked sumchecks to linear claims on a committed short vector; every field element the prover reveals is uniform. The witness is committed row-wise with Module-SIS (Ajtai) commitments; evaluation claims are proven by folding the rows with monomial challenges, whose differences have short scaled inverses, so that the extraction norm grows only singly exponentially in the folding depth. The row commitments and partial evaluations are moved into the witness of a LaBRADOR proof and replaced by two short outer commitments, so the proof has size polylogarithmic in $n$. The verifier runs in time $\\tilde O(\\sqrt n)\\cdot\\mathrm{poly}(\\lambda)$ plus $T_\\mathrm{circ}$, the time to evaluate the multilinear extensions of the constraint matrices, which we bound for data-parallel circuits. We prove completeness, knowledge soundness of the interactive protocol, and classical zero-knowledge in the programmable random-oracle model, and give parameters from a Core-SVP estimate. The concrete verifier cost at $n=2^{20}$ exceeds that of checking the circuit directly; the gain is asymptotic. Soundness of the Fiat--Shamir compiled protocol and a quantum-oracle zero-knowledge bound are not proven.",
+   "url": "https://eprint.iacr.org/2026/2943",
+   "pdf": "https://eprint.iacr.org/2026/2943.pdf",
+   "source": "ePrint",
+   "date": "2026-11-19T02:49:39+00:00"
+  },
+  {
+   "id": "eprint:2026/2936",
+   "title": "Aggregating ML-DSA Signatures Without Recursion: A Cross-Field Argument for the Commitment Hash",
+   "authors": "Jipeng Zhang, Jiaheng Zhang",
+   "abstract": "Consensus protocols must compress tens of thousands of signatures per block, yet ML-DSA (FIPS 204) signatures are kilobytes long and lack native aggregation. Aerie aggregates Falcon signatures into a single succinct proof per batch without recursion, using a sum-check-based polynomial interactive oracle proof (PIOP) over the Akita lattice-based polynomial commitment. Extending this approach to ML-DSA is challenging: the hash that its verifier recomputes from the response and hint takes seven Keccak-f permutations, or nine for ML-DSA-87, which are expensive over prime fields. We address this bottleneck by proving ML-DSA's algebraic and Boolean components over separate fields, supporting all three FIPS 204 parameter sets. A PIOP over a 64-bit prime field handles the lattice relation, hint verification, and range checks, while Flock proves Keccak over GF(2). We introduce a cross-field parity bridge to enforce bitwise consistency between the two commitments. Using seeded sparse matrices, the bridge detects any fixed nonzero difference except with probability below 2^-144.6, independently of batch size. The aggregate certifies that every signature passes FIPS 204 verification. In the classical random-oracle model, each Fiat-Shamir challenge incurs at most 2^-128 soundness error per query, as in Aerie, and aggregate unforgeability reduces to the strong unforgeability of ML-DSA. On 16 AMD Zen 5 cores with AVX2, our prover aggregates 32,768 ML-DSA-44 signatures in 2.68 s, at 49.2 bytes per signature. For ML-DSA-87, it takes 4.13 s at 82.7 bytes per signature. Against the Johnson-regime variant of Alloul26, a prime-field ML-DSA-87 aggregator, our prover is 43x faster and our aggregates are 1.8x smaller.",
+   "url": "https://eprint.iacr.org/2026/2936",
+   "pdf": "https://eprint.iacr.org/2026/2936.pdf",
+   "source": "ePrint",
+   "date": "2026-11-18T18:45:23+00:00"
   },
   {
    "id": "arxiv:2611.24623",

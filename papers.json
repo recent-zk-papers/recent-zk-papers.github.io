@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T19:12:14.200181+00:00",
+ "updated": "2026-11-22T06:43:24.578678+00:00",
  "papers": [
   {
    "id": "arxiv:2611.25663",
@@ -20,6 +20,16 @@
    "pdf": "http://arxiv.org/pdf/2611.24623v1",
    "source": "arXiv",
    "date": "2026-11-18T15:38:28Z"
+  },
+  {
+   "id": "eprint:2026/2907",
+   "title": "Sparse-zkVC: Sparsity-Aware R1CS Synthesis for Zero-Knowledge Proofs of Sparse LLM Inference",
+   "authors": "yanzhe cheng, Luxing Yang, Wei Ren",
+   "abstract": "Zero-knowledge proofs for machine-learning inference are often limited by dense arithmetization: even after model pruning, R1CS generators may instantiate witness variables and linear-combination terms according to the original tensor shape. Sparse-zkVC extends zkVC's CRPC+PSQ matrix-multiplication generator with mask-guided synthesis. Given a public static pruning mask, it allocates variables only for retained weights and active prefix-sum states while advancing CRPC coefficients over the original dense index order. This preserves coefficient alignment, keeps the constraint count at the inner dimension $d$, and reduces the dominant variable term from $h d m$ to $h\\cdot NNZ$, where $NNZ$ counts retained weights. The prototype removes unused variables and linear-combination terms during frontend synthesis. On the zkVC-aligned $128\\times64\\times49$ benchmark, 99\\% sparsity reduces variables from 412,736 to 12,191 and improves online proving time by 20.2$\\times$, with all generated proofs verifying successfully. Long-context and LLaMA-7B linear-operator stress tests characterize the resulting efficiency gains and remaining single-node memory limits.",
+   "url": "https://eprint.iacr.org/2026/2907",
+   "pdf": "https://eprint.iacr.org/2026/2907.pdf",
+   "source": "ePrint",
+   "date": "2026-11-16T05:52:38+00:00"
   },
   {
    "id": "eprint:2026/2898",

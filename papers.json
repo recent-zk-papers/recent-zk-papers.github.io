@@ -1,6 +1,56 @@
 {
- "updated": "2026-11-22T19:35:28.876843+00:00",
+ "updated": "2026-11-23T07:33:25.107457+00:00",
  "papers": [
+  {
+   "id": "eprint:2026/2996",
+   "title": "Real Brakedown Performance: A Portable Scalar Baseline for Spielman-Code Polynomial Commitments",
+   "authors": "Jipeng Zhang",
+   "abstract": "Brakedown-style polynomial commitment schemes encode the rows of a coefficient matrix with a linear-time Spielman code and Merkle-commit the columns. New schemes are typically compared against the unoptimized LCPC and PolyCommit libraries. Conversely, the reported speedups of the AVX-512 encoder SIMD-Spielman over LCPC combine vector arithmetic with portable algorithmic and memory optimizations. We present RBP-LCPC, an optimized implementation of LCPC in portable stable Rust that integrates column-major batched encoding, right-to-left graph evaluation, lazy modular reduction and cache-aware slicing. Its incremental structure isolates the contribution of each optimization. On both x86-64 and AArch64, its compiled hot kernels contain no vector arithmetic. With LCPC's code and prime, its encodings, Merkle roots and proofs match those of LCPC bit-for-bit. On an AMD Zen 5 server with one thread and N = 2^16 to 2^28 coefficients, RBP-LCPC encodes 8.14-9.06x faster than LCPC under its default build configuration. SIMD-Spielman, measured on the same server, remains 1.59-4.44x faster up to N = 2^26. Commit achieves a smaller speedup of 5.21-5.95x over the default LCPC configuration (4.48-5.95x across both default and tuned configurations), because column hashing then accounts for over a third of single-threaded commit time. Prove and verify are 1.83-7.61x and 2.65-5.36x faster than under the default LCPC configuration across thread counts and sizes, and single-threaded PCS setup is 1.31-1.44x faster. The accompanying artifact reproduces all baselines and measurements from fixed source revisions.",
+   "url": "https://eprint.iacr.org/2026/2996",
+   "pdf": "https://eprint.iacr.org/2026/2996.pdf",
+   "source": "ePrint",
+   "date": "2026-11-23T03:48:39+00:00"
+  },
+  {
+   "id": "eprint:2026/2982",
+   "title": "Pethoa: Dynamic Proofs of Assets for Hidden Address Sets on Account-Based Blockchains",
+   "authors": "Yangrui Zhou, Dongliang Cai, Yuxuan Chen, Liang Zhang, Haibin Kan",
+   "abstract": "Proofs of solvency allow custodians to demonstrate that their assets cover their liabilities, but conventional Proofs of Assets (PoA) often require publicly disclosing reserve addresses, exposing financial activities and enabling long-term transaction tracing. While zero-knowledge proofs can hide reserve addresses and prove asset ownership and balances against a public blockchain state, generating proofs for evolving blockchain states remains computationally expensive, particularly for chains with proof-unfriendly state structures. We introduce Dynamic Private Proof of Assets (DPoA), a framework for efficiently updating proofs of assets over hidden sets of on-chain addresses. Our construction separates asset-proof generation into an expensive initialization phase and lightweight incremental updates. During initialization, the prover establishes ownership and state membership for the reserve addresses. Subsequently, for each epoch, the prover locally updates its proof state based on newly finalized blocks and generates a zero-knowledge proof to demonstrate the correctness of the update, avoiding the need to regenerate the entire asset proof from scratch. Experimental results demonstrate the efficiency of our approach: generating a conventional static proof for thousands of addresses takes several minutes on an NVIDIA RTX 5090 GPU, whereas our dynamic update requires only a few seconds per block and runs entirely on a 14-core CPU.",
+   "url": "https://eprint.iacr.org/2026/2982",
+   "pdf": "https://eprint.iacr.org/2026/2982.pdf",
+   "source": "ePrint",
+   "date": "2026-11-22T08:28:11+00:00"
+  },
+  {
+   "id": "eprint:2026/2978",
+   "title": "SPAN: Privacy-Preserving Proofs of Sustained Aggregate Holdings in UTXO Privacy Pools",
+   "authors": "Zonglun Li, Xue Liu",
+   "abstract": "Privacy pools are expanding from private transfers to tokenized real-world assets and holding-dependent rewards. These applications motivate evidence of sustained holdings across note replacements. We define a privacy-preserving interval proof of holding (PP-IPoH) scheme and present SPAN for arbitrary-value unspent transaction output (UTXO) pools. Two incrementally verifiable computations (IVCs) authenticate selected records and establish spend completeness, certifying a balance lower bound after every finalized transaction. An independent zero-knowledge succinct argument proves that this bound meets a threshold throughout an interval and supports subsequent queries over the same certified history. We prove completeness, knowledge soundness, and privacy under the stated component and ledger conditions. Experiments show linear proving time, adding about 2.9 seconds per additional transaction, and essentially constant maximum memory usage near 3.8 GB.",
+   "url": "https://eprint.iacr.org/2026/2978",
+   "pdf": "https://eprint.iacr.org/2026/2978.pdf",
+   "source": "ePrint",
+   "date": "2026-11-21T22:03:56+00:00"
+  },
+  {
+   "id": "eprint:2026/2962",
+   "title": "How to Hash and Commit Real Values with Dynamic Precision",
+   "authors": "Binyi Chen, Yilei Chen, Zhenghao Guan, Wenjie Li",
+   "abstract": "When hashing or committing real values (represented by floating-point numbers), traditional cryptographic hash functions and commitment schemes have to first convert the real values to integers or finite ring elements. Such solutions suffer from several drawbacks. The schemes do not support dynamic choices of precisions. More generally, hashing or committing algorithms lose the efficiency and flexibility of directly working on real numbers. In this paper, we define and construct cryptographic hash functions and commitment schemes with dynamic precision choices and native real number arithmetic. Our main contributions are: 1. Providing the definitions of the real value collision resistant hash function (RVCRH) and commitment for real numbers, formalizing the notions of dynamic precision choices in the hashing, committing, and opening algorithms. 2. Defining the continuous analogs of the Short Integer Solution Problem (CSIS) and proving their hardness based on the worst-case hardness of lattice problems. We then construct RVCRHs and compressing commitment schemes with dynamic precision and native real arithmetic from CSIS problems. 3. Constructing a statistically binding additively homomorphic commitment scheme that supports real number arithmetic from the Continuous Learning With Errors Problem (CLWE). As an application, we provide a Sigma protocol for proving the knowledge of real numbers from CLWE. We also show that additively homomorphic commitment schemes for real values are unlikely to be compressing by showing a partial impossibility result for achieving such schemes.",
+   "url": "https://eprint.iacr.org/2026/2962",
+   "pdf": "https://eprint.iacr.org/2026/2962.pdf",
+   "source": "ePrint",
+   "date": "2026-11-20T09:26:54+00:00"
+  },
+  {
+   "id": "eprint:2026/2961",
+   "title": "Post-Quantum Anonymous Credentials and Blind Signatures from ML-DSA",
+   "authors": "Thibauld Feneuil, Killian Provin, Matthieu Rivain",
+   "abstract": "Anonymous credentials allow users to prove properties of their identity, such as their age or nationality, without revealing any other personal information. For institutional deployment, it is particularly desirable to build such systems from standardized post-quantum signature schemes, allowing issuers to retain their existing signing procedures. However, proving knowledge of a valid ML-DSA signature in zero knowledge is costly: ML-DSA verification mixes binary operations, notably SHAKE/Keccak, with arithmetic over $\\mathbb{F}_q$, together with sampling and decomposition procedures that are hard to arithmetize efficiently. As a result, recent concurrent works produce large proofs, ranging from several hundred kilobytes to approximately 1 MB. In this paper, we present an efficient zero-knowledge proof of knowledge (ZK-PoK) of an ML-DSA signature. Our approach separates the binary and prime-field computations and relies on SmallWood+, a hash-based zero-knowledge argument system built on the sum-check and GKR protocols. We use it to build blind signatures and anonymous credentials from ML-DSA. For ML-DSA-44, our ZK-PoK of a valid signature on a 32-byte private message has a proof size of about 87 KB. Our blind signature, which essentially consists of such a ZK-PoK, achieves a similar size of about 88 KB. We apply our construction to ISO/IEC 18013-5 mdoc credentials instantiated with ML-DSA, including device binding: the holder proves knowledge of an issuer-signed credential and of a device signature on the verifier's challenge under the certified, hidden device key. The resulting presentation proofs have a size of about 200 KB, compared with about 458 KB in a recent concurrent work. Our proof-of-concept implementation, partly written in Python and not yet optimized, generates the ZK-PoK and the blind signature in about 2 seconds and a credential presentation in about 15 seconds; we expect an optimized implementation to be significantly faster.",
+   "url": "https://eprint.iacr.org/2026/2961",
+   "pdf": "https://eprint.iacr.org/2026/2961.pdf",
+   "source": "ePrint",
+   "date": "2026-11-20T07:54:48+00:00"
+  },
   {
    "id": "eprint:2026/2957",
    "title": "Does Witness Indistinguishability Require Cryptography?",

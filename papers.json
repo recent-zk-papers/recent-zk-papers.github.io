@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T09:51:13.613011+00:00",
+ "updated": "2026-11-24T22:24:04.836604+00:00",
  "papers": [
   {
    "id": "arxiv:2611.30063",
@@ -2930,6 +2930,16 @@
    "pdf": "https://eprint.iacr.org/2026/284.pdf",
    "source": "ePrint",
    "date": "2026-02-17T06:38:28+00:00"
+  },
+  {
+   "id": "eprint:2026/266",
+   "title": "UltraFold: Distributed Code-Based PCS from Packed Interleaved Merkle Trees",
+   "authors": "Wenhao Wang, Fan Zhang",
+   "abstract": "Transparent, code-based polynomial commitment schemes (PCSs) are a foundation for large-scale succinct proofs: they avoid trusted setup, support post-quantum security, and achieve high performance. As proving workloads grow, the computational and memory demands of committing to and opening large polynomials motivate distribution. However, distributing these schemes requires coordinating data across encoding, folding, and Merkle authentication; poorly distributed data introduces repeated communication overhead that grows with the number of workers. In this paper, we present UltraFold, an efficient framework for distributing a class of code-based PCSs that we call partition-compatible. UltraFold combines a distributed encoder inspired by Bailey's FFT with an interleaved Merkle leaf layout. After a single all-to-all exchange of partially encoded values, each worker can complete encoding and generate subsequent oracle entries and local Merkle authentication paths without further worker-to-worker communication. UltraFold maintains a single global commitment to each oracle and preserves the underlying PCS's asymptotic proof size, and supports distribution to an arbitrary number of workers. We further incorporate packed Merkle trees to amortize hashing and authentication costs. We instantiate UltraFold with BaseFold (CRYPTO'24), obtaining a distributed PCS for multilinear polynomials. Using 256 single-core workers, our implementation commits to and opens a $2^{30}$-coefficient polynomial in under 5 seconds, with a proof size of 281 KB.",
+   "url": "https://eprint.iacr.org/2026/266",
+   "pdf": "https://eprint.iacr.org/2026/266.pdf",
+   "source": "ePrint",
+   "date": "2026-02-16T05:09:57+00:00"
   },
   {
    "id": "arxiv:2602.13682",

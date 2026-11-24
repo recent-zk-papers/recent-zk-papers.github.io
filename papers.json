@@ -1,6 +1,16 @@
 {
- "updated": "2026-11-23T23:50:59.653603+00:00",
+ "updated": "2026-11-24T09:51:13.613011+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.30063",
+   "title": "LaTSEC: Lattice-Based Threshold Signatures with Native Non-Interactive Identifiable Abort and Compact Per-Party Storage",
+   "authors": "Muhammad Arzaki, Muhammed F. Esgin, Markku-Juhani O. Saarinen, Amin Sakzad, Ron Steinfeld",
+   "abstract": "We present $\\mathsf{LaTSEC}$, a three-round lattice-based threshold signature scheme with native non-interactive identifiable abort. Each party holds one small-norm signing share and is associated with one public abort key, against which its partial signature is verified directly, without zero-knowledge proofs or an additional interactive protocol. Prior lattice-based threshold signatures that identify misbehaving parties rely on one of three mechanisms: zero-knowledge proofs, an additional interactive protocol, or an everywhere-short secret sharing scheme in which each party holds multiple signing shares, each with its own public abort key. Compared with schemes that use the third mechanism, $\\mathsf{LaTSEC}$ substantially reduces per-party storage. The construction uses $\\mathsf{SEC}$, a recent ramp everywhere-short secret sharing scheme based on lossless expanders that gives each party a single short share. We prove correctness, identifiable-abort security, and threshold unforgeability under the standard $\\mathsf{MLWE}$ and $\\mathsf{MSIS}$ assumptions. The unforgeability proof introduces the Repeated-$\\boldsymbol{A}$ Matrix Hint-MLWE problem, a new variant of $\\mathsf{MLWE}$ with hints that captures the complete tuple of correlated public abort keys. We rigorously prove that this new variant admits a reduction from the standard $\\mathsf{MLWE}$ problem. For 60 parties at 128-bit security, $\\mathsf{LaTSEC}$ tolerates up to 6 corrupted parties, and, empirically, a randomly chosen set of at least 46 parties can sign with probability at least 0.99. Each party holds one signing share of about 14.3 KiB and is associated with one 24-KiB public abort key.",
+   "url": "http://arxiv.org/abs/2611.30063v1",
+   "pdf": "http://arxiv.org/pdf/2611.30063v1",
+   "source": "arXiv",
+   "date": "2026-11-23T05:12:53Z"
+  },
   {
    "id": "eprint:2026/2996",
    "title": "Real Brakedown Performance: A Portable Scalar Baseline for Spielman-Code Polynomial Commitments",
@@ -20,6 +30,26 @@
    "pdf": "https://eprint.iacr.org/2026/2982.pdf",
    "source": "ePrint",
    "date": "2026-11-22T08:28:11+00:00"
+  },
+  {
+   "id": "arxiv:2611.29260",
+   "title": "Revealing Semantic Gaps in Zero-Knowledge Virtual Machines via Obligation-Targeted Semantic Fuzzing",
+   "authors": "Hongbo Wen, Jingyu Ke, Hanzhi Liu, Yanju Chen, Yu Feng",
+   "abstract": "Zero-knowledge virtual machines (zkVMs) prove correct execution of programs and underpin systems securing billions of dollars in digital assets. Their security depends on alignment between the instruction set architecture (ISA) that programs target, such as RISC-V, and the constraint system, polynomial equations that check the prover's record of every intermediate value (the witness). Mismatches, or semantic gaps, come in two kinds: underconstraint bugs let a malicious prover forge a proof of an execution the ISA forbids (a soundness violation), and divergence bugs make the zkVM itself deviate from the ISA or crash, so an honest prover cannot prove a legitimate execution (a completeness violation). Both cluster at corner cases such as division by zero that conventional fuzzing almost never reaches, and underconstraint bugs leave program output unchanged. Our key insight is that these corner cases correspond to constraint obligations derived from the ISA specification and the proof system's algebraic structure. We build Beak, a reinforcement-learning fuzzer in which obligations replace three random decisions: they supply inputs that trigger each obligation, reward executions that trigger new combinations of obligations, and direct witness tampering to the step where an obligation is triggered. Beak flags divergence bugs by comparing registers against a reference RISC-V emulator, and underconstraint bugs by checking whether the constraints accept a tampered witness. On six leading production RISC-V zkVMs, Beak detects 25 of 37 known bugs (67.6%) versus 5 (13.5%) for the prior state of the art, and discovers 14 previously unknown bugs, all responsibly disclosed and patched.",
+   "url": "http://arxiv.org/abs/2611.29260v1",
+   "pdf": "http://arxiv.org/pdf/2611.29260v1",
+   "source": "arXiv",
+   "date": "2026-11-22T05:58:34Z"
+  },
+  {
+   "id": "arxiv:2611.29188",
+   "title": "Ziv Meets Sumcheck: Zero-Knowledge Proofs of Floating-Point LLM Inference",
+   "authors": "Hassan Khodaiemehr, Khadijeh Bagheri, Chen Feng",
+   "abstract": "Zero-knowledge proofs can show that a neural network produced a given output without revealing the network, but current systems for language models prove integer approximations of the model rather than the floating-point arithmetic that is actually deployed. Proving floating-point matrix multiplication has been regarded as hard, because rounding after every addition makes the result depend on the order of the additions. We avoid this obstacle by proving the correctly rounded product, in which every dot product is computed exactly and rounded once. This result is independent of the hardware and at least as accurate as standard kernels. We give an interactive proof for this relation whose cost is close to that of integer matrix multiplication, with roughly a thousand times fewer committed values than per-operation floating-point circuits need constraints, extend it to every layer of a transformer, and give a privacy construction for the complete argument whose zero knowledge we prove under explicit hypotheses. We implement the system and prove the full forward pass of GPT-2 small, including all twelve blocks and the output over the whole vocabulary, in 19 minutes on two processor cores; verification takes 21 seconds. The verifier rejects all 236 attacks we tested, and the model's outputs agree with high-precision inference at least as closely as standard 16-bit inference does.",
+   "url": "http://arxiv.org/abs/2611.29188v1",
+   "pdf": "http://arxiv.org/pdf/2611.29188v1",
+   "source": "arXiv",
+   "date": "2026-11-22T03:29:13Z"
   },
   {
    "id": "eprint:2026/2978",
@@ -103,11 +133,11 @@
   },
   {
    "id": "arxiv:2611.25663",
-   "title": "Correctable Enrollment and One-Transaction Seed Proofs for Ethereum's Post-Quantum Transition",
+   "title": "Correctable Enrollment and One-Transaction Seed Proofs for Ethereum's Post-Quantum Migration",
    "authors": "Xin Jin, Maximillian Liao, Handong Chen, Yi Nancy Li, Junyu Liu",
    "abstract": "A quantum computer running Shor's algorithm can extract the private key of every Ethereum account whose public key is published, and accounts exposed by their own transactions hold 54.6% of execution-layer ETH. As the first such machine may stay secret, a migration cannot wait for visible thefts, and once keys are extractable, legacy signatures no longer tell owners from attackers. We design a migration in which owners enroll post-quantum keys cheaply with their existing signatures before ECDSA is retired at a scheduled time, while a zero-knowledge proof of the wallet's BIP-39 seed can correct any such enrollment until a common deadline afterward; an account nobody enrolled stays frozen and recoverable by seed proof without a deadline. Each proof binds the new key, a nonce and a fee cap, so neither a paying sponsor nor a reordering block builder can redirect or replay it. Validators switch to hash-based keys first, at a finalized checkpoint and under a stated bound on the attacker's voting power. We prove the account guarantees under explicit assumptions, model-check the rules, and implement the design in go-ethereum and a Lean consensus client. A three-layer recursive hash-based STARK yields a seed proof of about 190 KB that fits one transaction, verifies in 38 ms and takes a median of 111 s to generate on a laptop; four proofs aggregate into one. In a ten-node simulation with mainnet-derived accounts and fee demand, block space rather than proving sets the duration: the 4.45 million accounts with at least 0.1 ETH would migrate in 29.4 days if all enroll before ECDSA is retired and in 235 days if all recover after it in batches of four. In a mass enrollment, an enrollment waits a median of 19.1 minutes in the public mempool, longer than published estimates for a fast quantum computer to extract its key, so owners with a seed and an unexposed key should migrate by seed proof.",
-   "url": "http://arxiv.org/abs/2611.25663v1",
-   "pdf": "http://arxiv.org/pdf/2611.25663v1",
+   "url": "http://arxiv.org/abs/2611.25663v2",
+   "pdf": "http://arxiv.org/pdf/2611.25663v2",
    "source": "arXiv",
    "date": "2026-11-19T07:43:09Z"
   },
@@ -256,8 +286,8 @@
    "title": "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models",
    "authors": "Tomer Solberg",
    "abstract": "We present Sable, an argument system and single-GPU prover for the statement that a committed, integer-quantized transformer produced a given token sequence from a given prompt, bit for bit. Sable fixes an integer function F_O with no floating-point step, in which every rounding, normalization, softmax and sampling decision is determined by its inputs, and proves it with a constraint system whose relations provably never wrap modulo the 31-bit KoalaBear prime. The proof batches zerochecks and LogUp-GKR lookups into one sumcheck per domain, and commits to every witness tensor and weight in one multilinear commitment built from Reed-Solomon codes, BLAKE3 Merkle trees and a mixed-length BaseFold opening. The prover streams the model layer by layer on one GPU. On one NVIDIA RTX PRO 6000 Blackwell GPU, Sable proves all 64 layers of Qwen2.5-32B in 92.5 s for 4,096 tokens and 398 s for 16,384 tokens, and covers Qwen3-32B and the mixture-of-experts Qwen3-30B-A3B (4,096 tokens in 121.8 and 84.7 s). A proof costs 41 to 50 times the serving time, or 6.4 cents per 4,096-token request at public GPU prices, and 40 to 64 times less time per parameter and token than zkLLM. On WikiText-2, F_O's greedy token matches the BF16 model's at 86.3% of positions; on Qwen3, F_O is within 1.6 points of BF16 on MMLU and 1.7 points on GSM8K. A verifier with a compiled core checks a proof on one CPU core in 19 to 56 s. In the random-oracle model, the interactive proof has round-by-round soundness error 2^-103. The proof is not zero-knowledge, so the system targets open-weight models. Code: https://github.com/moonmath-ai/Sable",
-   "url": "http://arxiv.org/abs/2611.14083v1",
-   "pdf": "http://arxiv.org/pdf/2611.14083v1",
+   "url": "http://arxiv.org/abs/2611.14083v2",
+   "pdf": "http://arxiv.org/pdf/2611.14083v2",
    "source": "arXiv",
    "date": "2026-11-10T13:47:29Z"
   },
@@ -1992,6 +2022,16 @@
    "date": "2026-06-18T09:38:13Z"
   },
   {
+   "id": "eprint:2026/1259",
+   "title": "Collaborative Rate Limiting Nullifier Signaling",
+   "authors": "Ya\u011fmur G\u00fcrel, U\u011fur \u015een, O\u011fuz Yayla",
+   "abstract": "Rate Limiting Nullifier (RLN) is a privacy-preserving and decentralized spam-prevention mechanism for anonymous broadcast networks: each member can emit at most $r$ signals per epoch, and any violation reveals a secret that enables the member's stake to be slashed. The standard construction binds each membership to a single secret key $\\mathsf{sk}_G$, so the unit of identity, the unit of authorization, and the unit of slashing all coincide with one party. This rules out settings in which a group should speak with one voice, share one rate budget, and stand behind one collective bond without any single member being able to act unilaterally. We introduce Collaborative RLN Signaling (coRLN), a protocol that lets $n$ parties register as a single RLN member and signal only by acting jointly. The group secret $\\mathsf{sk}_G$ is held as additive shares under SPDZ and never reconstructed; the identity (or rate) commitment, the per-epoch RLN evaluation, and the broadcast proof are produced inside an MPC network using collaborative zk-SNARKs. The group occupies one leaf in the membership Merkle tree, locks one aggregated stake $\\mathsf{stake}_G$, and is bound by one rate limit. We present the construction in both the rate-limit-1 and the general $r \\geq 1$ settings, and we extend the protocol with a collaborative withdrawal procedure that lets the group exit without ever reconstructing $\\mathsf{sk}_G$. We prove three security properties of coRLN by reduction to the collaborative-SNARK composition and the standard primitives underneath: (i) no PPT adversary corrupting up to $n-1$ parties recovers $\\mathsf{sk}_G$ as long as one party is honest; (ii) two signals in the same epoch with the same $\\mathsf{messageId}$ yield an efficient extractor that recovers $\\mathsf{sk}_G$ and triggers forfeiture of $\\mathsf{stake}_G$; and (iii) no strict subset of $G$ can produce a verifying signal. The verifier interface and signal shape match classical RLN at the byte level, so coRLN deploys on existing RLN-aware infrastructure with only the verification key updated.",
+   "url": "https://eprint.iacr.org/2026/1259",
+   "pdf": "https://eprint.iacr.org/2026/1259.pdf",
+   "source": "ePrint",
+   "date": "2026-06-15T15:37:21+00:00"
+  },
+  {
    "id": "eprint:2026/1248",
    "title": "Atlantis: Lattice-based Anonymous Tokens with Private Metadata Bit",
    "authors": "Foteini Baldimtsi, Aayush Yadav",
@@ -3446,8 +3486,8 @@
    "title": "zk-Agreements: A Privacy-Preserving Way to Establish Deterministic Trust in Confidential Agreements",
    "authors": "To-Wen Liu, Matthew Green",
    "abstract": "Digital transactions currently exceed trillions of dollars annually, yet traditional paper-based agreements remain a bottleneck for automation, enforceability, and dispute resolution. Natural language contracts introduce ambiguity, require manual processing, and lack computational verifiability, all of which hinder efficient digital commerce. Computable legal contracts, expressed in machine-readable formats, offer a potential solution by enabling automated execution and verification. Blockchain-based smart contracts further strengthen enforceability and accelerate dispute resolution; however, current implementations risk exposing sensitive agreement terms on public ledgers, raising serious privacy and competitive intelligence concerns that limit enterprise adoption. We introduce zk-agreements, a protocol designed to transition from paper-based trust to cryptographic trust while preserving confidentiality. Our design combines zero-knowledge proofs to protect private agreement terms, secure two-party computation to enable private compliance evaluation, and smart contracts to guarantee automated enforcement. Together, these components achieve both privacy preservation and computational enforceability, resolving the fundamental tension between transparency and confidentiality in blockchain-based agreements.",
-   "url": "http://arxiv.org/abs/2510.20007v1",
-   "pdf": "http://arxiv.org/pdf/2510.20007v1",
+   "url": "http://arxiv.org/abs/2510.20007v2",
+   "pdf": "http://arxiv.org/pdf/2510.20007v2",
    "source": "arXiv",
    "date": "2025-10-22T20:11:57Z"
   }

@@ -1,6 +1,26 @@
 {
- "updated": "2026-11-24T22:24:04.836604+00:00",
+ "updated": "2026-11-25T08:28:55.056898+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.31547",
+   "title": "Aftershock: Yesterday's Linux Kernel Bugs, Tomorrow's Android Exploits",
+   "authors": "Kareem Shehada, Zhiyun Qian",
+   "abstract": "Android kernels have long suffered from slow patch propagation from Linux upstream, with fixes often reaching devices far later than conventional Linux distributions. Until recently, this lag was largely a patch-management problem. With rapidly improving LLM agents, it is becoming an exploitation problem: public upstream patches can now serve as blueprints for building working n-day exploits before downstream devices are fixed. We test this threat end to end by building an automated pipeline that screens upstream Linux patches, reproduces memory-safety vulnerabilities on Android targets, and drives an LLM agent to construct local privilege escalation exploits from an untrusted application. Across 152 candidate CVEs reported over 33 months, we reproduce 38 vulnerabilities and generate 17 independently verified exploits under production defenses. Exploitation takes a median of 14.3 agent-hours and $321 in API cost, with 90% median reliability; 12 of 14 trials succeed on Pixel 9 and Pixel 10 devices. Notably, the pipeline relies only on publicly available, off-the-shelf models. Surprisingly, only 3 of the 17 exploited CVEs appear in Android Security Bulletins, suggesting limited visibility into which upstream fixes address vulnerabilities that affect Android kernels. For these 17 CVEs, the corresponding upstream patches reach Pixel devices with a median delay of 181 days. Together, these results reveal a stark asymmetry: attackers can increasingly automate exploitation in hours, while defenders still identify and deploy fixes on the timescale of months.",
+   "url": "http://arxiv.org/abs/2611.31547v1",
+   "pdf": "http://arxiv.org/pdf/2611.31547v1",
+   "source": "arXiv",
+   "date": "2026-11-23T20:58:46Z"
+  },
+  {
+   "id": "eprint:2026/3002",
+   "title": "Where on Earth? Zero-Knowledge Proof of Location from a Phone Photograph of the Moon and Stars",
+   "authors": "Pavel Shuvalov",
+   "abstract": "We study whether a single photograph taken with commodity hardware, such as an unmodified phone, can serve as a privacy-preserving proof of location. The physical anchor is lunar parallax. The Moon is close enough to the Earth that its position against the background stars shifts by up to about one degree depending on where the observer stands, so a frame that shows the Moon among a few stars, together with its capture time, determines the camera's position: one arcsecond of measurement error corresponds to about 1.9 km on the ground. Nothing is transmitted and nothing is received; the only infrastructure is the sky, a star catalogue and an ephemeris (a published table of where the Moon is at any given time). We make three contributions. First, we measure what phone cameras actually achieve. Our study is based on 356 captures, of which 6 RAW frames give a position, with errors from tens to under two hundred kilometres. We analyse what limits the measurement and the ranges of capture parameters in which it is feasible. Second, we turn the measurement into a zero-knowledge proof. One proof binds a signed RAW file to a Merkle commitment of its pixels; a second proof recomputes the star centroids, the camera calibration, the Moon's centre and the parallax from the committed pixels, and shows that every position consistent with the photograph lies inside a public region, revealing neither the position, the photograph, nor the signing device. The prover is left with essentially no choices: the camera must be the least-squares fit to a complete, magnitude-limited star set, which cuts the prover's influence on the result from more than a thousand kilometres to under 25 km in our measurements. Six telephoto frames from one phone at two sites are accepted, with regions between roughly 370 x 370 and 710 x 640 km, as are three further test photographs, two of them published photographs from dedicated cameras. Both proofs run on two zkVMs; on the faster one the full pipeline for a photograph, ending in a zero-knowledge proof, takes about ten minutes of GPU and CPU time, and verification takes under half a second. Third, we analyse what the proof does not establish. A photograph of a laptop screen displaying a rendered sky is accepted as a proof for the original site, because the proof binds pixels to a signing device and its clock, not to the physical sky. We enumerate the trust assumptions, survey which device signals could narrow the gap, and outline measures that would raise the cost of more advanced forgeries well beyond the resources of an individual. The result is a working approach for building location proofs from commodity-phone photographs, at country-to-region granularity, and not yet a complete proof-of-location system.",
+   "url": "https://eprint.iacr.org/2026/3002",
+   "pdf": "https://eprint.iacr.org/2026/3002.pdf",
+   "source": "ePrint",
+   "date": "2026-11-23T06:27:39+00:00"
+  },
   {
    "id": "arxiv:2611.30063",
    "title": "LaTSEC: Lattice-Based Threshold Signatures with Native Non-Interactive Identifiable Abort and Compact Per-Party Storage",
@@ -366,8 +386,8 @@
    "title": "QUASI: Post-Quantum Quorum Attestation of Pre-Validated Statements",
    "authors": "Maksym Ioffe, Dahlia Malkhi",
    "abstract": "We present QUASI, a newly conceived class of hash-based, post-quantum-secure protocols that enable a group of parties to produce a publicly verifiable attestation about a pre-validated statement. QUASI produces attestations that reduce the size and verification cost to a fraction of a full hash-based signatures collection, without relying on SNARKs or a trusted setup. QUASI rests on a surprising discovery: each party need not sign the entire statement. Authenticating only a small subset of symbols suffices for a quorum to attest to the whole. We turn this insight into a randomized construction that achieves reductions of more than 10x in per-party contribution size and hash computations for generation and verification, compared with full hash-based signatures. QUASI is a generic primitive supporting diverse applications. Operationally, QUASI requires no additional interactive setup or preprocessing beyond independent key generation by parties for the underlying hash-based authentication scheme. Two principal use cases are external attestation for signature-free consensus, enabling clients to verify statements about committed state; and preprocessing for SNARK-based aggregation, compounding QUASI's savings with succinct-proof compression.",
-   "url": "http://arxiv.org/abs/2611.10403v2",
-   "pdf": "http://arxiv.org/pdf/2611.10403v2",
+   "url": "http://arxiv.org/abs/2611.10403v3",
+   "pdf": "http://arxiv.org/pdf/2611.10403v3",
    "source": "arXiv",
    "date": "2026-11-07T02:29:20Z"
   },
@@ -1920,6 +1940,16 @@
    "pdf": "https://eprint.iacr.org/2026/1388.pdf",
    "source": "ePrint",
    "date": "2026-07-07T21:17:04+00:00"
+  },
+  {
+   "id": "eprint:2026/1387",
+   "title": "ZK-Audit: Proving Power Side-Channel Resilience in Synthesized Hardware",
+   "authors": "Sakib Anwar Rieyan, Nektarios Georgios Tsoutsos",
+   "abstract": "Modern hardware security often relies on the assumption that protections introduced before synthesis will survive logic synthesis. However, Electronic Design Automation (EDA) toolchains apply structural optimizations that can affect data-dependent switching activity. Conventional netlist auditing may also require an IP vendor to disclose proprietary gate-level intellectual property to an external auditor. In this paper, we introduce ZK-Audit, a pre-silicon framework for assessing input-dependent switching in synthesized soft IP. By translating gate-level netlists into a custom Side-Channel Intermediate Language (SCIL), ZK-Audit expresses stable-state transitions and their capacitance-weighted switching scores as arithmetic constraints. In our evaluation, the AES S-box exceeded the configured switching-discrepancy threshold in 86 of 100 trials, illustrating the framework's ability to identify input-dependent switching in a cryptographic component. The assessment applies to the sampled inputs and the audited design, with transient glitches and physical implementation effects outside its scope. We also specify a zero-knowledge Bounded Toggle Assessment (ZK-BTA) relation that would allow a client to verify the reported exceedance count while the vendor keeps its netlist and execution traces private.",
+   "url": "https://eprint.iacr.org/2026/1387",
+   "pdf": "https://eprint.iacr.org/2026/1387.pdf",
+   "source": "ePrint",
+   "date": "2026-07-07T21:15:19+00:00"
   },
   {
    "id": "arxiv:2607.06804",

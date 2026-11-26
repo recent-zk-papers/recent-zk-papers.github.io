@@ -1,6 +1,46 @@
 {
- "updated": "2026-11-25T21:39:16.157680+00:00",
+ "updated": "2026-11-26T08:12:44.738666+00:00",
  "papers": [
+  {
+   "id": "arxiv:2611.34417",
+   "title": "Northstar: Efficient Verifiable Negacyclic Polynomial Arithmetic with Applications to Encrypted Lattice-based Multi-Asset ERC-20 and Verifiable FHE",
+   "authors": "Yeoh Wei Zhu, Shaltiel Eloul, Yash Satsangi, Rob Otter",
+   "abstract": "Lattice-based cryptography can be used to construct a variety of post-quantum cryptographic schemes, ranging from standard cryptographic primitives such as digital signatures and encryption, to fully homomorphic encryption (FHE). However, the verification of correct lattice computations remains relatively expensive, particularly for computationally intensive FHE operations and for resource-constrained environments such as on-chain verification via smart contracts. We propose Northstar, an efficient technique for proving negacyclic arithmetic natively. When integrated with existing STARK proving frameworks, Northstar achieves the best overall performance across prover time, verifier time, and proof size compared to prior state-of-the-art approaches for verifiable FHE constructions. Furthermore, Northstar is used to construct the first verifiable encrypted multi-asset (~ 1000 assets) variant of ERC-20 that is efficiently verifiable by a smart contract, and is practically deployable in the current blockchain ecosystem.",
+   "url": "http://arxiv.org/abs/2611.34417v1",
+   "pdf": "http://arxiv.org/pdf/2611.34417v1",
+   "source": "arXiv",
+   "date": "2026-11-25T14:09:05Z"
+  },
+  {
+   "id": "arxiv:2611.33741",
+   "title": "FlashProve-Next: Verifiable Inference for Production LLM APIs",
+   "authors": "Liang Song",
+   "abstract": "Clients of closed-weight LLM APIs cannot verify whether a provider ran the advertised model, precision, hidden prompt, and reasoning budget. Existing approaches either trust hardware or third parties, or re-prove every layer of an integer surrogate at high cost while diverging from native floating-point serving. FlashProve-Next produces verifiable, zero-knowledge-masked proofs for individual LLM API responses without modifying native serving (bf16/fp8/mxfp4, random sampling, FlashAttention, CUDA graphs, batching, prefix caching) and without disclosing weights, hidden prompts, hidden reasoning, or activations (dense profiles fix coarse geometry; cross-architecture hiding is deferred). A non-depleting Reed-Solomon weight commitment model_id opens inside proofs via hidden column openings, while local per-operator rounding contracts remove integer surrogates and the refusal-bit leak. Cost-weighted spot-checking supports non-interactive public verification (NI-315, $\\varepsilon \\le 2^{-40}$, $Q \\le 2^{64}$) and external-seed C_pre mode (ExtSeed-153, $\\varepsilon \\le 2^{-20}$, $Q_{\\rm samp} \\le 2^{30}$). Twenty-eight Lean 4 modules (696 declarations, zero sorry, standard axioms only) mechanize round-by-round soundness, bucketed sampling, $\\mathbb{F}_{p^3}$ constrained-mask binding, causal masking, six IR gadgets, and executable FPN2 verifiers. Five-model Blackwell calibration gives zero false rejections across 1.85M GEMM/MoE blocks and 1.96M non-GEMM rows. Our zero-Phase-2 folded backend (folded ZK simulator open) proves Qwen3-0.6B ExtSeed-153 (1.47B cells, 8 MiB) in 450.2 s GPU (10.76 s CPU) at unique-decoding $Q=128$, passes a 14/14 cheating matrix, and scales to 36-layer Qwen3-4B (dev $4+2$) and live vLLM Qwen3-30B-A3B-FP8 Relation 6 (1.49 s prove, 23.4 ms Rust verify, public weight tiles). Rust fpn-verify checks 8 MiB FPN2 Relation 2 proofs in 10.1 ms on CPU.",
+   "url": "http://arxiv.org/abs/2611.33741v1",
+   "pdf": "http://arxiv.org/pdf/2611.33741v1",
+   "source": "arXiv",
+   "date": "2026-11-25T04:01:37Z"
+  },
+  {
+   "id": "arxiv:2611.33508",
+   "title": "Merkle Trees Minimize Verifier Complexity in the ROM",
+   "authors": "Miranda Christ, Oliver Korten, Tal Malkin, Noam Mazor, Shyamal Patel",
+   "abstract": "Nearly five decades after their introduction, Merkle trees remain the most efficient hash-based vector commitments. They compress a vector $x \\in \\{0,1\\}^n$ into a commitment whose size is independent of $n$, such that a verifier can open any bit $x_i$ using $\\log n$ hash evaluations. The security of the scheme (intractability of finding two distinct openings for a given bit using the same commitment) follows from the collision resistance of the hash function. The verifier's runtime complexity is a bottleneck in many key applications of vector commitments, including SNARKs, credentials, and authenticated dictionaries. As such, a longstanding open question has been whether it is possible to construct hash-based vector commitments where the verifier makes a sublogarithmic number of hash evaluations. We prove that sublogarithmic verifier complexity is impossible to achieve through black-box use of a hash function; we not only rule out constructions from collision resistant hash functions, but in fact show that commitment schemes with sublogarithmic verifier complexity are unachievable in the random oracle model. In particular, any vector commitment with deterministic verifiers has verifier query complexity $\u03a9_\u03b8(\\log n)$, where $\u03b8$ is the input length of the random oracle. This bound is matched up to constant factors by high-arity Merkle trees. The key technical lemma in our proof is a disjoint product lemma, which can be viewed as a computational analog of the van den Berg-Kesten-Reimer (BKR) inequality. We believe this lemma is of independent interest, and in particular may be useful for showing other lower bounds and separations in the random oracle model.",
+   "url": "http://arxiv.org/abs/2611.33508v1",
+   "pdf": "http://arxiv.org/pdf/2611.33508v1",
+   "source": "arXiv",
+   "date": "2026-11-24T22:35:22Z"
+  },
+  {
+   "id": "eprint:2026/3015",
+   "title": "Merkle Trees Minimize Verifier Complexity in the ROM",
+   "authors": "Miranda Christ, Oliver Korten, Tal Malkin, Noam Mazor, Shyamal Patel",
+   "abstract": "Nearly five decades after their introduction, Merkle trees remain the most efficient hash-based vector commitments. They compress a vector $x \\in \\{0,1\\}^n$ into a commitment whose size is independent of $n$, such that a verifier can open any bit $x_i$ using $\\log n$ hash evaluations. The security of the scheme (intractability of finding two distinct openings for a given bit using the same commitment) follows from the collision resistance of the hash function. The verifier's runtime complexity is a bottleneck in many key applications of vector commitments, including SNARKs, credentials, and authenticated dictionaries. As such, a longstanding open question has been whether it is possible to construct hash-based vector commitments where the verifier makes a sublogarithmic number of hash evaluations. We prove that sublogarithmic verifier complexity is impossible to achieve through black-box use of a hash function; we not only rule out constructions from collision resistant hash functions, but in fact show that commitment schemes with sublogarithmic verifier complexity are unachievable in the random oracle model. In particular, any vector commitment with deterministic verifiers has verifier query complexity $\\Omega_{\\theta}(\\log n)$, where $\\theta$ is the input length of the random oracle. This bound is matched up to constant factors by high-arity Merkle trees. The key technical lemma in our proof is a disjoint product lemma, which can be viewed as a computational analog of the van den Berg-Kesten-Reimer (BKR) inequality. We believe this lemma is of independent interest, and in particular may be useful for showing other lower bounds and separations in the random oracle model.",
+   "url": "https://eprint.iacr.org/2026/3015",
+   "pdf": "https://eprint.iacr.org/2026/3015.pdf",
+   "source": "ePrint",
+   "date": "2026-11-24T03:37:30+00:00"
+  },
   {
    "id": "arxiv:2611.31547",
    "title": "Aftershock: Yesterday's Linux Kernel Bugs, Tomorrow's Android Exploits",
@@ -2586,8 +2626,8 @@
    "title": "HFIPay: Privacy-Preserving, Cross-Chain Cryptocurrency Payments to Human-Friendly Identifiers",
    "authors": "Jian Sheng Wang",
    "abstract": "Human-friendly identifiers such as email addresses and phone numbers are convenient payment targets, but direct mappings from identifiers to blockchain addresses make balances and transaction histories enumerable by anyone who knows the identifier. We present HFI-Pay, a relay-assisted protocol for privacy-preserving identifier-routed cryptocurrency payments. The relay resolves the identifier off-chain and registers only a random intent identifier, a per-intent blinded binding rho_i, and the quoted payment tuple on-chain; no identifier or reusable recipient tag is published before claim. In a verified-quote deployment, the sender verifies an attested quote proving that rho_i was derived from the same hidden binding handle as the recipient's attested binding-key commitment, preventing relay-side recipient substitution before funding. Claims are authorized by a zero-knowledge proof, instantiated through ZK-ACE, that the claimant controls the deterministic identity whose epoch-scoped handle opens the blinded binding and authorizes release of the quoted asset and amount to a chosen destination. We define observer-model games for enumeration resistance and pre-claim unlinkability, state the composition needed for post-quote claim correctness, and characterize relay compromise and post-claim linkability. Keywords: identifier-based payment, privacy-preserving, verifiable quote, blinded claim binding, zero-knowledge authorization",
-   "url": "http://arxiv.org/abs/2603.26970v2",
-   "pdf": "http://arxiv.org/pdf/2603.26970v2",
+   "url": "http://arxiv.org/abs/2603.26970v3",
+   "pdf": "http://arxiv.org/pdf/2603.26970v3",
    "source": "arXiv",
    "date": "2026-03-27T20:26:17Z"
   },
@@ -2696,8 +2736,8 @@
    "title": "ACE Runtime - A ZKP-Native Blockchain Runtime with Sub-Second Cryptographic Finality",
    "authors": "Jian Sheng Wang",
    "abstract": "Existing high performance blockchains verify one signature per transaction on the critical path, which creates O(N) verification cost, high hardware pressure, and difficult post quantum migration. This paper presents ACE Runtime, a ZKP native execution layer built on identity authorization separation. We replace per transaction signature checks with lightweight HMAC attestations in the hot path, then generate one aggregated zero knowledge finality certificate per block in an asynchronous prove stage. The system is organized as an Attest Execute Prove pipeline with two tier finality: soft finality from BFT voting and hard finality from proof verification. Under standard cryptographic assumptions, we provide formal arguments for attestation unforgeability and hard finality irreversibility. We also define a two phase timeout and backup proving path with witness availability gossip for liveness under builder failure. Quantitative results combine analytical modeling with reference implementation measurements. The prototype shows low CPU orchestration overhead, while model driven analysis projects constant per block verification cost, lower validator hardware requirements for non builders, and better bandwidth efficiency than per transaction signature designs. These results indicate that identity authorization separation is a practical architecture for sub second cryptographic finality with a clear path toward stronger post quantum components.",
-   "url": "http://arxiv.org/abs/2603.10242v1",
-   "pdf": "http://arxiv.org/pdf/2603.10242v1",
+   "url": "http://arxiv.org/abs/2603.10242v2",
+   "pdf": "http://arxiv.org/pdf/2603.10242v2",
    "source": "arXiv",
    "date": "2026-03-10T21:39:36Z"
   },
@@ -2736,8 +2776,8 @@
    "title": "ACE-GF-based Attestation Relay for PQC - Lightweight Mempool Propagation Without On-Path Proofs",
    "authors": "Jian Sheng Wang",
    "abstract": "In post-quantum blockchain settings, objects that require validity proofs (e.g., blob roots, execution-layer or consensus-layer signature aggregates) must be broadcast through mempool and relay networks. Recursive STARKs have been proposed to aggregate such proofs so that each node forwards one proof per tick plus objects without proofs, capping per-node proof bandwidth at roughly 128 KB degree per tick. We observe that propagation does not inherently require validity proofs on the path-only a lightweight assurance that an object is eligible for relay. We present AR-ACE (ACE-GF-based Attestation Relay for PQC), in which relay nodes forward objects plus compact attestations (e.g., identity-bound signatures or commitments) and do not generate, hold, or forward any full validity proof. Only the builder (or final verifier) performs a single aggregated validity proof over the set of objects it includes. This proof-off-path design removes proof overhead from the propagation path entirely, yielding an order-of-magnitude reduction in proof-related relay bandwidth relative to proof-carrying propagation. When instantiated with ACE-GF-derived attestation keys, AR-ACE preserves a unified identity story with on-chain authorization and is PQC-ready. We specify a protocol model, state design goals and security considerations, define security games, and provide a structural bandwidth comparison with recursive-STARK-based propagation.",
-   "url": "http://arxiv.org/abs/2603.07982v1",
-   "pdf": "http://arxiv.org/pdf/2603.07982v1",
+   "url": "http://arxiv.org/abs/2603.07982v2",
+   "pdf": "http://arxiv.org/pdf/2603.07982v2",
    "source": "arXiv",
    "date": "2026-03-09T05:41:31Z"
   },
@@ -2746,8 +2786,8 @@
    "title": "ZK-ACE: Identity-Centric Zero-Knowledge Authorization for Post-Quantum Blockchain Systems",
    "authors": "Jian Sheng Wang",
    "abstract": "Post-quantum signature schemes impose kilobyte-scale on-chain artifacts. Verifying them inside ZK circuits merely relocates the cost via expensive lattice arithmetic in prover circuits. We present ZK-ACE (Zero-Knowledge Authorization for Cryptographic Entities), which replaces transaction-carried signature objects with identity-bound ZK statements. Given a deterministic identity derivation primitive (DIDP) as a black box, the prover demonstrates in zero knowledge that an identity consistent with an on-chain commitment authorized the transaction; no signature object is produced or verified on-chain. We provide game-based definitions and reduction-based proofs for authorization soundness, replay resistance, substitution resistance, and cross-domain separation, under knowledge soundness, collision resistance, and DIDP recovery hardness. Structural data accounting shows an order-of-magnitude reduction in per-transaction authorization data versus direct PQC deployment. A reference implementation offers two backends: Circle STARK (341 active rows / 361 AIR constraint expressions, 14.5 ms prove, 1.1 ms verify, approx. 107 KB proofs, transparent setup, post-quantum-oriented) and Groth16/BN254 (2,155 R1CS constraints, 37.3 ms prove, 128-byte proofs). Both are roughly 500--2,300x smaller than in-circuit PQC signature verification. Under mandatory per-block STARK aggregation, per-transaction consensus-visible data is approx. 160 bytes.",
-   "url": "http://arxiv.org/abs/2603.07974v3",
-   "pdf": "http://arxiv.org/pdf/2603.07974v3",
+   "url": "http://arxiv.org/abs/2603.07974v4",
+   "pdf": "http://arxiv.org/pdf/2603.07974v4",
    "source": "arXiv",
    "date": "2026-03-09T05:21:44Z"
   },

@@ -1,6 +1,16 @@
 {
- "updated": "2026-11-27T08:25:23.636009+00:00",
+ "updated": "2026-11-27T21:14:37.858787+00:00",
  "papers": [
+  {
+   "id": "eprint:2026/3053",
+   "title": "DEEP Revisited: Proximity Gaps up to List-Decoding Radius via Out-of-Domain Samples",
+   "authors": "Alexander Frolov, Justin Thaler, Eylon Yogev, Kai Zhe Zheng",
+   "abstract": "We revisit the use of out-of-domain samples in proximity gaps, introduced in DEEP-FRI [BGKS20]. With multiple samples, we obtain proximity gaps up to the list decoding radius of any linear code. We highlight two regimes that our results make possible, that were previously not possible. First, for general linear codes, our approach extends the standard proximity-gap guarantee from the one-and-a-half Johnson bound to the full Johnson bound, at the expense of a constant number of out-of-domain samples. Moreover, with a constant fraction of agreement loss, we can achieve error $O(1/q)$ when the field size $q$ is at least the blocklength $n$, adding $20-30$ bits of security in typical hash-based SNARK constructions using general linear codes Second, for Reed--Solomon codes, our bounds apply beyond the Johnson radius even when the list size, $L$ is very large, e.g. $L \\gg 2^\\lambda$. While standard proximity gaps would typically achieve trivial error probability in this setting, our approach shows that one can still obtain $2^{-\\lambda}$ error probability using $O(\\log L/\\lambda)$ out-of-domain samples.",
+   "url": "https://eprint.iacr.org/2026/3053",
+   "pdf": "https://eprint.iacr.org/2026/3053.pdf",
+   "source": "ePrint",
+   "date": "2026-11-26T02:49:56+00:00"
+  },
   {
    "id": "arxiv:2611.34417",
    "title": "Northstar: Efficient Verifiable Negacyclic Polynomial Arithmetic with Applications to Encrypted Lattice-based Multi-Asset ERC-20 and Verifiable FHE",
@@ -10,6 +20,36 @@
    "pdf": "http://arxiv.org/pdf/2611.34417v1",
    "source": "arXiv",
    "date": "2026-11-25T14:09:05Z"
+  },
+  {
+   "id": "eprint:2026/3046",
+   "title": "Stateful LLM Guardrails without Surveillance via Anonymous Risk Token",
+   "authors": "Anirban Chakrabarti, Stefan Dziembowski, Arup Mondal",
+   "abstract": "Safety guardrails for large language models (LLMs) judge each message on its own, yet multi-turn jailbreaks spread a harmful request over messages that each look benign. To catch them, a guardrail must remember the user's earlier messages. If the provider, who hosts and runs the model, keeps this memory, it holds a permanent record of every user, almost all of whom are innocent, along with how suspicious the guardrail judged each of their private queries. One data breach, court order, or change of policy could expose this record. If the user keeps the memory instead, a malicious user can roll it back or reset it. We therefore ask whether a guardrail can remember what it needs for safety without profiling its users. We first show that a guardrail needs far less memory than a full transcript: two numbers per user suffice. Using the classifier Llama Guard 3 on about 10,000 public conversations from automated multi-turn attacks, human red-teaming, and real users, we keep a fast and a slow running average of each user's scores; when the fast one rises above the slow one, the user's messages are becoming more harmful. At a 5% false-alarm rate, the two averages detect 34% of escalating attacks, against 25% for judging each message on its own. Kept across conversations, they cannot be evaded by splitting an attack over several conversations, unlike memory that restarts with each one. Against red-team attacks, which are often harmful from the first message, memory adds little. To keep these averages without a profile, we introduce and design a new cryptographic primitive, anonymous risk tokens (ART), in which the user holds its own averages. For each message, the provider learns only a coarse risk level (e.g., low or high) and cannot link it to the user's earlier conversations; the user cannot lower, roll back, or copy its averages, or reset them without forfeiting a prepaid balance. We formalize the security of ART and give a provably secure construction from Pointcheval-Sanders (PS) blind signatures and zero-knowledge arguments. The price is some loss of detection within a single conversation, because the averages must start from a public value. We implement a prototype of ART in Rust and evaluate it: each message takes each party about 0.4s on one laptop core, and the user uploads 90KB, regardless of the history length.",
+   "url": "https://eprint.iacr.org/2026/3046",
+   "pdf": "https://eprint.iacr.org/2026/3046.pdf",
+   "source": "ePrint",
+   "date": "2026-11-25T12:34:11+00:00"
+  },
+  {
+   "id": "eprint:2026/3043",
+   "title": "TB-IOPP: Repair-Group-Local IOPs of Proximity for Tamo\u2013Barg Codes",
+   "authors": "Seunghyun Cho, Saehoon Jung, Young-Sik Kim",
+   "abstract": "Reed-Solomon IOPPs underpin transparent succinct arguments but inherently lack small-locality symbol repair: by the MDS barrier, reconstructing missing queries requires global recovery, creating a fundamental structural mismatch in distributed, authenticated, and data-availability settings. We introduce TB-IOPP, the first repair-group-local IOP of proximity for locally recoverable Tamo-Barg codes. TB-IOPP delegates global proximity testing to an arbitrary Reed-Solomon backend via full-rank matrix folding while strictly confining every query to the committed original oracle within a fiber, an individual local repair group. The central technical challenge is cross-fiber stitching, where locally valid repair groups fail to combine into a globally consistent codeword. We resolve this by proving a robust anti-stitching theorem that bounds distance to the code in the fiber metric, showing that our original-oracle query complexity is optimal up to a constant factor in the ideal-IOPP model. Furthermore, we establish round-by-round knowledge soundness assuming only round-by-round soundness and efficient witness decoding of the backend, and compile the protocol under BCS into a non-interactive argument whose extraction guarantee binds directly to the published commitment. Finally, we establish a correlated-agreement theorem directly in the fiber metric to enable batched verification, and construct a splicing-resistant repairable proximity certificate tailored for authenticated distributed storage.",
+   "url": "https://eprint.iacr.org/2026/3043",
+   "pdf": "https://eprint.iacr.org/2026/3043.pdf",
+   "source": "ePrint",
+   "date": "2026-11-25T10:59:23+00:00"
+  },
+  {
+   "id": "eprint:2026/3042",
+   "title": "End-to-End Framework for Maliciously Secure Threshold Homomorphic Encryption",
+   "authors": "Intak Hwang, Jinyeong Seo",
+   "abstract": "We study $t$-out-of-$n$ threshold homomorphic encryption (ThHE) and its instantiation as a maliciously secure multiparty computation (MPC) protocol. We observe that recent ThHE constructions often focus on individual phases, such as distributed key generation or distributed decryption, rather than providing an end-to-end protocol with a comprehensive security analysis. Furthermore, most existing constructions either consider only passive security or address malicious security at a theoretical level, without providing concrete instantiations or evaluating the associated overhead. Consequently, there remains a lack of practical ThHE constructions that can serve as a drop-in replacement for an MPC functionality while achieving malicious security without relying on additional ideal functionalities for key generation or secure decryption, such as a trusted dealer or an external MPC functionality. In this work, we address these limitations by constructing a ThHE scheme and its associated secure computation protocol in an end-to-end manner, covering all phases from distributed key generation to distributed decryption. We provide a comprehensive security analysis of the resulting protocol against malicious adversaries within the universal composability framework. Furthermore, we quantify the concrete overhead of achieving malicious security by instantiating and benchmarking all the required zero-knowledge arguments of knowledge for verifying the well-formedness of cryptographic materials generated throughout the protocol execution. Our benchmarks demonstrate the practicality of our proof system instantiations, with proving times typically around 5 seconds per phase for a small parameter setting with ring degree $2^{13}$ and a 200-bit ciphertext modulus, and around one minute per phase even for a large parameter setting with ring degree $2^{15}$ and an 800-bit ciphertext modulus, using only a single thread. Furthermore, the resulting proof sizes remain practical, reaching at most 10 MiB per phase, while the public key materials can be as large as 90 MiB.",
+   "url": "https://eprint.iacr.org/2026/3042",
+   "pdf": "https://eprint.iacr.org/2026/3042.pdf",
+   "source": "ePrint",
+   "date": "2026-11-25T09:33:55+00:00"
   },
   {
    "id": "arxiv:2611.33741",
@@ -22,6 +62,26 @@
    "date": "2026-11-25T04:01:37Z"
   },
   {
+   "id": "eprint:2026/3036",
+   "title": "Dovetail: Group-Action Adaptor Signatures via a Heterogeneous Two-Block Construction",
+   "authors": "Kexiang Xiong, Gang Tang, Jie Chen, Debiao He",
+   "abstract": "Adaptor signatures bind the adaptation of a pre-signature into a valid signature to the disclosure of a witness, enabling atomic swaps, payment channels, and scriptless scripts. However, existing group-action constructions face key limitations: O-IAS requires commutative actions with costly zero-knowledge proofs, Fast ORCAS incurs prohibitive communication on large group elements, and GATOR couples soundness amplification with pre-signing search cost. We present Dovetail, a group-action adaptor signature scheme built from a heterogeneous two-block construction over multiple public keys. By pairing a large non-cheating block with a small cheating block, Dovetail decouples soundness amplification from pre-signing search cost: the pre-signer fixes both commitments, searches over nonces until the challenge hits a target support, and uses its secret key to adjust the selected responses to the challenged public keys while preserving the ordinary signature format. Following Gerhart et al.\\ (EUROCRYPT 2024), we prove Dovetail secure in the classical random oracle model under the Multiple Group Action Inverse Problem ($\\mathsf{mGAIP}$). Benchmarks across CSI-FiSh, LESS, MEDS, and ALTEQ at the $128$-bit security level confirm these gains. On actions with large group elements, Dovetail outperforms both GATOR and Fast ORCAS in pre-signature size and pre-signing time, generating $15.39$ kB pre-signatures in $16.25$ ms on LESS ($s=32$, $4.6\\times$ faster than Fast ORCAS) and $14.29$ kB pre-signatures in $15.20$ ms on ALTEQ ($s=64$, $121.7\\times$ faster than GATOR). On compact-element actions such as CSI-FiSh ($s=4$), it produces $1.32$ kB pre-signatures in $2.49$ s, outperforming both GATOR and O-IAS.",
+   "url": "https://eprint.iacr.org/2026/3036",
+   "pdf": "https://eprint.iacr.org/2026/3036.pdf",
+   "source": "ePrint",
+   "date": "2026-11-25T03:29:26+00:00"
+  },
+  {
+   "id": "eprint:2026/3035",
+   "title": "ClearWater: A Zero-Knowledge Local-Context Hardware IP Watermarking Framework",
+   "authors": "Sakib Anwar Rieyan, Nektarios Georgios Tsoutsos",
+   "abstract": "ClearWater embeds hardware IP watermarks during standard-cell placement in LLM-assisted flows and verifies detection without revealing the owner's key. Bounded fan-in contexts identify carrier pairs, and keyed Poseidon2 determines their relative placement order. A Groth16 proof verifies agreement over an externally audited carrier table. In our testbench, routed AES, SHA-256, and ChaCha layouts retained every registered mark with no measured cell-area growth. Copied fragments retained matching bits even when too few survived to support a detection claim. For AES, verification took 16 milliseconds. The public carrier table dominated communication, while timing impact varied across designs.",
+   "url": "https://eprint.iacr.org/2026/3035",
+   "pdf": "https://eprint.iacr.org/2026/3035.pdf",
+   "source": "ePrint",
+   "date": "2026-11-25T02:18:17+00:00"
+  },
+  {
    "id": "arxiv:2611.33508",
    "title": "Merkle Trees Minimize Verifier Complexity in the ROM",
    "authors": "Miranda Christ, Oliver Korten, Tal Malkin, Noam Mazor, Shyamal Patel",
@@ -30,6 +90,26 @@
    "pdf": "http://arxiv.org/pdf/2611.33508v1",
    "source": "arXiv",
    "date": "2026-11-24T22:35:22Z"
+  },
+  {
+   "id": "eprint:2026/3031",
+   "title": "(Almost) Tight Bounds for Pairing-Based SNARGs",
+   "authors": "Gal Arnon, Eylon Yogev",
+   "abstract": "We construct a publicly verifiable succinct non-interactive argument (SNARG) for NP in the asymmetric bilinear generic group and random oracle models. At $\\lambda$ bits of security, a proof consists of one $\\mathbb{G}_1$ element and $\\lambda+o(\\lambda)$ additional bits. Assuming exponentially secure pseudorandom generators, we show that the additional bit string cannot have length $o(\\lambda)$ under natural restrictions on setup and verification. The lower bound applies to schemes with exponentially small completeness and soundness errors, where soundness holds against subexponential adversaries. Our construction uses a variant of the KZG polynomial commitment scheme that may be of independent interest. The commitment is the hash of a target group element, and an opening proof still consists of one $\\mathbb{G}_1$ element. Given the opening proof and the claimed evaluation, the verifier reconstructs the target group element with one pairing and checks its hash against the commitment, saving one pairing over standard KZG verification.",
+   "url": "https://eprint.iacr.org/2026/3031",
+   "pdf": "https://eprint.iacr.org/2026/3031.pdf",
+   "source": "ePrint",
+   "date": "2026-11-24T21:57:02+00:00"
+  },
+  {
+   "id": "eprint:2026/3028",
+   "title": "Improving Lindell's Two-Party ECDSA: Faster Key Generation and UC Security Without Global Abort",
+   "authors": "Yehuda Lindell, Gil Segev",
+   "abstract": "The two-party ECDSA signing protocol constructed by Lindell (CRYPTO '17) has a substantial implementation footprint across the blockchain industry. Despite its advantage of completely static state management, the protocol admits two main limitations: (1) its key generation phase is computationally intensive due to the usage of somewhat inefficient zero-knowledge proofs, and (2) its security relies on a \"global abort\" mechanism (requiring that if a certain error is detected then all current and future executions must halt), which poses significant operational challenges in high-throughput environments. In this work we demonstrate that these limitations are not inherent, presenting \"drop-in\" improvements that preserve the protocol's structure while delivering substantial gains in both efficiency and security: -- Faster key generation. We overcome the main bottleneck in the protocol's key generation by constructing a drastically improved zero-knowledge proof for the Paillier-EC discrete logarithm (PDL) relation. Utilizing aggregated inner-product arguments (Bulletproofs), we address the algebraic mismatch between Paillier encryption and elliptic curves by constructing a \"commitment bridge\" that links a Paillier ciphertext to a set of Pedersen commitments over an elliptic curve. This allows us to minimize Paillier operations by shifting the computational cost to significantly faster elliptic-curve operations. -- UC security without global abort. We augment the protocol with a highly efficient non-interactive zero-knowledge proof (integrated into the protocol's second message). We prove that this addition eliminates the need for a global abort mechanism, upgrading the protocol's security from its original game-based definition to UC security against malicious adversaries (under the Paillier and Strong RSA assumptions in the random oracle model). We provide rigorous security proofs and report on the performance of a production-grade implementation, demonstrating that our approach reduces the estimated key-generation time by a factor of approximately four and achieves UC security without global abort with minimal signing overhead: less than $22$ms of additional computation per party and only $3.5$KB of additional communication.",
+   "url": "https://eprint.iacr.org/2026/3028",
+   "pdf": "https://eprint.iacr.org/2026/3028.pdf",
+   "source": "ePrint",
+   "date": "2026-11-24T17:37:27+00:00"
   },
   {
    "id": "eprint:2026/3019",
@@ -1320,6 +1400,16 @@
    "pdf": "http://arxiv.org/pdf/2609.25535v1",
    "source": "arXiv",
    "date": "2026-09-22T01:05:01Z"
+  },
+  {
+   "id": "eprint:2026/2141",
+   "title": "BitZ: proofs and commitments in arbitrary rings through binary fields",
+   "authors": "Remco Bloemen, Albert Garreta, Marcin Kostrzewa, Shreyas Londhe, Lev Soukhanov, John Wu",
+   "abstract": "We introduce BitZ, a hash-based Polynomial Commitment Scheme (PCS) for committing to multilinear polynomials $\\mathbf{f}$ with coefficients in an arbitrary finitely generated ring $S$, e.g.\\ a finite field $\\mathbb{F}$, the integers $\\mathbb{Z}$, a cyclotomic ring, etc. Moreover, given another arbitrary ring $R$ and a ring homomorphism $\\psi:S\\to R$, BitZ then proves evaluation claims over $R$ for the polynomial $\\psi(\\mathbf{f})$. BitZ's costs depend almost exclusively on the number of bits in the coefficients of $\\mathbf{f}$, and not on $S$, $R$ or $\\psi$. Moreover, BitZ provides range checks (or more generally, bit-size checks) essentially for free. BitZ can thus be used as a PCS in essentially any proof system. We do so to build a SNARK, called BitZ-SNARK, for integer polynomial constraints, following the fingerprinting technique of Campanelli and Hall-Andersen, where one commits over $\\mathbb{Z}$ and proves the constraints over a random prime field $\\mathbb{F}_q$, i.e. BitZ is deployed with $S=\\mathbb{Z}$, $R=\\mathbb{F}_q$, and $\\psi$ reduction modulo $q$. BitZ applies equally to other ring-based proof systems, or field-based ones. To commit to $\\mathbf{f}$, BitZ first decomposes $\\mathbf{f}$ into a string of bits, and then commits to it over a binary field $\\mathbb{F}_{2^{\\nu}}$, in packed form. The scheme then proves the linear claim on $\\psi(\\mathbf{f})$ over the arbitrary ring $R$, even though it committed to the bits forming $\\mathbf{f}$ over a binary field. We implement BitZ-SNARK and use it to prove, among others, SHA-256 hashing followed by ECDSA signature verification; RSA modular exponentiation and Poseidon hashing; integer multiplication; and SHA-256 hashing followed by multiplication modulo $2^{32}$, consistently obtaining better performance than prior approaches on most tasks. As an example, we achieve a throughput of $9$ million proved 32-bit integer multiplications per second on a MacBook Air M5 24 GB (10 threads, CPU-only) with proof sizes under $200$ kB. We prove a SHA-256 hash of a $2$ kB ($2^5$ compressions) message followed by a P-256 ECDSA signature verification with $32$ ms and $3.1$ ms prover and verifier time, respectively, and with a proof of $65$ kB, single-threaded. With $10$ threads the times are $17$ ms and $3.7$ ms.",
+   "url": "https://eprint.iacr.org/2026/2141",
+   "pdf": "https://eprint.iacr.org/2026/2141.pdf",
+   "source": "ePrint",
+   "date": "2026-09-21T15:16:27+00:00"
   },
   {
    "id": "eprint:2026/2099",

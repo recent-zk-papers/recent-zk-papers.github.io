@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T21:14:37.858787+00:00",
+ "updated": "2026-11-28T07:43:59.099081+00:00",
  "papers": [
   {
    "id": "eprint:2026/3053",
@@ -3640,26 +3640,6 @@
    "pdf": "http://arxiv.org/pdf/2510.23060v4",
    "source": "arXiv",
    "date": "2025-10-27T06:45:11Z"
-  },
-  {
-   "id": "arxiv:2510.21124",
-   "title": "QAE-BAC: Achieving Quantifiable Anonymity and Efficiency in Blockchain-Based Access Control with Attribute",
-   "authors": "Jie Zhang, Xiaohong Li, Mengke Zhang, Ruitao Feng, Shanshan Xu, Zhe Hou, Guangdong Bai",
-   "abstract": "Blockchain-based Attribute-Based Access Control (BC-ABAC) offers a decentralized paradigm for secure data governance but faces two inherent challenges: the transparency of blockchain ledgers threatens user privacy by enabling reidentification attacks through attribute analysis, while the computational complexity of policy matching clashes with blockchain's performance constraints. Existing solutions, such as those employing Zero-Knowledge Proofs (ZKPs), often incur high overhead and lack measurable anonymity guarantees, while efficiency optimizations frequently ignore privacy implications. To address these dual challenges, this paper proposes QAEBAC (Quantifiable Anonymity and Efficiency in Blockchain-Based Access Control with Attribute). QAE-BAC introduces a formal (r, t)-anonymity model to dynamically quantify the re-identification risk of users based on their access attributes and history. Furthermore, it features an Entropy-Weighted Path Tree (EWPT) that optimizes policy structure based on realtime anonymity metrics, drastically reducing policy matching complexity. Implemented and evaluated on Hyperledger Fabric, QAE-BAC demonstrates a superior balance between privacy and performance. Experimental results show that it effectively mitigates re-identification risks and outperforms state-of-the-art baselines, achieving up to an 11x improvement in throughput and an 87% reduction in latency, proving its practicality for privacy-sensitive decentralized applications.",
-   "url": "http://arxiv.org/abs/2510.21124v1",
-   "pdf": "http://arxiv.org/pdf/2510.21124v1",
-   "source": "arXiv",
-   "date": "2025-10-24T03:28:41Z"
-  },
-  {
-   "id": "arxiv:2510.21024",
-   "title": "JSTprove: Pioneering Verifiable AI for a Trustless Future",
-   "authors": "Jonathan Gold, Tristan Freiberg, Haruna Isah, Shirin Shahabi",
-   "abstract": "The integration of machine learning (ML) systems into critical industries such as healthcare, finance, and cybersecurity has transformed decision-making processes, but it also brings new challenges around trust, security, and accountability. As AI systems become more ubiquitous, ensuring the transparency and correctness of AI-driven decisions is crucial, especially when they have direct consequences on privacy, security, or fairness. Verifiable AI, powered by Zero-Knowledge Machine Learning (zkML), offers a robust solution to these challenges. zkML enables the verification of AI model inferences without exposing sensitive data, providing an essential layer of trust and privacy. However, traditional zkML systems typically require deep cryptographic expertise, placing them beyond the reach of most ML engineers. In this paper, we introduce JSTprove, a specialized zkML toolkit, built on Polyhedra Network's Expander backend, to enable AI developers and ML engineers to generate and verify proofs of AI inference. JSTprove provides an end-to-end verifiable AI inference pipeline that hides cryptographic complexity behind a simple command-line interface while exposing auditable artifacts for reproducibility. We present the design, innovations, and real-world use cases of JSTprove as well as our blueprints and tooling to encourage community review and extension. JSTprove therefore serves both as a usable zkML product for current engineering needs and as a reproducible foundation for future research and production deployments of verifiable AI.",
-   "url": "http://arxiv.org/abs/2510.21024v1",
-   "pdf": "http://arxiv.org/pdf/2510.21024v1",
-   "source": "arXiv",
-   "date": "2025-10-23T22:22:38Z"
   }
  ]
 }
